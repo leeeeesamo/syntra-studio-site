@@ -1,13 +1,73 @@
-<section id="testimonials">
-  <h1>Testimonials</h1>
-  <blockquote>
-    “Working with Syntra Studio has completely changed how I manage my business.
-    I save hours each week, and everything finally runs smoothly.”
-    <footer>— Ashley F., Business Owner</footer>
-  </blockquote>
-  <blockquote>
-    “Leesa’s approach blends tech-savvy precision with personal understanding.
-    It’s the first time I’ve felt truly supported by a digital partner.”
-    <footer>— Jonathan P., Executive Client</footer>
-  </blockquote>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonials — Syntra Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/img/syntra_logo.svg" alt="Syntra Studio logo" />
+        <span>Syntra Studio</span>
+      </a>
+      <nav>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <div class="bar"></div>
+        <h2>What Clients Say</h2>
+      </div>
+      <div class="slider" data-slider>
+        <div class="slide">
+          <blockquote class="quote">
+            “Working with Syntra Studio completely changed how I manage my business — I save hours each week and everything finally runs smoothly.”
+            <footer>— Ashley F., Business Owner</footer>
+          </blockquote>
+        </div>
+        <div class="slide">
+          <blockquote class="quote">
+            “Leesa’s approach blends tech‑savvy precision with personal understanding. It’s the first time I’ve felt truly supported by a digital partner.”
+            <footer>— Jonathan P., Executive Client</footer>
+          </blockquote>
+        </div>
+        <div class="slide">
+          <blockquote class="quote">
+            “Structured, dependable, and design‑conscious. Syntra helped us scale without losing the human touch.”
+            <footer>— Maya R., Agency Founder</footer>
+          </blockquote>
+        </div>
+      </div>
+      <div class="slider-dots" data-dots></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container center">
+      <div>© 2025 Syntra Studio – Reliable by Design.</div>
+      <div class="links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

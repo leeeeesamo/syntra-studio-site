@@ -1,19 +1,64 @@
-<section id="contact">
-  <h1>Contact Syntra Studio</h1>
-  <p>Let’s streamline your business — Reliable by Design.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Syntra Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/img/syntra_logo.svg" alt="Syntra Studio logo" />
+        <span>Syntra Studio</span>
+      </a>
+      <nav>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#testimonials">Testimonials</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <p><strong>Email:</strong> <a href="mailto:hello.syntrastudio@gmail.com">hello.syntrastudio@gmail.com</a></p>
+  <section id="contact">
+    <div class="container center">
+      <div class="section-head" style="justify-content:center">
+        <div class="bar"></div>
+        <h2>Contact Syntra Studio</h2>
+      </div>
+      <p class="muted">Let’s streamline your business — Reliable by Design.</p>
+      <div class="center stack-24" style="margin-top:20px">
+        <form class="form" action="mailto:hello.syntrastudio@gmail.com" method="post" enctype="text/plain">
+          <input class="input" type="text" id="name" name="name" placeholder="Name" required>
+          <input class="input" type="email" id="email" name="email" placeholder="Email" required>
+          <textarea class="textarea" id="message" name="message" rows="4" placeholder="How can we help?" required></textarea>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+        <div>
+          <strong>Email:</strong> <a href="mailto:hello.syntrastudio@gmail.com">hello.syntrastudio@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <form action="mailto:hello.syntrastudio@gmail.com" method="post" enctype="text/plain">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="4" required></textarea>
-
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+  <footer class="site-footer">
+    <div class="container center">
+      <div>© 2025 Syntra Studio – Reliable by Design.</div>
+      <div class="links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
