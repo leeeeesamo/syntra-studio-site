@@ -6,10 +6,8 @@
   "homepage": "https://leeeeesamo.github.io/syntra-studio-site",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "export": "next export",
-    "start": "next start",
-    "build:pages": "npm run build && npm run export"
+    "build": "next build && next export -o docs",
+    "start": "next start"
   },
   "keywords": [
     "nextjs",
