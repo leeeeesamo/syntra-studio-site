@@ -16,13 +16,13 @@ module.exports = {
           heading: "var(--syntra-heading)",
           text: "var(--syntra-text-main)",
           muted: "var(--syntra-text-muted)",
-          border: "var(--syntra-border-soft)"
+          border: "var(--syntra-border-soft)",
         }
       },
       backgroundImage: {
-        "syntra-gradient": "linear-gradient(to right, var(--syntra-gradient-start), var(--syntra-gradient-end))",
+        "syntra-gradient": "linear-gradient(to right, var(--syntra-gradient-start), var(--syntra-gradient-end))"
       },
-    }
+    },
   },
-  plugins: []
+  plugins: [],
 };
