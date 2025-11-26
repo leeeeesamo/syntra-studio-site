@@ -22,7 +22,15 @@
     .filter(Boolean);
 
   const setActive = (id) => {
-    navLinks.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+    navLinks.forEach((l) => {
+      const isActive = l.getAttribute('href') === `#${id}`;
+      l.classList.toggle('active', isActive);
+      if (isActive) {
+        l.setAttribute('aria-current', 'true');
+      } else {
+        l.removeAttribute('aria-current');
+      }
+    });
   };
 
   const onScroll = () => {
@@ -86,4 +94,67 @@
       startX = null;
     });
   }
+  // Formspree forms
+  const forms = document.querySelectorAll('form[data-formspree]');
+  forms.forEach((form) => {
+    const feedback = form.querySelector('.form-feedback');
+    const fields = form.querySelectorAll('.input, .textarea');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    const setFeedback = (type, message) => {
+      if (!feedback) return;
+      feedback.classList.remove('success', 'error');
+      feedback.textContent = '';
+      if (type && message) {
+        feedback.classList.add(type);
+        feedback.textContent = message;
+      }
+    };
+
+    const validate = () => {
+      let valid = true;
+      fields.forEach((field) => {
+        if (!field.checkValidity()) {
+          field.setAttribute('aria-invalid', 'true');
+          valid = false;
+        } else {
+          field.removeAttribute('aria-invalid');
+        }
+      });
+      return valid;
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      setFeedback();
+
+      if (!validate()) {
+        setFeedback('error', 'Please complete all required fields before submitting.');
+        return;
+      }
+
+      const formData = new FormData(form);
+      if (submitBtn) submitBtn.setAttribute('disabled', 'true');
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: formData
+        });
+
+        if (response.ok) {
+          form.reset();
+          setFeedback('success', 'Thank you for reaching out! We’ll get back to you within 24 hours.');
+        } else {
+          throw new Error(`Request failed with status ${response.status}`);
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        setFeedback('error', 'Something went wrong – please try again or email hello@syntrastudio.com.');
+      } finally {
+        if (submitBtn) submitBtn.removeAttribute('disabled');
+      }
+    });
+  });
 })();
