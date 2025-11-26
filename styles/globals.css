@@ -1,0 +1,90 @@
+/* ===========================
+   SYNTRA BRAND TOKENS
+=========================== */
+:root {
+  --syntra-gradient-start: #4ba3f2;
+  --syntra-gradient-end: #6c5ce7;
+
+  --syntra-soft-bg: #f7f8fb;
+  --syntra-deep-bg: #0a0f24;
+
+  --syntra-heading: #fdfdfd;
+  --syntra-text-main: #e8e8e8;
+  --syntra-text-muted: #d0d0d0;
+
+  --syntra-border-soft: rgba(255, 255, 255, 0.15);
+}
+
+/* ===========================
+   GLOBAL RESETS
+=========================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: var(--syntra-soft-bg);
+  color: var(--syntra-text-main);
+}
+
+/* ===========================
+   UTILITIES
+=========================== */
+.section-eyebrow {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--syntra-text-muted);
+}
+
+.section-divider {
+  width: 80px;
+  height: 2px;
+  margin: 20px auto;
+  background: linear-gradient(
+    to right,
+    var(--syntra-gradient-start),
+    var(--syntra-gradient-end)
+  );
+  opacity: 0.4;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  background: linear-gradient(
+    to right,
+    var(--syntra-gradient-start),
+    var(--syntra-gradient-end)
+  );
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  border: 1px solid var(--syntra-border-soft);
+  color: var(--syntra-text-main);
+  background: transparent;
+  transition: background 0.2s;
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+}
