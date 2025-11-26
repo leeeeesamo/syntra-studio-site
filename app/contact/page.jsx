@@ -1,18 +1,21 @@
 // app/contact/page.jsx
+import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
+
+export const metadata = {
+  title: "Contact Syntra Digital Solutions",
+  description:
+    "Get in touch with Syntra Digital Solutions to discuss virtual assistance, customer support, operations, or web design support.",
+};
 
 export default function ContactPage() {
   return (
-    <main>
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-3xl sm:text-4xl font-semibold text-[var(--syntra-heading)] mb-6">
-          Let’s talk about what you need handled.
-        </h1>
-
-        <p className="text-[var(--syntra-text-muted)] mb-10 max-w-2xl">
-          Share what you’re working on — I’ll reply with ways Syntra can help.
-        </p>
-
+    <main className="space-y-12">
+      <PageHero
+        title="Get in Touch"
+        subtitle="Share what you're working on — we'll reply with ways Syntra can help."
+      />
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <ContactForm />
       </section>
     </main>

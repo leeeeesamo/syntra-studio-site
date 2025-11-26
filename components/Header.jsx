@@ -15,22 +15,70 @@ export default function Header() {
         {/* Logo + Brand */}
         <Link href="/" className="flex items-center gap-3">
           <img
-            src="/brand-assets/logo-mark.svg"
+            src="/brand-assets/logo-icon.svg"
             alt="Syntra Logo"
-            className="h-8"
+            className="h-9 sm:h-10"
           />
-          <span className="font-semibold tracking-wide text-[var(--syntra-heading)]">
+          <span className="text-sm sm:text-base md:text-lg font-semibold tracking-wide text-[var(--syntra-heading)]">
             Syntra Digital Solutions
           </span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-8 text-sm text-[var(--syntra-text-muted)]">
-          <Link href="/about" className="hover:text-white">About</Link>
-          <Link href="/services" className="hover:text-white">Services</Link>
-          <Link href="/deck" className="hover:text-white">Deck</Link>
-          <Link href="/contact" className="hover:text-white">Contact</Link>
-        </nav>
+        {/* Desktop Nav + CTA */}
+        <div className="hidden md:flex items-center gap-6 text-sm">
+          <nav className="flex gap-8 text-sm md:text-base text-[var(--syntra-text-muted)]">
+            <Link href="/" className="hover:text-white">Home</Link>
+            <Link href="/about" className="hover:text-white">About</Link>
+
+            {/* Services with dropdown */}
+            <div className="relative group">
+              <Link
+                href="/services"
+                className="hover:text-white inline-flex items-center gap-1"
+              >
+                Services
+                <span className="text-[10px]">▾</span>
+              </Link>
+              <div className="absolute right-0 mt-2 w-64 rounded-2xl border border-[var(--syntra-border-soft)] bg-black/90 backdrop-blur-md shadow-lg opacity-0 scale-95 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition duration-150 ease-out">
+                <nav className="flex flex-col py-2 text-xs">
+                  <Link
+                    href="/services/executive-assistance"
+                    className="px-4 py-2 hover:text-white hover:bg-white/5"
+                  >
+                    Executive &amp; Virtual Assistance
+                  </Link>
+                  <Link
+                    href="/services/customer-service-support"
+                    className="px-4 py-2 hover:text-white hover:bg-white/5"
+                  >
+                    Customer Service Support
+                  </Link>
+                  <Link
+                    href="/services/operations-systems-support"
+                    className="px-4 py-2 hover:text-white hover:bg-white/5"
+                  >
+                    Operations &amp; Systems Support
+                  </Link>
+                  <Link
+                    href="/services/web-design-digital-presence"
+                    className="px-4 py-2 hover:text-white hover:bg-white/5"
+                  >
+                    Web Design &amp; Digital Presence
+                  </Link>
+                </nav>
+              </div>
+            </div>
+
+            <Link href="/mission" className="hover:text-white">Our Mission</Link>
+          </nav>
+
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-full font-medium text-xs sm:text-sm px-4 py-2 text-white bg-gradient-to-r from-[var(--syntra-gradient-start)] to-[var(--syntra-gradient-end)] shadow-lg hover:opacity-90"
+          >
+            Book a Discovery Call
+          </Link>
+        </div>
 
         {/* Mobile toggle */}
         <button
@@ -51,10 +99,10 @@ export default function Header() {
             className="md:hidden bg-black/40 backdrop-blur-md border-t border-[var(--syntra-border-soft)]"
           >
             <nav className="flex flex-col px-6 py-6 gap-6 text-sm">
+              <Link href="/" onClick={() => setOpen(false)}>Home</Link>
               <Link href="/about" onClick={() => setOpen(false)}>About</Link>
               <Link href="/services" onClick={() => setOpen(false)}>Services</Link>
-              <Link href="/deck" onClick={() => setOpen(false)}>Deck</Link>
-              <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
+              <Link href="/mission" onClick={() => setOpen(false)}>Our Mission</Link>
             </nav>
           </motion.div>
         )}

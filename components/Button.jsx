@@ -1,7 +1,7 @@
 // components/Button.jsx
 export default function Button({ children, href, variant = "primary" }) {
   const base =
-    "inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-medium transition-all";
+    "inline-flex items-center justify-center px-7 py-3.5 rounded-full text-base font-medium transition-all";
 
   const styles = {
     primary: `${base} text-white bg-gradient-to-r from-[var(--syntra-gradient-start)] to-[var(--syntra-gradient-end)] shadow-lg hover:opacity-90`,

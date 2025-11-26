@@ -1,6 +1,9 @@
+import Link from "next/link";
+
 const services = [
   {
     title: 'Executive & Virtual Assistance',
+    href: '/services/executive-assistance',
     body:
       'Inbox, calendars, travel, vendor coordination, and project admin handled with proactive communication.',
     badge: 'Founders & execs',
@@ -8,20 +11,23 @@ const services = [
   },
   {
     title: 'Customer Service Support',
+    href: '/services/customer-service-support',
     body:
       'Email, chat, and phone support with a calm, empathetic tone and documented processes for your team.',
     badge: 'CX & retention',
     icon: '💬',
   },
   {
-    title: 'Marketing & Operations',
+    title: 'Operations & Systems Support',
+    href: '/services/operations-systems-support',
     body:
-      'Campaign coordination, content scheduling, reporting, and back-office ops that keep everything moving.',
-    badge: 'Growth & ops',
-    icon: '📈',
+      'Internal workflows, documentation, reporting, and back-office ops that keep everything moving.',
+    badge: 'Ops & systems',
+    icon: '⚙️',
   },
   {
     title: 'Web Design & Digital Presence',
+    href: '/services/web-design-digital-presence',
     body:
       'Clean, responsive sites that reflect your brand and make it easy for clients and customers to work with you.',
     badge: 'Web & brand',
@@ -31,33 +37,39 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
-      <p className="section-eyebrow text-center">What Syntra Handles</p>
-      <h2 className="text-3xl sm:text-4xl font-semibold text-center mt-3 mb-10">
-        Services that keep your work moving.
+    <section className="pt-8 pb-12 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <h2 className="text-3xl sm:text-4xl font-semibold text-center">
+        What Syntra Handles
       </h2>
+      <p className="mt-2 mb-8 text-base sm:text-lg text-center text-[var(--syntra-text-muted)]">
+        Services that keep your work moving.
+      </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {services.map((service) => (
-          <article
+          <Link
             key={service.title}
-            className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 flex flex-col gap-4 shadow-md"
+            href={service.href}
+            className="group"
           >
-            <div className="flex items-center justify-between gap-3">
-              <span className="text-2xl">{service.icon}</span>
-              <span className="text-xs uppercase tracking-wide px-3 py-1 rounded-full bg-white/5 border border-[var(--syntra-border-soft)] text-[var(--syntra-text-muted)]">
-                {service.badge}
-              </span>
-            </div>
-            <h3 className="font-semibold text-lg text-[var(--syntra-heading)]">
-              {service.title}
-            </h3>
-            <p className="text-[var(--syntra-text-muted)] text-sm leading-relaxed">
-              {service.body}
-            </p>
-          </article>
+            <article
+              className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-5 flex flex-col gap-3 shadow-md transition-transform transition-colors group-hover:-translate-y-0.5 group-hover:border-white/40"
+            >
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">{service.icon}</span>
+              </div>
+              <h3 className="font-semibold text-lg text-[var(--syntra-heading)]">
+                {service.title}
+              </h3>
+              <p className="text-[var(--syntra-text-muted)] text-sm leading-relaxed">
+                {service.body}
+              </p>
+            </article>
+          </Link>
         ))}
       </div>
+
+      <div className="mt-10 border-t border-[var(--syntra-border-soft)] max-w-5xl mx-auto" />
     </section>
   );
 }

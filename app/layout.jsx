@@ -22,10 +22,7 @@ export default function RootLayout({ children }) {
       <body
         className="
           min-h-screen font-sans antialiased
-          bg-gradient-to-br
-          from-[var(--syntra-soft-bg)]
-          via-[var(--syntra-deep-bg)]
-          to-[var(--syntra-text-main)]
+          bg-[var(--syntra-deep-bg)]
           text-[var(--syntra-text-main)]
         "
       >
@@ -36,6 +33,20 @@ export default function RootLayout({ children }) {
           <main className="flex-1 pt-24">
             {children}
           </main>
+
+          <div className="mt-10">
+            <div className="max-w-7xl mx-auto px-6 text-center text-xs sm:text-sm text-[var(--syntra-text-muted)]">
+              <p>
+                Prefer to reach out directly?{" "}
+                <a
+                  href="/contact"
+                  className="text-[var(--syntra-text-main)] underline-offset-2 hover:underline"
+                >
+                  Contact Syntra.
+                </a>
+              </p>
+            </div>
+          </div>
 
           <Footer />
         </div>
