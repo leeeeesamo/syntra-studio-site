@@ -5,10 +5,10 @@
   "type": "module",
   "homepage": "https://syntrasolutions.digital",
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "start": "next start"
-  },
+	"dev": "next dev",
+	"build": "next build && next export",
+	"start": "next start"
+   },
   "dependencies": {
     "next": "14.2.4",
     "react": "18.0.0",
