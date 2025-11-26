@@ -1,4 +1,5 @@
-import SyntraStudioLaunchDeck from '@/components/SyntraStudioLaunchDeck';
+// app/deck/page.jsx
+import SyntraStudioLaunchDeck from "@/components/SyntraStudioLaunchDeck";
 
 export default function DeckPage() {
   return (

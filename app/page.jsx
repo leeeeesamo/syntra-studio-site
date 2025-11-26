@@ -1,7 +1,8 @@
-import HeroSection from '@/components/HeroSection';
-import ServicesSection from '@/components/ServicesSection';
-import AboutSection from '@/components/AboutSection';
-import ContactForm from '@/components/ContactForm';
+// app/page.jsx
+import HeroSection from "@/components/HeroSection";
+import ServicesSection from "@/components/ServicesSection";
+import AboutSection from "@/components/AboutSection";
+import ContactForm from "@/components/ContactForm";
 
 export default function HomePage() {
   return (

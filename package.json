@@ -2,34 +2,19 @@
   "name": "syntra-studio-site",
   "version": "1.0.0",
   "private": true,
-  "description": "Syntra Studio | Reliable by Design – Virtual Assistance & Creative Systems Support",
-  "homepage": "https://leeeeesamo.github.io/syntra-studio-site",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export -o docs",
+    "build": "next build",
     "start": "next start"
   },
-  "keywords": [
-    "nextjs",
-    "tailwindcss",
-    "static-site",
-    "syntra-studio",
-    "virtual-assistance",
-    "creative-systems"
-  ],
-  "author": "Leesa Moore",
-  "license": "ISC",
   "dependencies": {
-    "framer-motion": "^10.18.0",
-    "next": "14.2.5",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "14.2.5",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.4"
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.10"
   }
 }

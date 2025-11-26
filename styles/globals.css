@@ -1,6 +1,7 @@
-/* ===========================
+/* ============================================
    SYNTRA BRAND TOKENS
-=========================== */
+   (CSS Variables used across Tailwind + Custom)
+=============================================== */
 :root {
   --syntra-gradient-start: #4ba3f2;
   --syntra-gradient-end: #6c5ce7;
@@ -11,17 +12,27 @@
   --syntra-heading: #fdfdfd;
   --syntra-text-main: #e8e8e8;
   --syntra-text-muted: #d0d0d0;
+  --syntra-text-dark: #bfbfbf; /* optional but nice to have */
 
   --syntra-border-soft: rgba(255, 255, 255, 0.15);
 }
 
-/* ===========================
+/* ============================================
+   TAILWIND LAYERS
+=============================================== */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
    GLOBAL RESETS
-=========================== */
-html, body {
+=============================================== */
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -29,9 +40,9 @@ body {
   color: var(--syntra-text-main);
 }
 
-/* ===========================
-   UTILITIES
-=========================== */
+/* ============================================
+   TYPOGRAPHY & SECTIONS
+=============================================== */
 .section-eyebrow {
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -51,21 +62,19 @@ body {
   opacity: 0.4;
 }
 
-/* Buttons */
+/* ============================================
+   BUTTONS
+=============================================== */
 .btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2rem;
+  @apply inline-flex items-center justify-center font-medium rounded-full;
   padding: 0.75rem 1.5rem;
-  font-weight: 500;
   color: #ffffff;
   background: linear-gradient(
     to right,
     var(--syntra-gradient-start),
     var(--syntra-gradient-end)
   );
-  transition: opacity 0.2s;
+  transition: opacity 0.2s ease;
 }
 
 .btn-primary:hover {
@@ -73,18 +82,14 @@ body {
 }
 
 .btn-outline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2rem;
+  @apply inline-flex items-center justify-center font-medium rounded-full;
   padding: 0.75rem 1.5rem;
-  font-weight: 500;
   border: 1px solid var(--syntra-border-soft);
   color: var(--syntra-text-main);
   background: transparent;
-  transition: background 0.2s;
+  transition: background 0.2s ease;
 }
 
 .btn-outline:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
