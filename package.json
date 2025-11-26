@@ -1,14 +1,18 @@
 {
   "name": "syntra-studio-site",
   "version": "1.0.0",
+  "private": true,
   "description": "Syntra Studio | Reliable by Design – Virtual Assistance & Creative Systems Support",
-  "main": "syntra_studio_next_js_site_structure.js",
+  "homepage": "https://leeeeesamo.github.io/syntra-studio-site",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./assets/css/tailwind.css -o ./assets/css/output.css --watch",
-    "build": "npx @tailwindcss/cli -i ./assets/css/tailwind.css -o ./assets/css/output.css --minify",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "build:pages": "npm run build && npm run export"
   },
   "keywords": [
+    "nextjs",
     "tailwindcss",
     "static-site",
     "syntra-studio",
@@ -17,26 +21,17 @@
   ],
   "author": "Leesa Moore",
   "license": "ISC",
-  "devDependencies": {
-    "@tailwindcss/cli": "^4.1.15",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.15"
-  },
   "dependencies": {
-    "baseline-browser-mapping": "^2.8.18",
-    "browserslist": "^4.26.3",
-    "caniuse-lite": "^1.0.30001751",
-    "electron-to-chromium": "^1.5.237",
-    "escalade": "^3.2.0",
-    "fraction.js": "^4.3.7",
-    "framer-motion": "^12.23.24",
-    "nanoid": "^3.3.11",
-    "node-releases": "^2.0.26",
-    "normalize-range": "^0.1.2",
-    "picocolors": "^1.1.1",
-    "postcss-value-parser": "^4.2.0",
-    "source-map-js": "^1.2.1",
-    "update-browserslist-db": "^1.1.3"
+    "framer-motion": "^10.18.0",
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.4"
   }
 }
