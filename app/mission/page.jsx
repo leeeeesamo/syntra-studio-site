@@ -24,51 +24,51 @@ export default function MissionPage() {
             focused on what matters, and operate without overwhelm.
           </p>
         </div>
+        {/* Our Core Principles + How We Bring Our Mission to Life (two-column cards) */}
+        <div className="grid gap-8 md:grid-cols-2">
+          {/* Our Core Principles - left card */}
+          <div className="rounded-2xl border border-[var(--syntra-border-soft)] bg-black/20 p-8 md:p-10 text-left">
+            <p className="section-eyebrow text-center text-lg sm:text-xl font-semibold">
+              Our Core Principles
+            </p>
+            <div className="section-divider" />
+            <ul className="mt-6 space-y-3 text-sm sm:text-base text-[var(--syntra-text-muted)] leading-relaxed">
+              <li>Work should feel organized, not chaotic.</li>
+              <li>Communication should be clear and respectful.</li>
+              <li>Support should be dependable, not reactive.</li>
+              <li>Design should elevate, not confuse.</li>
+              <li>Systems should simplify, not complicate.</li>
+            </ul>
+            <p className="mt-4 text-sm sm:text-base text-[var(--syntra-text-muted)]">
+              These principles shape every interaction, workflow, and project — ensuring a consistent,
+              grounded experience for the people we serve.
+            </p>
+          </div>
 
-        {/* Our Core Principles */}
-        <div className="max-w-3xl mx-auto">
-          <h3 className="text-3xl sm:text-4xl font-semibold text-[var(--syntra-heading)] mb-3">Our Core Principles</h3>
-          <ul className="list-disc list-inside space-y-2 text-lg text-[var(--syntra-text-muted)] text-left">
-            <li>Work should feel organized, not chaotic.</li>
-            <li>Communication should be clear and respectful.</li>
-            <li>Support should be dependable, not reactive.</li>
-            <li>Design should elevate, not confuse.</li>
-            <li>Systems should simplify, not complicate.</li>
-          </ul>
-          <p className="mt-4 text-sm sm:text-base text-[var(--syntra-text-muted)] text-left">
-            These principles shape every interaction, workflow, and project — ensuring a consistent,
-            grounded experience for the people we serve.
-          </p>
-        </div>
-
-        {/* How We Bring Our Mission to Life */}
-        <div className="max-w-3xl mx-auto mt-4">
-          <div className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-8 sm:p-10 text-left">
-            <h3 className="text-3xl sm:text-4xl font-semibold text-[var(--syntra-heading)] mb-4 text-center">
+          {/* How We Bring Our Mission to Life - right card */}
+          <div className="rounded-2xl border border-[var(--syntra-border-soft)] bg-black/20 p-8 md:p-10 text-left">
+            <p className="section-eyebrow text-center text-lg sm:text-xl font-semibold">
               How We Bring Our Mission to Life
-            </h3>
-            <div className="space-y-3 text-sm sm:text-base text-[var(--syntra-text-muted)]">
+            </p>
+            <div className="section-divider" />
+            <div className="mt-6 space-y-3 text-sm sm:text-base text-[var(--syntra-text-muted)] leading-relaxed">
               <p>
-                <span className="font-semibold text-[var(--syntra-heading)]">Structure First:</span>
-                {" "}
+                <span className="font-semibold text-[var(--syntra-heading)]">Structure First:</span>{" "}
                 We create organized workflows and operational frameworks that help work feel predictable
                 and manageable — giving every client a stronger foundation.
               </p>
               <p>
-                <span className="font-semibold text-[var(--syntra-heading)]">Human-Centered Support:</span>
-                {" "}
+                <span className="font-semibold text-[var(--syntra-heading)]">Human-Centered Support:</span>{" "}
                 Behind every message, update, and task is someone fully invested in helping your business
                 run smoothly. Care and consideration guide everything we do.
               </p>
               <p>
-                <span className="font-semibold text-[var(--syntra-heading)]">Thoughtful Digital Design:</span>
-                {" "}
+                <span className="font-semibold text-[var(--syntra-heading)]">Thoughtful Digital Design:</span>{" "}
                 From a clean website to intuitive processes, your digital presence and internal systems
                 deserve a polished, user-friendly experience that supports your goals.
               </p>
               <p>
-                <span className="font-semibold text-[var(--syntra-heading)]">Consistent Communication:</span>
-                {" "}
+                <span className="font-semibold text-[var(--syntra-heading)]">Consistent Communication:</span>{" "}
                 We believe reliability is built through clarity. That means quick responses, proactive
                 updates, and steady follow-through — every step of the way.
               </p>
