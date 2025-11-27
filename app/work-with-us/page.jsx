@@ -34,6 +34,15 @@ export default function WorkWithUsPage() {
         {/* Packages */}
         <PricingCards />
 
+        <section className="max-w-3xl mx-auto rounded-2xl bg-black/25 border border-[var(--syntra-border-soft)] px-6 py-6 sm:px-8 sm:py-7 text-center shadow-sm shadow-black/40">
+          <h2 className="text-lg sm:text-xl font-semibold text-[var(--syntra-heading)] mb-2">
+            Onboarding Retainer
+          </h2>
+          <p className="text-sm sm:text-base text-[var(--syntra-text-muted)] leading-relaxed">
+            All new clients begin with a one-time $300 onboarding retainer. This retainer is applied toward Month 1 and covers account setup, inbox/calendar connection, workspace organization, and onboarding preparation.
+          </p>
+        </section>
+
         {/* Divider */}
         <div className="h-px bg-[var(--syntra-border-soft)]/80 max-w-xs mx-auto" />
 

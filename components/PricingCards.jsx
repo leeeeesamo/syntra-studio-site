@@ -4,9 +4,9 @@ import { Circle, Layers, Star } from "lucide-react";
 export default function PricingCards() {
   const plans = [
     {
-      name: "Essential Support",
+      name: "Essential",
       tone: "For lighter weeks and focused support.",
-      priceLine: "Starting at $825/mo",
+      priceLine: "$825/month",
       featured: false,
       icon: Circle,
       items: [
@@ -17,9 +17,9 @@ export default function PricingCards() {
       ],
     },
     {
-      name: "Standard Support",
+      name: "Standard",
       tone: "For steady weekly support and active operations.",
-      priceLine: "Starting at $1,450/mo",
+      priceLine: "$1,450/month",
       featured: true,
       icon: Layers,
       items: [
@@ -31,9 +31,9 @@ export default function PricingCards() {
       ],
     },
     {
-      name: "Premium Support",
+      name: "Premium",
       tone: "For high-volume weeks and leaders who need full support.",
-      priceLine: "Starting at $2,200/mo",
+      priceLine: "$2,200/month",
       featured: false,
       icon: Star,
       items: [
@@ -75,16 +75,13 @@ export default function PricingCards() {
                 <h3 className="text-lg sm:text-xl font-semibold text-[var(--syntra-heading)] mb-1">
                   {plan.name}
                 </h3>
-              <p className="text-xs sm:text-sm text-[var(--syntra-text-muted)] mb-4">
-                {plan.tone}
-              </p>
+                <p className="text-xs sm:text-sm text-[var(--syntra-text-muted)] mb-4">
+                  {plan.tone}
+                </p>
 
-              <p className="text-sm font-medium text-[var(--syntra-text-muted)] uppercase tracking-wide">
-                {"Starting at"}
-              </p>
-              <p className="text-2xl sm:text-3xl font-semibold text-[var(--syntra-heading)] mb-4">
-                {plan.priceLine.replace("Starting at ", "")}
-              </p>
+                <p className="text-2xl sm:text-3xl font-semibold text-[var(--syntra-heading)] mb-4">
+                  {plan.priceLine}
+                </p>
 
                 <ul className="mt-2 space-y-2.5 text-sm text-[var(--syntra-text-muted)] list-disc list-inside">
                   {plan.items.map((item) => (

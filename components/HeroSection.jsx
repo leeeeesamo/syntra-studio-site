@@ -8,7 +8,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen -mt-24 pt-24 flex flex-col justify-center items-center text-center px-8 overflow-hidden">
       {/* Hero Banner Background */}
       <div 
-        className="absolute inset-0 z-0 bg-fixed bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat md:bg-fixed"
         style={{
           backgroundImage: 'url(/brand-assets/hero-banner.png)',
         }}

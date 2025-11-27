@@ -19,6 +19,18 @@ const workingFaqs = [
 
 const pricingFaqs = [
   {
+    q: "Do you require a retainer?",
+    a: "Yes. All new clients pay a one-time $300 onboarding retainer credited toward their first month. It reserves your start date and covers initial setup and onboarding preparation.",
+  },
+  {
+    q: "Why is a retainer required?",
+    a: "It ensures your systems are set up correctly before support begins and secures dedicated time on our calendar.",
+  },
+  {
+    q: "Is the retainer refundable?",
+    a: "It is fully credited toward your first invoice and becomes non-refundable once onboarding begins.",
+  },
+  {
     q: "Why are Syntra's prices lower than some national virtual assistant agencies?",
     a: "We intentionally keep our pricing approachable for small businesses and service-based professionals. Our goal is to provide high-quality support without the inflated overhead you see in large agencies. You receive dedicated, personalized service — not a rotating support team — and you only pay for what you actually need.",
   },

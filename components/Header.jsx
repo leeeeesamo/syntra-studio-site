@@ -37,31 +37,33 @@ export default function Header() {
                 className="hover:text-white inline-flex items-center gap-1"
               >
                 Services
-                <span className="text-[10px]">▾</span>
+                <span className="text-[10px] transition-transform duration-150 group-hover:translate-y-[1px]">
+                  ▾
+                </span>
               </Link>
-              <div className="absolute right-0 mt-2 w-64 rounded-2xl border border-[var(--syntra-border-soft)] bg-black/90 backdrop-blur-md shadow-lg opacity-0 scale-95 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition duration-150 ease-out">
-                <nav className="flex flex-col py-2 text-xs">
+              <div className="absolute right-0 mt-3 w-72 rounded-2xl border border-[var(--syntra-border-soft)]/80 bg-white text-[var(--syntra-deep-bg)] shadow-xl opacity-0 scale-95 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 ease-out">
+                <nav className="flex flex-col py-2 text-xs sm:text-sm divide-y divide-black/5">
                   <Link
                     href="/services/executive-assistance"
-                    className="px-4 py-2 hover:text-white hover:bg-white/5"
+                    className="px-4 py-3 text-[var(--syntra-deep-bg)] hover:bg-[var(--syntra-deep-bg)] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--syntra-gradient-start)] first:rounded-t-2xl last:rounded-b-2xl transition-colors duration-150"
                   >
                     Executive &amp; Virtual Assistance
                   </Link>
                   <Link
                     href="/services/customer-service-support"
-                    className="px-4 py-2 hover:text-white hover:bg-white/5"
+                    className="px-4 py-3 text-[var(--syntra-deep-bg)] hover:bg-[var(--syntra-deep-bg)] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--syntra-gradient-start)] first:rounded-t-2xl last:rounded-b-2xl transition-colors duration-150"
                   >
                     Customer Service Support
                   </Link>
                   <Link
                     href="/services/operations-systems-support"
-                    className="px-4 py-2 hover:text-white hover:bg-white/5"
+                    className="px-4 py-3 text-[var(--syntra-deep-bg)] hover:bg-[var(--syntra-deep-bg)] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--syntra-gradient-start)] first:rounded-t-2xl last:rounded-b-2xl transition-colors duration-150"
                   >
                     Operations &amp; Systems Support
                   </Link>
                   <Link
                     href="/services/web-design-digital-presence"
-                    className="px-4 py-2 hover:text-white hover:bg-white/5"
+                    className="px-4 py-3 text-[var(--syntra-deep-bg)] hover:bg-[var(--syntra-deep-bg)] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--syntra-gradient-start)] first:rounded-t-2xl last:rounded-b-2xl transition-colors duration-150"
                   >
                     Web Design &amp; Digital Presence
                   </Link>

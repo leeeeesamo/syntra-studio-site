@@ -34,20 +34,6 @@ export default function RootLayout({ children }) {
             {children}
           </main>
 
-          <div className="mt-10">
-            <div className="max-w-7xl mx-auto px-6 text-center text-xs sm:text-sm text-[var(--syntra-text-muted)]">
-              <p>
-                Prefer to reach out directly?{" "}
-                <a
-                  href="/contact"
-                  className="text-[var(--syntra-text-main)] underline-offset-2 hover:underline"
-                >
-                  Contact Syntra.
-                </a>
-              </p>
-            </div>
-          </div>
-
           <Footer />
         </div>
       </body>
