@@ -6,7 +6,7 @@ import { CheckCircle2, ListChecks, Link2, LayoutTemplate, MessageSquare } from "
 
 export default function HomePage() {
   return (
-    <main className="space-y-10">
+    <main className="space-y-12 md:space-y-16">
       <HeroSection />
       <ServicesSection />
 

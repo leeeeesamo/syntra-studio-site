@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function ServicesPage() {
   return (
-    <main className="space-y-10">
+    <main className="space-y-12 md:space-y-16">
       <PageHero
         title="Services We Offer"
         subtitle="Support that keeps your work moving, from assistance and support to operations and web."

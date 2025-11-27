@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="space-y-16">
+    <main className="space-y-12 md:space-y-16">
       <PageHero
         title="About Syntra Digital"
         subtitle="Learn more about who we are and how we help businesses thrive."

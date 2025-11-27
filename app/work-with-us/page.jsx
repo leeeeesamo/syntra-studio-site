@@ -1,5 +1,4 @@
 import PageHero from "@/components/PageHero";
-import PickYourPriorities from "@/components/PickYourPriorities";
 import PricingCards from "@/components/PricingCards";
 import OneTimeProjects from "@/components/OneTimeProjects";
 import ComparisonTable from "@/components/ComparisonTable";
@@ -9,15 +8,6 @@ export const metadata = {
   description:
     "Explore Syntra Digital's support packages, one-time projects, and flexible ways to work together.",
 };
-
-const priorities = [
-  "Inbox stays under control",
-  "Clients get quick, clear responses",
-  "Scheduling doesn't slip",
-  "Website content stays current",
-  "Projects move forward on time",
-  "Processes are documented",
-];
 
 export default function WorkWithUsPage() {
   return (
@@ -49,9 +39,6 @@ export default function WorkWithUsPage() {
 
         {/* One-time projects */}
         <OneTimeProjects />
-
-        {/* Pick Your Priorities */}
-        <PickYourPriorities priorities={priorities} />
 
         {/* Services Guide Download */}
         <section className="mt-4 text-center">

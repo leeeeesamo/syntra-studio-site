@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function MissionPage() {
   return (
-    <main className="space-y-8">
+    <main className="space-y-12 md:space-y-16">
       <PageHero
         title="Our Mission"
         subtitle="Our purpose and how we show up for clients."
