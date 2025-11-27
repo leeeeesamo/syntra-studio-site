@@ -13,7 +13,7 @@ export default function MissionPage() {
         title="Our Mission"
         subtitle="Our purpose and how we show up for clients."
       />
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 space-y-10 text-center">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 space-y-14 text-center">
         {/* Our Mission (inline) */}
         <div className="max-w-3xl mx-auto">
           <p className="text-xl leading-relaxed text-[var(--syntra-text-muted)]">
