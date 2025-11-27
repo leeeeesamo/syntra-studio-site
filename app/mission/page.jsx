@@ -16,12 +16,19 @@ export default function MissionPage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 space-y-10 text-center">
         {/* Our Mission (inline) */}
         <div className="max-w-3xl mx-auto">
-          <p className="section-eyebrow mb-2 text-base sm:text-lg font-semibold">Our Purpose</p>
           <p className="text-xl leading-relaxed text-[var(--syntra-text-muted)]">
-            To bring clarity, structure, and thoughtful design to the people who keep work moving. We
-            support businesses and professionals with strong organizational skills, dependable
-            communication, and reliable digital tools — so they can show up with confidence, stay
-            focused on what matters, and operate without overwhelm.
+            At Syntra Digital, our mission is to support the people behind the work. We partner with
+            business owners, teams, and service-based professionals to bring structure, clarity, and ease
+            back into their day-to-day operations.
+            <br />
+            <br />
+            We build organized systems, establish clear communication, and create thoughtful digital
+            solutions that help you stay grounded and focused. Our approach is practical, supportive, and
+            always centered around making work feel more manageable—never overwhelming.
+            <br />
+            <br />
+            Everything we deliver is crafted with intention and built to last. Every system, every
+            workflow, every design choice reflects our commitment to being Reliable by Design.
           </p>
         </div>
         {/* Our Core Principles + How We Bring Our Mission to Life (two-column cards) */}

@@ -55,7 +55,7 @@ export default function PricingCards() {
         </h2>
         <p className="text-sm sm:text-base text-[var(--syntra-text-muted)]">
           Three levels of support designed for different workloads. All focus on steady, reliable help
-          — not deep CRM management or marketing.
+          — no deep CRM management or marketing.
         </p>
       </div>
 
