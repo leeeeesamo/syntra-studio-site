@@ -2,6 +2,7 @@
 import PageHero from "@/components/PageHero";
 import ServicesFAQ from "@/components/ServicesFAQ";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import { Inbox, MessageSquare, Settings2, Monitor, Wand2 } from "lucide-react";
 
 export const metadata = {
   title: "Services We Offer | Syntra Digital Solutions",
@@ -47,6 +48,9 @@ export default function ServicesPage() {
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
           <article className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left">
+            <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
+              <Inbox className="w-5 h-5 text-[var(--syntra-text-muted)]" />
+            </div>
             <h3 className="text-lg font-semibold text-[var(--syntra-heading)]">
               Virtual Assistance
             </h3>
@@ -60,6 +64,9 @@ export default function ServicesPage() {
           </article>
 
           <article className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left">
+            <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
+              <MessageSquare className="w-5 h-5 text-[var(--syntra-text-muted)]" />
+            </div>
             <h3 className="text-lg font-semibold text-[var(--syntra-heading)]">
               Customer Support
             </h3>
@@ -73,6 +80,9 @@ export default function ServicesPage() {
           </article>
 
           <article className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left">
+            <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
+              <Settings2 className="w-5 h-5 text-[var(--syntra-text-muted)]" />
+            </div>
             <h3 className="text-lg font-semibold text-[var(--syntra-heading)]">
               Systems &amp; Workflows
             </h3>
@@ -86,6 +96,9 @@ export default function ServicesPage() {
           </article>
 
           <article className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left">
+            <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
+              <Monitor className="w-5 h-5 text-[var(--syntra-text-muted)]" />
+            </div>
             <h3 className="text-lg font-semibold text-[var(--syntra-heading)]">
               Website Support
             </h3>
@@ -99,6 +112,9 @@ export default function ServicesPage() {
           </article>
 
           <article className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left md:col-span-2">
+            <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
+              <Wand2 className="w-5 h-5 text-[var(--syntra-text-muted)]" />
+            </div>
             <h3 className="text-lg font-semibold text-[var(--syntra-heading)]">
               One-Time Projects
             </h3>

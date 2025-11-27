@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Button from './Button';
 
 export default function HeroSection() {
@@ -21,27 +20,11 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="flex justify-center mb-6"
-        >
-          <Image
-            src="/brand-assets/logo.svg"
-            alt="Syntra Digital Solutions"
-            width={220}
-            height={80}
-            className="h-16 w-auto sm:h-20"
-            priority
-          />
-        </motion.div>
-
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-[var(--syntra-text-main)] drop-shadow-lg"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-[var(--syntra-text-main)] drop-shadow-lg"
         >
           Reliable by Design.
         </motion.h1>

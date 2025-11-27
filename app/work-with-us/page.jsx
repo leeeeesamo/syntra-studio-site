@@ -26,18 +26,6 @@ export default function WorkWithUsPage() {
         title="Ways to Work With Syntra"
         subtitle="Choose the level of support that fits your workload, pace, and priorities."
       />
-      {/* Download Services Guide (top of page) */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mt-4 flex justify-center">
-          <a
-            href="/documents/Syntra_Digital_Services_Guide_Brand.pdf"
-            download
-            className="btn-primary px-6 py-3 text-sm sm:text-base flex items-center gap-2"
-          >
-            <span>Download Services Guide (PDF)</span>
-          </a>
-        </div>
-      </section>
 
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 space-y-16">
         {/* Intro */}
@@ -64,6 +52,17 @@ export default function WorkWithUsPage() {
 
         {/* Pick Your Priorities */}
         <PickYourPriorities priorities={priorities} />
+
+        {/* Services Guide Download */}
+        <section className="mt-4 text-center">
+          <a
+            href="/documents/Syntra_Digital_Services_Guide_Brand.pdf"
+            download
+            className="btn-primary px-6 py-3 text-sm sm:text-base inline-flex items-center gap-2"
+          >
+            <span>Download Services Guide (PDF)</span>
+          </a>
+        </section>
 
         {/* Comparison Table */}
         <ComparisonTable />

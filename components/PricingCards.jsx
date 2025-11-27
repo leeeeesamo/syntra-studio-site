@@ -1,12 +1,14 @@
 import React from "react";
+import { Circle, Layers, Star } from "lucide-react";
 
 export default function PricingCards() {
   const plans = [
     {
       name: "Essential Support",
       tone: "For lighter weeks and focused support.",
-      priceLine: "Starting at $800/mo",
+      priceLine: "Starting at $825/mo",
       featured: false,
+      icon: Circle,
       items: [
         "Weekday inbox monitoring with basic triage",
         "Light scheduling and calendar support",
@@ -17,8 +19,9 @@ export default function PricingCards() {
     {
       name: "Standard Support",
       tone: "For steady weekly support and active operations.",
-      priceLine: "Starting at $1,400/mo",
+      priceLine: "Starting at $1,450/mo",
       featured: true,
+      icon: Layers,
       items: [
         "Priority inbox monitoring and clear triage",
         "Scheduling, coordination, and reminders for key meetings",
@@ -32,6 +35,7 @@ export default function PricingCards() {
       tone: "For high-volume weeks and leaders who need full support.",
       priceLine: "Starting at $2,200/mo",
       featured: false,
+      icon: Star,
       items: [
         "Priority inbox support with proactive follow-through",
         "Scheduling, coordination, and follow-ups across projects",
@@ -56,15 +60,21 @@ export default function PricingCards() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-3">
-        {plans.map((plan) => (
-          <div
-            key={plan.name}
-            className={`h-full rounded-2xl border border-[var(--syntra-border-soft)] bg-black/25 shadow-sm shadow-black/40 p-6 sm:p-7 md:p-8 flex flex-col`}
-          >
-            <div className="flex-1 flex flex-col">
-              <h3 className="text-lg sm:text-xl font-semibold text-[var(--syntra-heading)] mb-1">
-                {plan.name}
-              </h3>
+        {plans.map((plan) => {
+          const Icon = plan.icon;
+          return (
+            <div
+              key={plan.name}
+              className="h-full rounded-2xl border border-[var(--syntra-border-soft)] bg-black/25 shadow-sm shadow-black/40 p-6 sm:p-7 md:p-8 flex flex-col"
+            >
+              <div className="flex-1 flex flex-col">
+                <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
+                  <Icon className="w-5 h-5 text-[var(--syntra-text-muted)]" />
+                </div>
+
+                <h3 className="text-lg sm:text-xl font-semibold text-[var(--syntra-heading)] mb-1">
+                  {plan.name}
+                </h3>
               <p className="text-xs sm:text-sm text-[var(--syntra-text-muted)] mb-4">
                 {plan.tone}
               </p>
@@ -76,14 +86,15 @@ export default function PricingCards() {
                 {plan.priceLine.replace("Starting at ", "")}
               </p>
 
-              <ul className="mt-2 space-y-2.5 text-sm text-[var(--syntra-text-muted)] list-disc list-inside">
-                {plan.items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+                <ul className="mt-2 space-y-2.5 text-sm text-[var(--syntra-text-muted)] list-disc list-inside">
+                  {plan.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

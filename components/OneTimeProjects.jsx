@@ -24,7 +24,7 @@ export default function OneTimeProjects() {
     },
     {
       name: "Workspace Setup",
-      priceLine: "Starting at $600",
+      priceLine: "Starting at $650",
       description: "Bring structure to your everyday tools.",
       items: [
         "Organize shared folders, docs, and resources",
