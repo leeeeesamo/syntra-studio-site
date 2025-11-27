@@ -68,7 +68,7 @@ export default function Header() {
                 </nav>
               </div>
             </div>
-
+            <Link href="/work-with-us" className="hover:text-white">Work With Us</Link>
             <Link href="/mission" className="hover:text-white">Our Mission</Link>
           </nav>
 
@@ -102,6 +102,7 @@ export default function Header() {
               <Link href="/" onClick={() => setOpen(false)}>Home</Link>
               <Link href="/about" onClick={() => setOpen(false)}>About</Link>
               <Link href="/services" onClick={() => setOpen(false)}>Services</Link>
+              <Link href="/work-with-us" onClick={() => setOpen(false)}>Work With Us</Link>
               <Link href="/mission" onClick={() => setOpen(false)}>Our Mission</Link>
             </nav>
           </motion.div>

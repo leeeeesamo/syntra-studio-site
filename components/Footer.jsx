@@ -10,6 +10,7 @@ export default function Footer() {
             <nav className="mt-2 flex flex-col gap-1 text-xs sm:text-sm">
               <a href="/" className="hover:text-white">Home</a>
               <a href="/services" className="hover:text-white">Services</a>
+              <a href="/work-with-us" className="hover:text-white">Work With Us</a>
               <a href="/about" className="hover:text-white">About</a>
               <a href="/contact" className="hover:text-white">Contact</a>
             </nav>
