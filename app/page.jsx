@@ -2,7 +2,7 @@
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
-import { CheckCircle2, ListChecks, Link2, LayoutTemplate } from "lucide-react";
+import { CheckCircle2, ListChecks, Link2, LayoutTemplate, MessageSquare } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -77,7 +77,9 @@ export default function HomePage() {
 
         <div className="mt-10 grid gap-8 md:grid-cols-3">
           <div className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left">
-            <div className="text-2xl">🗂️</div>
+            <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
+              <ListChecks className="w-5 h-5 text-[var(--syntra-text-muted)]" />
+            </div>
             <h3 className="mt-4 font-semibold text-lg text-[var(--syntra-heading)]">
               Structure
             </h3>
@@ -90,7 +92,9 @@ export default function HomePage() {
           </div>
 
           <div className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left">
-            <div className="text-2xl">💬</div>
+            <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
+              <MessageSquare className="w-5 h-5 text-[var(--syntra-text-muted)]" />
+            </div>
             <h3 className="mt-4 font-semibold text-lg text-[var(--syntra-heading)]">
               Clear Communication
             </h3>
@@ -102,7 +106,9 @@ export default function HomePage() {
           </div>
 
           <div className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left">
-            <div className="text-2xl">🤝</div>
+            <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
+              <CheckCircle2 className="w-5 h-5 text-[var(--syntra-text-muted)]" />
+            </div>
             <h3 className="mt-4 font-semibold text-lg text-[var(--syntra-heading)]">
               Genuine Care
             </h3>

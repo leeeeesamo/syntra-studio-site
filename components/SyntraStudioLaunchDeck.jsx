@@ -1,4 +1,6 @@
 // SyntraStudioLaunchDeck.jsx
+import { CheckCircle2, ListChecks, Link2, LayoutTemplate } from "lucide-react";
+
 export default function SyntraStudioLaunchDeck() {
   return (
     <div className="w-full font-sans text-[var(--syntra-text-main)] max-w-6xl mx-auto">
@@ -31,28 +33,36 @@ export default function SyntraStudioLaunchDeck() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex items-start gap-4 p-4 rounded-xl bg-black/30">
-              <span className="text-2xl">✨</span>
+              <div className="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/40 border border-[var(--syntra-border-soft)]">
+                <CheckCircle2 className="w-5 h-5 text-[var(--syntra-text-muted)]" />
+              </div>
               <div>
                 <h3 className="font-semibold text-[var(--syntra-heading)]">Reliable Systems + Human Touch</h3>
                 <p className="text-sm text-[var(--syntra-text-muted)]">Technology paired with genuine care.</p>
               </div>
             </div>
             <div className="flex items-start gap-4 p-4 rounded-xl bg-black/30">
-              <span className="text-2xl">🧩</span>
+              <div className="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/40 border border-[var(--syntra-border-soft)]">
+                <ListChecks className="w-5 h-5 text-[var(--syntra-text-muted)]" />
+              </div>
               <div>
                 <h3 className="font-semibold text-[var(--syntra-heading)]">Thoughtful Processes</h3>
                 <p className="text-sm text-[var(--syntra-text-muted)]">Documented workflows that scale.</p>
               </div>
             </div>
             <div className="flex items-start gap-4 p-4 rounded-xl bg-black/30">
-              <span className="text-2xl">🤝</span>
+              <div className="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/40 border border-[var(--syntra-border-soft)]">
+                <Link2 className="w-5 h-5 text-[var(--syntra-text-muted)]" />
+              </div>
               <div>
                 <h3 className="font-semibold text-[var(--syntra-heading)]">Seamless Integration</h3>
                 <p className="text-sm text-[var(--syntra-text-muted)]">We work within your existing tools.</p>
               </div>
             </div>
             <div className="flex items-start gap-4 p-4 rounded-xl bg-black/30">
-              <span className="text-2xl">🎨</span>
+              <div className="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/40 border border-[var(--syntra-border-soft)]">
+                <LayoutTemplate className="w-5 h-5 text-[var(--syntra-text-muted)]" />
+              </div>
               <div>
                 <h3 className="font-semibold text-[var(--syntra-heading)]">Modern Design</h3>
                 <p className="text-sm text-[var(--syntra-text-muted)]">Aesthetic clarity meets function.</p>

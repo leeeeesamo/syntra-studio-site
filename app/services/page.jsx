@@ -46,85 +46,113 @@ export default function ServicesPage() {
           </h2>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <article className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {/* Virtual Assistance */}
+          <article className="rounded-2xl bg-black/25 border border-[var(--syntra-border-soft)] p-6 sm:p-7 md:p-8 text-left shadow-sm shadow-black/40 flex flex-col">
             <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
               <Inbox className="w-5 h-5 text-[var(--syntra-text-muted)]" />
             </div>
-            <h3 className="text-lg font-semibold text-[var(--syntra-heading)]">
+            <h3 className="text-xl font-semibold text-[var(--syntra-heading)]">
               Virtual Assistance
             </h3>
-            <p className="mt-2 text-sm text-[var(--syntra-text-muted)]">
+            <p className="mt-2 text-sm sm:text-base text-[var(--syntra-text-muted)]">
               Reliable support for day-to-day operations.
             </p>
-            <p className="mt-3 text-sm text-[var(--syntra-text-muted)] leading-relaxed">
-              <span className="font-medium text-[var(--syntra-heading)]">Includes:</span> inbox triage,
-              scheduling, document prep, and client follow-ups.
+            <p className="mt-4 text-[11px] sm:text-xs font-semibold text-[var(--syntra-text-muted)] uppercase tracking-wide">
+              Includes
             </p>
+            <ul className="mt-2 space-y-1.5 text-sm text-[var(--syntra-text-muted)] list-disc list-inside">
+              <li>Inbox triage and basic filtering</li>
+              <li>Scheduling and calendar coordination</li>
+              <li>Document preparation and small admin tasks</li>
+              <li>Client follow-ups and simple communication</li>
+            </ul>
           </article>
 
-          <article className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left">
+          {/* Customer Support */}
+          <article className="rounded-2xl bg-black/25 border border-[var(--syntra-border-soft)] p-6 sm:p-7 md:p-8 text-left shadow-sm shadow-black/40 flex flex-col">
             <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
               <MessageSquare className="w-5 h-5 text-[var(--syntra-text-muted)]" />
             </div>
-            <h3 className="text-lg font-semibold text-[var(--syntra-heading)]">
+            <h3 className="text-xl font-semibold text-[var(--syntra-heading)]">
               Customer Support
             </h3>
-            <p className="mt-2 text-sm text-[var(--syntra-text-muted)]">
+            <p className="mt-2 text-sm sm:text-base text-[var(--syntra-text-muted)]">
               Professional communication that keeps your clients cared for.
             </p>
-            <p className="mt-3 text-sm text-[var(--syntra-text-muted)] leading-relaxed">
-              <span className="font-medium text-[var(--syntra-heading)]">Includes:</span> support inbox
-              monitoring, responses, and light troubleshooting.
+            <p className="mt-4 text-[11px] sm:text-xs font-semibold text-[var(--syntra-text-muted)] uppercase tracking-wide">
+              Includes
             </p>
+            <ul className="mt-2 space-y-1.5 text-sm text-[var(--syntra-text-muted)] list-disc list-inside">
+              <li>Support inbox monitoring</li>
+              <li>Friendly, on-brand responses</li>
+              <li>Light troubleshooting and simple FAQs</li>
+            </ul>
           </article>
 
-          <article className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left">
+          {/* Systems & Workflows */}
+          <article className="rounded-2xl bg-black/25 border border-[var(--syntra-border-soft)] p-6 sm:p-7 md:p-8 text-left shadow-sm shadow-black/40 flex flex-col">
             <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
               <Settings2 className="w-5 h-5 text-[var(--syntra-text-muted)]" />
             </div>
-            <h3 className="text-lg font-semibold text-[var(--syntra-heading)]">
+            <h3 className="text-xl font-semibold text-[var(--syntra-heading)]">
               Systems &amp; Workflows
             </h3>
-            <p className="mt-2 text-sm text-[var(--syntra-text-muted)]">
+            <p className="mt-2 text-sm sm:text-base text-[var(--syntra-text-muted)]">
               Simple, organized structures that make work easier.
             </p>
-            <p className="mt-3 text-sm text-[var(--syntra-text-muted)] leading-relaxed">
-              <span className="font-medium text-[var(--syntra-heading)]">Includes:</span> CRM updates, SOPs,
-              workflows, and basic automations.
+            <p className="mt-4 text-[11px] sm:text-xs font-semibold text-[var(--syntra-text-muted)] uppercase tracking-wide">
+              Includes
             </p>
+            <ul className="mt-2 space-y-1.5 text-sm text-[var(--syntra-text-muted)] list-disc list-inside">
+              <li>Light CRM updates and data hygiene</li>
+              <li>Standard operating procedures (SOPs)</li>
+              <li>Workflow mapping for key processes</li>
+              <li>Basic automations that reduce manual steps</li>
+            </ul>
           </article>
 
-          <article className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left">
+          {/* Website Support */}
+          <article className="rounded-2xl bg-black/25 border border-[var(--syntra-border-soft)] p-6 sm:p-7 md:p-8 text-left shadow-sm shadow-black/40 flex flex-col">
             <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
               <Monitor className="w-5 h-5 text-[var(--syntra-text-muted)]" />
             </div>
-            <h3 className="text-lg font-semibold text-[var(--syntra-heading)]">
+            <h3 className="text-xl font-semibold text-[var(--syntra-heading)]">
               Website Support
             </h3>
-            <p className="mt-2 text-sm text-[var(--syntra-text-muted)]">
+            <p className="mt-2 text-sm sm:text-base text-[var(--syntra-text-muted)]">
               Clean, purposeful updates to keep your online presence polished.
             </p>
-            <p className="mt-3 text-sm text-[var(--syntra-text-muted)] leading-relaxed">
-              <span className="font-medium text-[var(--syntra-heading)]">Includes:</span> content changes,
-              small design updates, landing pages, and light builds.
+            <p className="mt-4 text-[11px] sm:text-xs font-semibold text-[var(--syntra-text-muted)] uppercase tracking-wide">
+              Includes
             </p>
+            <ul className="mt-2 space-y-1.5 text-sm text-[var(--syntra-text-muted)] list-disc list-inside">
+              <li>Content and copy updates</li>
+              <li>Small design refinements</li>
+              <li>Landing page tweaks and light builds</li>
+            </ul>
           </article>
 
-          <article className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left md:col-span-2">
+          {/* One-Time Projects */}
+          <article className="rounded-2xl bg-black/25 border border-[var(--syntra-border-soft)] p-6 sm:p-7 md:p-8 text-left shadow-sm shadow-black/40 flex flex-col md:col-span-2">
             <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
               <Wand2 className="w-5 h-5 text-[var(--syntra-text-muted)]" />
             </div>
-            <h3 className="text-lg font-semibold text-[var(--syntra-heading)]">
+            <h3 className="text-xl font-semibold text-[var(--syntra-heading)]">
               One-Time Projects
             </h3>
-            <p className="mt-2 text-sm text-[var(--syntra-text-muted)]">
+            <p className="mt-2 text-sm sm:text-base text-[var(--syntra-text-muted)]">
               Quick, focused solutions for specific needs.
             </p>
-            <p className="mt-3 text-sm text-[var(--syntra-text-muted)] leading-relaxed">
-              <span className="font-medium text-[var(--syntra-heading)]">Includes:</span> inbox cleanups, CRM
-              cleanups, SOP documentation, website refreshes, and workspace setup.
+            <p className="mt-4 text-[11px] sm:text-xs font-semibold text-[var(--syntra-text-muted)] uppercase tracking-wide">
+              Includes
             </p>
+            <ul className="mt-2 space-y-1.5 text-sm text-[var(--syntra-text-muted)] list-disc list-inside">
+              <li>Inbox cleanups and resets</li>
+              <li>Light CRM and data cleanups</li>
+              <li>SOP documentation for recurring tasks</li>
+              <li>Website refreshes and workspace setup</li>
+            </ul>
           </article>
         </div>
       </section>

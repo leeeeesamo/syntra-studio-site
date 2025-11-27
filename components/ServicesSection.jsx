@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Inbox, MessageSquare, Settings2, Monitor } from "lucide-react";
 
 const services = [
   {
@@ -7,7 +8,7 @@ const services = [
     body:
       'Inbox, calendars, travel, vendor coordination, and project admin handled with proactive communication.',
     badge: 'Founders & execs',
-    icon: '🗂️',
+    Icon: Inbox,
   },
   {
     title: 'Customer Service Support',
@@ -15,7 +16,7 @@ const services = [
     body:
       'Email, chat, and phone support with a calm, empathetic tone and documented processes for your team.',
     badge: 'CX & retention',
-    icon: '💬',
+    Icon: MessageSquare,
   },
   {
     title: 'Operations & Systems Support',
@@ -23,7 +24,7 @@ const services = [
     body:
       'Internal workflows, documentation, reporting, and back-office ops that keep everything moving.',
     badge: 'Ops & systems',
-    icon: '⚙️',
+    Icon: Settings2,
   },
   {
     title: 'Web Design & Digital Presence',
@@ -31,7 +32,7 @@ const services = [
     body:
       'Clean, responsive sites that reflect your brand and make it easy for clients and customers to work with you.',
     badge: 'Web & brand',
-    icon: '🌐',
+    Icon: Monitor,
   },
 ];
 
@@ -46,7 +47,9 @@ export default function ServicesSection() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {services.map((service) => (
+        {services.map((service) => {
+          const Icon = service.Icon;
+          return (
           <Link
             key={service.title}
             href={service.href}
@@ -56,7 +59,9 @@ export default function ServicesSection() {
               className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-5 flex flex-col gap-3 shadow-md transition-transform transition-colors group-hover:-translate-y-0.5 group-hover:border-white/40"
             >
               <div className="flex items-center gap-3">
-                <span className="text-2xl">{service.icon}</span>
+                <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
+                  <Icon className="w-5 h-5 text-[var(--syntra-text-muted)]" />
+                </div>
               </div>
               <h3 className="font-semibold text-lg text-[var(--syntra-heading)]">
                 {service.title}
@@ -66,7 +71,7 @@ export default function ServicesSection() {
               </p>
             </article>
           </Link>
-        ))}
+        );})}
       </div>
 
       <div className="mt-10 border-t border-[var(--syntra-border-soft)] max-w-5xl mx-auto" />
