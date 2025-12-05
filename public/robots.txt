@@ -1,0 +1,25 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap location (update with your actual domain)
+Sitemap: https://syntra-studio.com/sitemap.xml
+
+# Disallow crawling of admin and API routes
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /*.json$
+
+# Allow all user-agent to access the following directories
+Allow: /images/
+Allow: /brand-assets/
+
+# Crawl-delay is supported by some search engines to limit crawl rate
+# (requests per second).
+# Crawl-delay: 10
+
+# Some search engines (like Google) support a 'noindex' directive in robots.txt
+# to prevent indexing of specific pages or sections
+# Disallow: /private/
+# Disallow: /temporary/
