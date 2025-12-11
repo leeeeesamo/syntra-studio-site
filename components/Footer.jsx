@@ -10,9 +10,9 @@ export default function Footer() {
             <nav className="mt-2 flex flex-col gap-1 text-xs sm:text-sm">
               <a href="/" className="hover:text-white">Home</a>
               <a href="/services" className="hover:text-white">Services</a>
-              <a href="/work-with-us" className="hover:text-white">Work With Us</a>
               <a href="/about" className="hover:text-white">About</a>
-              <a href="/contact" className="hover:text-white">Contact</a>
+              <a href="/how-it-works" className="hover:text-white">How It Works</a>
+              <a href="/work-with-us" className="hover:text-white">Work With Us</a>
             </nav>
           </div>
 
@@ -34,12 +34,13 @@ export default function Footer() {
 
           {/* Trusted by - Right */}
           <div className="text-xs sm:text-sm text-left sm:text-right">
-            <p className="font-medium text-[var(--syntra-text-main)]">Trusted by</p>
+            <p className="font-medium text-[var(--syntra-text-main)]">Legal</p>
             <ul className="mt-2 space-y-1 text-xs sm:text-sm">
-              <li>Startups</li>
-              <li>Real estate professionals</li>
-              <li>Service-based businesses</li>
-              <li>Solo founders &amp; coaches</li>
+              <li><a href="/privacy-policy" className="hover:text-white">Privacy Policy</a></li>
+              <li><a href="/terms-of-service" className="hover:text-white">Terms of Service</a></li>
+              <li className="mt-4">
+                <a href="/contact" className="hover:text-white">Contact Us</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -47,7 +48,7 @@ export default function Footer() {
 
       <div className="border-t border-[var(--syntra-border-soft)]">
         <div className="max-w-7xl mx-auto px-6 py-4 text-center text-[10px] sm:text-xs text-[var(--syntra-text-muted)]">
-          <p>© 2025 Syntra Digital Solutions. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Syntra Digital Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>

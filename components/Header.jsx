@@ -28,8 +28,7 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-6 text-sm">
           <nav className="flex gap-8 text-sm md:text-base text-[var(--syntra-text-muted)]">
             <Link href="/" className="hover:text-white">Home</Link>
-            <Link href="/about" className="hover:text-white">About</Link>
-
+            
             {/* Services with dropdown */}
             <div className="relative group">
               <Link
@@ -70,8 +69,10 @@ export default function Header() {
                 </nav>
               </div>
             </div>
+            
+            <Link href="/about" className="hover:text-white">About</Link>
+            <Link href="/how-it-works" className="hover:text-white">How It Works</Link>
             <Link href="/work-with-us" className="hover:text-white">Work With Us</Link>
-            <Link href="/mission" className="hover:text-white">Our Mission</Link>
           </nav>
 
           <Link
@@ -102,10 +103,10 @@ export default function Header() {
           >
             <nav className="flex flex-col px-6 py-6 gap-6 text-sm">
               <Link href="/" onClick={() => setOpen(false)}>Home</Link>
-              <Link href="/about" onClick={() => setOpen(false)}>About</Link>
               <Link href="/services" onClick={() => setOpen(false)}>Services</Link>
+              <Link href="/about" onClick={() => setOpen(false)}>About</Link>
+              <Link href="/how-it-works" onClick={() => setOpen(false)}>How It Works</Link>
               <Link href="/work-with-us" onClick={() => setOpen(false)}>Work With Us</Link>
-              <Link href="/mission" onClick={() => setOpen(false)}>Our Mission</Link>
             </nav>
           </motion.div>
         )}

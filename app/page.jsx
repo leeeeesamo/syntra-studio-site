@@ -1,159 +1,122 @@
 // app/page.jsx
-import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
-import { CheckCircle2, ListChecks, Link2, LayoutTemplate, MessageSquare } from "lucide-react";
+'use client';
+
+import { lazy, Suspense, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Loader2 } from 'lucide-react';
+
+// Lazy load components
+const HeroSection = lazy(() => import('@/components/HeroSection'));
+const ServicesSection = lazy(() => import('@/components/ServicesSection'));
+const DifferentiatorsSection = lazy(() => import('@/components/DifferentiatorsSection'));
+const ProcessSection = lazy(() => import('@/components/ProcessSection'));
+const FinalCTASection = lazy(() => import('@/components/FinalCTASection'));
+
+// Loading component
+const LoadingFallback = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <Loader2 className="h-8 w-8 animate-spin text-emerald-500" />
+  </div>
+);
+
+// Section wrapper with intersection observer for scroll animations
+const SectionWrapper = ({ children, id, className = '' }) => {
+  return (
+    <section 
+      id={id}
+      className={`relative overflow-hidden ${className}`}
+    >
+      <AnimatePresence>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px 0px -100px 0px' }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          className="w-full"
+        >
+          {children}
+        </motion.div>
+      </AnimatePresence>
+    </section>
+  );
+};
+
+// Preload above-the-fold content
+const PreloadResources = () => {
+  useEffect(() => {
+    // Preload hero background images
+    const preloadImage = (src) => {
+      const img = new Image();
+      img.src = src;
+    };
+    
+    preloadImage('/grid-pattern.svg');
+    
+    // Add any other critical assets to preload
+  }, []);
+  
+  return null;
+};
 
 export default function HomePage() {
+  // Add smooth scrolling for anchor links
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const smoothScroll = (e) => {
+        const targetId = e.target.getAttribute('href');
+        if (targetId.startsWith('#')) {
+          e.preventDefault();
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        }
+      };
+
+      // Add smooth scroll to all anchor links
+      const anchorLinks = document.querySelectorAll('a[href^="#"]');
+      anchorLinks.forEach(link => {
+        link.addEventListener('click', smoothScroll);
+      });
+
+      return () => {
+        anchorLinks.forEach(link => {
+          link.removeEventListener('click', smoothScroll);
+        });
+      };
+    }
+  }, []);
+
   return (
-    <main className="space-y-12 md:space-y-16">
-      <HeroSection />
-      <ServicesSection />
-
-      {/* Our Edge - Differentiators */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--syntra-heading)]">
-            Our Edge
-          </h2>
-          <p className="mt-2 text-base sm:text-lg text-[var(--syntra-text-muted)]">
-            What Sets Us Apart
-          </p>
-        </div>
-
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="flex items-start gap-4 p-4 rounded-xl bg-black/30">
-            <div className="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/40 border border-[var(--syntra-border-soft)]">
-              <CheckCircle2 className="w-5 h-5 text-[var(--syntra-text-muted)]" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-[var(--syntra-heading)]">Reliable Systems + Human Touch</h3>
-              <p className="text-sm text-[var(--syntra-text-muted)]">Technology paired with genuine care.</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4 p-4 rounded-xl bg-black/30">
-            <div className="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/40 border border-[var(--syntra-border-soft)]">
-              <ListChecks className="w-5 h-5 text-[var(--syntra-text-muted)]" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-[var(--syntra-heading)]">Thoughtful Processes</h3>
-              <p className="text-sm text-[var(--syntra-text-muted)]">Documented workflows that scale.</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4 p-4 rounded-xl bg-black/30">
-            <div className="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/40 border border-[var(--syntra-border-soft)]">
-              <Link2 className="w-5 h-5 text-[var(--syntra-text-muted)]" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-[var(--syntra-heading)]">Seamless Integration</h3>
-              <p className="text-sm text-[var(--syntra-text-muted)]">We work within your existing tools.</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4 p-4 rounded-xl bg-black/30">
-            <div className="mt-1 inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/40 border border-[var(--syntra-border-soft)]">
-              <LayoutTemplate className="w-5 h-5 text-[var(--syntra-text-muted)]" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-[var(--syntra-heading)]">Modern Design</h3>
-              <p className="text-sm text-[var(--syntra-text-muted)]">Aesthetic clarity meets function.</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-10 border-t border-[var(--syntra-border-soft)] max-w-5xl mx-auto" />
-      </section>
-
-      {/* How we work - Three pillars */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl font-semibold">
-            How we work
-          </h2>
-          <p className="mt-2 text-base sm:text-lg text-[var(--syntra-text-muted)]">
-            Our work is built on three pillars.
-          </p>
-          <div className="section-divider" />
-        </div>
-
-        <div className="mt-10 grid gap-8 md:grid-cols-3">
-          <div className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left">
-            <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
-              <ListChecks className="w-5 h-5 text-[var(--syntra-text-muted)]" />
-            </div>
-            <h3 className="mt-4 font-semibold text-lg text-[var(--syntra-heading)]">
-              Structure
-            </h3>
-            <p className="mt-3 text-sm text-[var(--syntra-text-muted)] leading-relaxed">
-              We bring order to the moving parts of your business — inboxes,
-              workflows, support systems, and day-to-day operations. Everything
-              has a place, a process, and a rhythm that makes your work feel
-              lighter and more predictable.
-            </p>
-          </div>
-
-          <div className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left">
-            <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
-              <MessageSquare className="w-5 h-5 text-[var(--syntra-text-muted)]" />
-            </div>
-            <h3 className="mt-4 font-semibold text-lg text-[var(--syntra-heading)]">
-              Clear Communication
-            </h3>
-            <p className="mt-3 text-sm text-[var(--syntra-text-muted)] leading-relaxed">
-              You'll never have to chase updates or wonder what's happening behind
-              the scenes. We prioritize transparent, timely communication so you
-              always know where things stand and what comes next.
-            </p>
-          </div>
-
-          <div className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 text-left">
-            <div className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-black/30 border border-[var(--syntra-border-soft)]">
-              <CheckCircle2 className="w-5 h-5 text-[var(--syntra-text-muted)]" />
-            </div>
-            <h3 className="mt-4 font-semibold text-lg text-[var(--syntra-heading)]">
-              Genuine Care
-            </h3>
-            <p className="mt-3 text-sm text-[var(--syntra-text-muted)] leading-relaxed">
-              We treat your business like it's our own. That means thoughtful
-              decision-making, professional client interactions, and support that
-              goes beyond checking boxes. Reliability and care are at the center
-              of every task we take on.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-10 border-t border-[var(--syntra-border-soft)] max-w-5xl mx-auto" />
-      </section>
-
-      <HowItWorksSection />
-
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 sm:p-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--syntra-heading)] mb-3">
-            Ready to Get Started?
-          </h2>
-          <p className="text-base sm:text-lg text-[var(--syntra-text-muted)] mb-6 max-w-xl mx-auto">
-            Let's discuss how Syntra can help your business run beautifully.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <a
-              href="/contact"
-              className="btn-primary px-8 py-3 text-base"
-            >
-              Book a Discovery Call
-            </a>
-            <a
-              href="/Syntra_Digital_Professional_Brochure.pdf"
-              download
-              className="btn-outline px-8 py-3 text-base flex items-center gap-2"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-              Download Brochure
-            </a>
-          </div>
-        </div>
-      </section>
+    <main className="overflow-hidden">
+      <PreloadResources />
+      
+      <Suspense fallback={<LoadingFallback />}>
+        <HeroSection />
+        
+        <SectionWrapper id="services">
+          <ServicesSection />
+        </SectionWrapper>
+        
+        <SectionWrapper id="differentiators" className="bg-slate-950">
+          <DifferentiatorsSection />
+        </SectionWrapper>
+        
+        <SectionWrapper id="process">
+          <ProcessSection />
+        </SectionWrapper>
+        
+        <SectionWrapper id="contact" className="bg-gradient-to-b from-slate-950 to-slate-900">
+          <FinalCTASection />
+        </SectionWrapper>
+      </Suspense>
+      
+      {/* Add subtle cursor follower */}
+      <div className="fixed top-0 left-0 w-4 h-4 rounded-full bg-emerald-400/30 pointer-events-none -translate-x-1/2 -translate-y-1/2 z-50 mix-blend-difference" 
+           style={{ transform: 'translate(-50%, -50%)' }} />
     </main>
   );
 }
