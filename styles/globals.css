@@ -14,21 +14,24 @@
 @tailwind utilities;
 
 /* ============================================
-   CSS VARIABLES
-   (Design Tokens)
+   CSS VARIABLES (Design Tokens)
 =============================================== */
 :root {
-  /* Brand Colors */
-  --brand-emerald-50: #ecfdf5;
-  --brand-emerald-100: #d1fae5;
-  --brand-emerald-200: #a7f3d0;
-  --brand-emerald-300: #6ee7b7;
-  --brand-emerald-400: #34d399; /* Primary brand color */
-  --brand-emerald-500: #10b981;
-  --brand-emerald-600: #059669;
-  --brand-emerald-700: #047857;
-  --brand-emerald-800: #065f46;
-  --brand-emerald-900: #064e3b;
+  /* --------------------------------------------
+     BRAND ACCENT (Syntra Accent Color Rule)
+     Single accent family: BLUE
+     Use these vars for gradients/dividers/etc.
+  --------------------------------------------- */
+  --brand-blue-50: #eff6ff;
+  --brand-blue-100: #dbeafe;
+  --brand-blue-200: #bfdbfe;
+  --brand-blue-300: #93c5fd;
+  --brand-blue-400: #60a5fa;
+  --brand-blue-500: #3b82f6;
+  --brand-blue-600: #2563eb;
+  --brand-blue-700: #1d4ed8;
+  --brand-blue-800: #1e40af;
+  --brand-blue-900: #1e3a8a;
 
   /* Slate (Neutral) Colors */
   --slate-50: #f8fafc;
@@ -39,31 +42,31 @@
   --slate-500: #64748b;
   --slate-600: #475569;
   --slate-700: #334155;
-  --slate-800: #1e293b; /* Dark background */
+  --slate-800: #1e293b;
   --slate-900: #0f172a;
-  --slate-950: #020617; /* Darker background */
+  --slate-950: #020617;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--brand-emerald-400) 0%, var(--brand-emerald-600) 100%);
+  --gradient-primary: linear-gradient(135deg, var(--brand-blue-400) 0%, var(--brand-blue-600) 100%);
   --gradient-dark: linear-gradient(135deg, var(--slate-900) 0%, var(--slate-950) 100%);
-  
+
   /* Text Colors */
   --text-primary: var(--slate-50);
   --text-secondary: var(--slate-200);
   --text-muted: var(--slate-400);
   --text-inverted: var(--slate-900);
-  
+
   /* Background Colors */
   --bg-primary: var(--slate-950);
   --bg-secondary: var(--slate-900);
   --bg-tertiary: var(--slate-800);
   --bg-surface: rgba(30, 41, 59, 0.5);
-  
+
   /* Border Colors */
   --border-light: var(--slate-800);
   --border-dark: var(--slate-700);
-  --border-accent: var(--brand-emerald-500);
-  
+  --border-accent: var(--brand-blue-500);
+
   /* Shadow Colors */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -71,10 +74,7 @@
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  --shadow-glow: 0 0 15px rgba(52, 211, 153, 0.3);
-  --shadow-glow-md: 0 0 25px rgba(52, 211, 153, 0.4);
-  --shadow-glow-lg: 0 0 35px rgba(52, 211, 153, 0.5);
-  
+
   /* Border Radius */
   --radius-sm: 0.125rem;
   --radius: 0.25rem;
@@ -84,101 +84,88 @@
   --radius-2xl: 1rem;
   --radius-3xl: 1.5rem;
   --radius-full: 9999px;
-  
-  /* Spacing */
-  --spacing-1: 0.25rem;
-  --spacing-2: 0.5rem;
-  --spacing-3: 0.75rem;
-  --spacing-4: 1rem;
-  --spacing-5: 1.25rem;
-  --spacing-6: 1.5rem;
-  --spacing-8: 2rem;
-  --spacing-10: 2.5rem;
-  --spacing-12: 3rem;
-  --spacing-16: 4rem;
-  --spacing-20: 5rem;
-  --spacing-24: 6rem;
-  --spacing-32: 8rem;
-  --spacing-40: 10rem;
-  --spacing-48: 12rem;
-  --spacing-56: 14rem;
-  --spacing-64: 16rem;
-  
+
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-display: 'Cal Sans', 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-  
-  /* Transitions */
-  --transition-default: all 0.2s ease-in-out;
-  --transition-slow: all 0.3s ease-in-out;
-  --transition-fast: all 0.1s ease-in-out;
-  
-  /* Z-Index */
-  --z-0: 0;
-  --z-10: 10;
-  --z-20: 20;
-  --z-30: 30;
-  --z-40: 40;
-  --z-50: 50;
-  --z-auto: auto;
+
+  /* Syntra Design System Variables (now BLUE) */
+  --syntra-gradient-start: var(--brand-blue-500);
+  --syntra-gradient-end: var(--brand-blue-600);
+  --syntra-border-soft: rgba(255, 255, 255, 0.1);
+  --syntra-text-main: #f8fafc;
+  --syntra-text-muted: #94a3b8;
+  --syntra-heading: #ffffff;
+  --syntra-deep-bg: #0f172a;
 }
 
 /* ============================================
    BASE STYLES
 =============================================== */
 @layer base {
-  /* Reset and base styles */
   *, *::before, *::after {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   html {
     @apply scroll-smooth;
     font-size: 16px;
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
   }
-  
+
   body {
     @apply bg-slate-950 text-slate-50 font-sans antialiased;
     @apply min-h-screen w-full overflow-x-hidden;
     @apply transition-colors duration-200;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricPrecision;
   }
-  
+
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
     @apply font-display font-bold leading-tight tracking-tight text-slate-50;
     @apply mb-4;
   }
-  
+
   h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
   h2 { @apply text-3xl md:text-4xl lg:text-5xl; }
   h3 { @apply text-2xl md:text-3xl lg:text-4xl; }
   h4 { @apply text-xl md:text-2xl; }
   h5 { @apply text-lg md:text-xl; }
   h6 { @apply text-base md:text-lg; }
-  
+
   p {
     @apply text-slate-300 leading-relaxed mb-4;
     @apply text-base md:text-lg;
   }
-  
+
+  /* ✅ IMPORTANT CHANGE:
+     Do NOT force all links to accent. Let links inherit their parent color.
+     This allows the header nav links to be white.
+  */
   a {
-    @apply text-emerald-400 hover:text-emerald-300 transition-colors duration-200;
-    @apply focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-900;
+    color: inherit;
+    @apply transition-opacity duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900;
     @apply rounded-sm;
   }
-  
+
+  a:hover {
+    @apply opacity-80;
+  }
+
   /* Forms */
   input, textarea, select, button {
-    @apply focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-900;
+    @apply focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-900;
     @apply transition-all duration-200;
   }
-  
-  /* Buttons */
+
+  /* Buttons (left as-is to avoid breaking existing styles) */
   .btn {
     @apply inline-flex items-center justify-center font-medium rounded-full;
     @apply px-6 py-3 text-base leading-6;
@@ -186,55 +173,58 @@
     @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900;
     @apply disabled:opacity-50 disabled:cursor-not-allowed;
   }
-  
+
   .btn-primary {
-    @apply bg-gradient-to-r from-emerald-500 to-emerald-600 text-white;
-    @apply hover:from-emerald-600 hover:to-emerald-700;
-    @apply focus:ring-emerald-500;
-    @apply shadow-lg hover:shadow-emerald-500/20;
+    @apply bg-gradient-to-r from-blue-500 to-blue-600 text-white;
+    @apply hover:from-blue-600 hover:to-blue-700;
+    @apply focus:ring-blue-500;
+    @apply shadow-lg hover:shadow-blue-500/20;
   }
-  
+
   .btn-secondary {
     @apply bg-slate-800 text-white border border-slate-700;
     @apply hover:bg-slate-700;
     @apply focus:ring-slate-500;
   }
-  
+
   .btn-outline {
-    @apply bg-transparent border-2 border-emerald-500 text-emerald-500;
-    @apply hover:bg-emerald-500/10;
-    @apply focus:ring-emerald-500;
+    @apply bg-transparent border-2 border-blue-500 text-blue-400;
+    @apply hover:bg-blue-500/10;
+    @apply focus:ring-blue-500;
   }
-  
+
   /* Cards */
   .card {
     @apply bg-slate-900/50 backdrop-blur-sm border border-slate-800/50 rounded-2xl;
     @apply transition-all duration-300;
-    @apply hover:border-emerald-500/30 hover:shadow-lg hover:shadow-emerald-500/10;
+    @apply hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10;
   }
-  
+
   /* Utility Classes */
   .container {
     @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-  
+
+  /* ✅ Tighter section spacing (global) */
   .section {
-    @apply py-20 md:py-24 lg:py-32 relative overflow-hidden;
+    @apply py-14 md:py-16 lg:py-20 relative overflow-hidden;
   }
-  
+
+  /* Slightly tighter header spacing */
   .section-header {
-    @apply max-w-3xl mx-auto text-center mb-12;
+    @apply max-w-3xl mx-auto text-center mb-8;
   }
-  
+
+  /* Title style (blue-tinted instead of emerald) */
   .section-title {
-    @apply text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-emerald-100/90;
+    @apply text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90;
     @apply mb-4;
   }
-  
+
   .section-subtitle {
-    @apply text-sm font-medium text-emerald-400 mb-3 uppercase tracking-wider;
+    @apply text-sm font-medium text-blue-400 mb-3 uppercase tracking-wider;
   }
-  
+
   .section-description {
     @apply text-lg text-slate-400;
   }
@@ -294,33 +284,13 @@
 /* ============================================
    UTILITY CLASSES
 =============================================== */
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-float-reverse {
-  animation: floatReverse 6s ease-in-out infinite;
-}
-
-.animate-delay-100 {
-  animation-delay: 0.1s;
-}
-
-.animate-delay-200 {
-  animation-delay: 0.2s;
-}
-
-.animate-delay-300 {
-  animation-delay: 0.3s;
-}
-
-.animate-delay-400 {
-  animation-delay: 0.4s;
-}
-
-.animate-delay-500 {
-  animation-delay: 0.5s;
-}
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-reverse { animation: floatReverse 6s ease-in-out infinite; }
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; }
 
 /* ============================================
    ACCESSIBILITY
@@ -330,14 +300,13 @@
   width: 1px;
   height: 1px;
   padding: 0;
-  margin: -1px;
+  margin: 0;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
 }
 
-/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -353,11 +322,7 @@
   width: 80px;
   height: 2px;
   margin: 20px auto;
-  background: linear-gradient(
-    to right,
-    var(--syntra-gradient-start),
-    var(--syntra-gradient-end)
-  );
+  background: linear-gradient(to right, var(--syntra-gradient-start), var(--syntra-gradient-end));
   opacity: 0.4;
 }
 
@@ -368,11 +333,7 @@
   @apply inline-flex items-center justify-center font-medium rounded-full;
   padding: 0.75rem 1.5rem;
   color: #ffffff;
-  background: linear-gradient(
-    to right,
-    var(--syntra-gradient-start),
-    var(--syntra-gradient-end)
-  );
+  background: linear-gradient(to right, var(--syntra-gradient-start), var(--syntra-gradient-end));
   transition: opacity 0.2s ease;
 }
 
@@ -406,5 +367,5 @@ input:focus,
 textarea:focus {
   outline: none;
   border-color: var(--syntra-gradient-start);
-  box-shadow: 0 0 0 2px rgba(75, 163, 242, 0.2);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2); /* blue-500 */
 }

@@ -1,45 +1,45 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Inbox, MessageSquare, Settings2, Monitor, ArrowRight } from 'lucide-react';
+import { Monitor, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/ui-utils';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 
 const services = [
   {
-    title: 'Executive & Virtual Assistance',
-    href: '/services/executive-assistance',
-    body: 'Reliable, proactive support for scheduling, inboxes, client follow-ups, documents, and day-to-day operational needs — all handled with clarity and care.',
-    icon: Inbox,
-    gradient: 'from-emerald-400 to-blue-500',
-    iconColor: 'text-emerald-400',
-    bgColor: 'bg-emerald-500/10',
-    borderColor: 'border-emerald-500/20'
+    title: 'Custom Website Design',
+    href: '/websites',
+    body: 'Tailored websites built with clean code, modern design principles, and focus on performance and user experience.',
+    icon: Monitor,
+    gradient: 'from-blue-400 to-blue-500',
+    iconColor: 'text-blue-400',
+    bgColor: 'bg-blue-500/10',
+    borderColor: 'border-blue-500/20'
   },
   {
-    title: 'Customer Service Support',
-    href: '/services/customer-service-support',
-    body: 'Compassionate, organized customer support experiences that help your clients feel heard, valued, and taken care of.',
-    icon: MessageSquare,
+    title: 'Performance Optimization',
+    href: '/websites',
+    body: 'Lightning-fast load times, smooth interactions, and technical optimization for search engines and user experience.',
+    icon: Monitor,
     gradient: 'from-blue-400 to-indigo-500',
     iconColor: 'text-blue-400',
     bgColor: 'bg-blue-500/10',
     borderColor: 'border-blue-500/20'
   },
   {
-    title: 'Operations & Systems Support',
-    href: '/services/operations-systems-support',
-    body: 'Smooth internal processes, clear workflows, and simple systems that help your team communicate better and operate efficiently.',
-    icon: Settings2,
+    title: 'Responsive Development',
+    href: '/websites',
+    body: 'Flawless functionality across all devices and screen sizes, ensuring your website works perfectly everywhere.',
+    icon: Monitor,
     gradient: 'from-indigo-400 to-purple-500',
     iconColor: 'text-indigo-400',
     bgColor: 'bg-indigo-500/10',
     borderColor: 'border-indigo-500/20'
   },
   {
-    title: 'Web Design & Digital Presence',
-    href: '/services/web-design-digital-presence',
-    body: 'Thoughtfully designed websites and digital touchpoints that elevate your brand, build trust, and support business growth.',
+    title: 'Website Maintenance',
+    href: '/websites',
+    body: 'Reliable maintenance, updates, and technical support to keep your website running smoothly and securely.',
     icon: Monitor,
     gradient: 'from-purple-400 to-pink-500',
     iconColor: 'text-purple-400',
@@ -76,8 +76,8 @@ const ServiceCard = ({ service, index }) => {
           "transition-all duration-500"
         )}>
           <div className={cn(
-            "relative h-full bg-slate-900/80 backdrop-blur-sm rounded-[calc(0.5rem-1px)] p-6 sm:p-8 flex flex-col",
-            "transition-all duration-300 group-hover:bg-slate-900/90"
+            "relative h-full bg-slate-900/90 rounded-[calc(0.5rem-1px)] p-8 sm:p-10 flex flex-col",
+            "transition-all duration-300 group-hover:bg-slate-900/95"
           )}>
             {/* Icon with subtle background */}
             <div className={cn(
@@ -91,20 +91,12 @@ const ServiceCard = ({ service, index }) => {
             
             {/* Content */}
             <div className="flex-1">
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-emerald-400 transition-colors">
+              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                 {service.title}
               </h3>
-              <p className="text-slate-400 leading-relaxed mb-6">
+              <p className="text-slate-300 leading-relaxed mb-6 font-medium">
                 {service.body}
               </p>
-            </div>
-            
-            {/* Learn more link */}
-            <div className="mt-auto pt-5 border-t border-slate-800">
-              <div className="inline-flex items-center text-sm font-medium text-emerald-400 group-hover:text-emerald-300 transition-colors">
-                Learn more
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </div>
             </div>
             
             {/* Hover effect */}
@@ -134,10 +126,10 @@ export default function ServicesSection() {
       <div className="container">
         {/* Section Header */}
         <motion.div 
-          className="section-header"
+          className="section-header text-center"
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={{
             hidden: {},
             show: {
@@ -151,25 +143,25 @@ export default function ServicesSection() {
             className="section-subtitle"
             variants={fadeInUp}
           >
-            Our Services
+            Website Design Services
           </motion.span>
           <motion.h2 
             className="section-title"
             variants={fadeInUp}
           >
-            How We Can Help
+            What We Build
           </motion.h2>
           <motion.p 
             className="section-description"
             variants={fadeInUp}
           >
-            Comprehensive support services designed to help your business run smoothly and grow sustainably.
+            Professional web design and development services focused on performance, reliability, and clean execution.
           </motion.p>
         </motion.div>
         
         {/* Services Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"

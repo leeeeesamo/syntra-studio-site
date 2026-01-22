@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/ui-utils';
 
 export const Button = React.forwardRef(
   (
@@ -23,18 +23,18 @@ export const Button = React.forwardRef(
     ref
   ) => {
     const baseStyles =
-      'inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-emerald-400 disabled:opacity-50 disabled:pointer-events-none';
+      'inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none';
 
     const variants = {
       primary:
-        'bg-gradient-to-r from-brand-emerald-500 to-brand-blue-500 text-white hover:shadow-lg hover:shadow-brand-emerald-500/20 hover:-translate-y-0.5',
+        'bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-0.5',
       secondary:
-        'bg-white/5 border border-brand-border text-brand-text hover:bg-white/10 hover:border-white/20',
+        'bg-white/5 border border-slate-700 text-slate-50 hover:bg-white/10 hover:border-white/20',
       ghost:
-        'text-brand-text hover:bg-white/5 hover:text-white',
-      link: 'text-brand-emerald-400 hover:text-brand-emerald-300 hover:underline underline-offset-4',
+        'text-slate-300 hover:bg-white/5 hover:text-white',
+      link: 'text-blue-400 hover:text-blue-300 hover:underline underline-offset-4',
       outline:
-        'border border-brand-border/50 bg-transparent text-brand-text hover:bg-white/5 hover:border-brand-emerald-400/30',
+        'border border-slate-700 bg-transparent text-slate-50 hover:bg-white/5 hover:border-blue-400/30',
     };
 
     const sizes = {
