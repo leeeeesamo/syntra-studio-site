@@ -8,85 +8,47 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Header() {
   const [open, setOpen] = useState(false);
 
+  const close = () => setOpen(false);
+
   return (
     <header className="w-full backdrop-blur-md bg-black/20 border-b border-[var(--syntra-border-soft)] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        
         {/* Logo + Brand */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3 text-white hover:opacity-90">
           <img
             src="/brand-assets/logo-icon.svg"
             alt="Syntra Logo"
-            className="h-9 sm:h-10"
+            className="h-12 sm:h-14"
           />
-          <span className="text-sm sm:text-base md:text-lg font-semibold tracking-wide text-[var(--syntra-heading)]">
-            Syntra Digital Solutions
+          <span className="text-lg sm:text-xl md:text-2xl font-semibold tracking-wide">
+            Syntra Digital
           </span>
         </Link>
 
-        {/* Desktop Nav + CTA */}
-        <div className="hidden md:flex items-center gap-6 text-sm">
-          <nav className="flex gap-8 text-sm md:text-base text-[var(--syntra-text-muted)]">
-            <Link href="/" className="hover:text-white">Home</Link>
-            
-            {/* Services with dropdown */}
-            <div className="relative group">
-              <Link
-                href="/services"
-                className="hover:text-white inline-flex items-center gap-1"
-              >
-                Services
-                <span className="text-[10px] transition-transform duration-150 group-hover:translate-y-[1px]">
-                  ▾
-                </span>
-              </Link>
-              <div className="absolute right-0 mt-3 w-72 rounded-2xl border border-[var(--syntra-border-soft)]/80 bg-white text-[var(--syntra-deep-bg)] shadow-xl opacity-0 scale-95 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 ease-out">
-                <nav className="flex flex-col py-2 text-xs sm:text-sm divide-y divide-black/5">
-                  <Link
-                    href="/services/executive-assistance"
-                    className="px-4 py-3 text-[var(--syntra-deep-bg)] hover:bg-[var(--syntra-deep-bg)] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--syntra-gradient-start)] first:rounded-t-2xl last:rounded-b-2xl transition-colors duration-150"
-                  >
-                    Executive &amp; Virtual Assistance
-                  </Link>
-                  <Link
-                    href="/services/customer-service-support"
-                    className="px-4 py-3 text-[var(--syntra-deep-bg)] hover:bg-[var(--syntra-deep-bg)] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--syntra-gradient-start)] first:rounded-t-2xl last:rounded-b-2xl transition-colors duration-150"
-                  >
-                    Customer Service Support
-                  </Link>
-                  <Link
-                    href="/services/operations-systems-support"
-                    className="px-4 py-3 text-[var(--syntra-deep-bg)] hover:bg-[var(--syntra-deep-bg)] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--syntra-gradient-start)] first:rounded-t-2xl last:rounded-b-2xl transition-colors duration-150"
-                  >
-                    Operations &amp; Systems Support
-                  </Link>
-                  <Link
-                    href="/services/web-design-digital-presence"
-                    className="px-4 py-3 text-[var(--syntra-deep-bg)] hover:bg-[var(--syntra-deep-bg)] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--syntra-gradient-start)] first:rounded-t-2xl last:rounded-b-2xl transition-colors duration-150"
-                  >
-                    Web Design &amp; Digital Presence
-                  </Link>
-                </nav>
-              </div>
-            </div>
-            
-            <Link href="/about" className="hover:text-white">About</Link>
-            <Link href="/how-it-works" className="hover:text-white">How It Works</Link>
-            <Link href="/work-with-us" className="hover:text-white">Work With Us</Link>
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center">
+          <nav className="flex gap-10 text-lg md:text-xl text-white">
+            <Link href="/" className="hover:opacity-80">Home</Link>
+            <Link href="/websites" className="hover:opacity-80">Websites</Link>
+            <Link href="/process" className="hover:opacity-80">Process</Link>
+            <Link href="/pricing" className="hover:opacity-80">Pricing</Link>
+            <Link href="/contact" className="hover:opacity-80">Contact</Link>
+            <Link
+              href="https://leeeeesamo.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+            >
+              My Portfolio
+            </Link>
           </nav>
-
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center rounded-full font-medium text-xs sm:text-sm px-4 py-2 text-white bg-gradient-to-r from-[var(--syntra-gradient-start)] to-[var(--syntra-gradient-end)] shadow-lg hover:opacity-90"
-          >
-            Book a Discovery Call
-          </Link>
         </div>
 
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-white text-2xl"
+          className="md:hidden text-white text-3xl leading-none"
+          aria-label={open ? "Close menu" : "Open menu"}
         >
           ☰
         </button>
@@ -101,12 +63,21 @@ export default function Header() {
             exit={{ opacity: 0, y: -10 }}
             className="md:hidden bg-black/40 backdrop-blur-md border-t border-[var(--syntra-border-soft)]"
           >
-            <nav className="flex flex-col px-6 py-6 gap-6 text-sm">
-              <Link href="/" onClick={() => setOpen(false)}>Home</Link>
-              <Link href="/services" onClick={() => setOpen(false)}>Services</Link>
-              <Link href="/about" onClick={() => setOpen(false)}>About</Link>
-              <Link href="/how-it-works" onClick={() => setOpen(false)}>How It Works</Link>
-              <Link href="/work-with-us" onClick={() => setOpen(false)}>Work With Us</Link>
+            <nav className="flex flex-col px-6 py-6 gap-6 text-lg text-white">
+              <Link href="/" onClick={close} className="hover:opacity-80">Home</Link>
+              <Link href="/websites" onClick={close} className="hover:opacity-80">Websites</Link>
+              <Link href="/process" onClick={close} className="hover:opacity-80">Process</Link>
+              <Link href="/pricing" onClick={close} className="hover:opacity-80">Pricing</Link>
+              <Link href="/contact" onClick={close} className="hover:opacity-80">Contact</Link>
+              <Link
+                href="https://leeeeesamo.github.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={close}
+                className="hover:opacity-80"
+              >
+                My Portfolio
+              </Link>
             </nav>
           </motion.div>
         )}

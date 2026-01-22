@@ -22,13 +22,13 @@ export default function ContactForm() {
 
       <input
         type="text"
-        placeholder="Business or role (optional)"
+        placeholder="Company name (optional)"
         className="w-full p-3 rounded-xl bg-black/30 border border-[var(--syntra-border-soft)] text-white text-sm"
       />
 
       <textarea
         rows="5"
-        placeholder="What would you like help with?"
+        placeholder="Tell us about your website project..."
         className="w-full p-3 rounded-xl bg-black/30 border border-[var(--syntra-border-soft)] text-white text-sm"
       ></textarea>
 
