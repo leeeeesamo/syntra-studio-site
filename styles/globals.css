@@ -119,6 +119,23 @@
     @apply transition-colors duration-200;
   }
 
+  /* Force crisp text rendering for all elements */
+  * {
+    -webkit-font-smoothing: auto !important;
+    -moz-osx-font-smoothing: auto !important;
+    text-rendering: optimizeSpeed !important;
+  }
+
+  /* Additional fixes for card titles and small text */
+  .text-xl, .text-lg, .text-base, .text-sm {
+    font-weight: 500 !important;
+    letter-spacing: 0.01em !important;
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+  }
+
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
     @apply font-display font-bold leading-tight tracking-tight text-slate-50;

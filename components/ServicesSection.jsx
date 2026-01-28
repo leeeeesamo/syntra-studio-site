@@ -91,7 +91,7 @@ const ServiceCard = ({ service, index }) => {
             
             {/* Content */}
             <div className="flex-1">
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+              <h3 className="text-xl font-medium text-white mb-3 group-hover:text-blue-400 transition-colors">
                 {service.title}
               </h3>
               <p className="text-slate-300 leading-relaxed mb-6 font-medium">
