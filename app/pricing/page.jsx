@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2, ArrowRight, Zap, Shield, Users } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { cn } from '@/lib/ui-utils';
+import PageContainer from '@/components/PageContainer';
 
 const plans = [
   {
@@ -234,7 +235,8 @@ const AddOnCard = ({ addOn, index }) => {
 
 export default function PricingPage() {
   return (
-    <main className="overflow-hidden">
+    <PageContainer>
+      <main className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         {/* Background Elements */}
@@ -381,5 +383,6 @@ export default function PricingPage() {
         </div>
       </section>
     </main>
+    </PageContainer>
   );
 }

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Search, LayoutTemplate, CheckCircle, ChevronRight, ArrowRight, Clock, Users, Code, ArrowRightIcon } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { cn } from '@/lib/ui-utils';
+import PageContainer from '@/components/PageContainer';
 
 const steps = [
   {
@@ -149,7 +150,8 @@ const ProcessStep = ({ step, index }) => {
 export default function ProcessPage() {
   
   return (
-    <main className="overflow-hidden">
+    <PageContainer>
+      <main className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         {/* Background Elements */}
@@ -319,5 +321,6 @@ export default function ProcessPage() {
         </div>
       </section>
     </main>
+    </PageContainer>
   );
 }
