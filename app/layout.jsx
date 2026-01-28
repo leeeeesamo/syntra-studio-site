@@ -104,7 +104,7 @@ export default function RootLayout({ children }) {
           <Header />
 
           {/* Page content */}
-          <main className="flex-1 pt-24">
+          <main className="flex-1">
             {children}
           </main>
 

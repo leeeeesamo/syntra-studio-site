@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Monitor, Zap, Shield, Users, ArrowRight, CheckCircle } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { cn } from '@/lib/ui-utils';
+import PageContainer from '@/components/PageContainer';
 
 const services = [
   {
@@ -123,7 +124,8 @@ const ServiceCard = ({ service, index }) => {
 
 export default function WebsitesPage() {
   return (
-    <main className="overflow-hidden">
+    <PageContainer>
+      <main className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         {/* Background Elements */}
@@ -281,5 +283,6 @@ export default function WebsitesPage() {
         </div>
       </section>
     </main>
+    </PageContainer>
   );
 }
