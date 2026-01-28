@@ -1,13 +1,11 @@
 // app/services/page.jsx
 import PageHero from "@/components/PageHero";
-import ServicesFAQ from "@/components/ServicesFAQ";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import { Inbox, MessageSquare, Settings2, Monitor, Wand2 } from "lucide-react";
 
 export const metadata = {
   title: "Services We Offer | Syntra Digital Solutions",
   description:
-    "Explore Syntras services: executive and virtual assistance, customer service support, operations and systems, and web design.",
+    "Explore Syntra's services: executive and virtual assistance, customer service support, operations and systems, and web design.",
 };
 
 export default function ServicesPage() {
@@ -156,8 +154,6 @@ export default function ServicesPage() {
           </article>
         </div>
       </section>
-      <TestimonialsSection />
-      <ServicesFAQ />
     </main>
   );
 }

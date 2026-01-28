@@ -1,7 +1,4 @@
 import PageHero from "@/components/PageHero";
-import PricingCards from "@/components/PricingCards";
-import OneTimeProjects from "@/components/OneTimeProjects";
-import ComparisonTable from "@/components/ComparisonTable";
 
 export const metadata = {
   title: "Ways to Work With Syntra | Syntra Digital Solutions",
@@ -31,8 +28,29 @@ export default function WorkWithUsPage() {
         {/* Divider */}
         <div className="h-px bg-[var(--syntra-border-soft)]/80 max-w-xs mx-auto" />
 
-        {/* Packages */}
-        <PricingCards />
+        {/* Pricing placeholder */}
+        <section className="text-center">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-[var(--syntra-heading)] mb-8">
+            Support Packages
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="rounded-2xl bg-black/25 border border-[var(--syntra-border-soft)] p-6">
+              <h3 className="text-xl font-semibold text-[var(--syntra-heading)] mb-2">Starter</h3>
+              <p className="text-3xl font-bold text-blue-400 mb-4">$1,200<span className="text-base text-[var(--syntra-text-muted)]">/month</span></p>
+              <p className="text-sm text-[var(--syntra-text-muted)]">Perfect for small businesses needing basic support</p>
+            </div>
+            <div className="rounded-2xl bg-black/25 border border-[var(--syntra-border-soft)] p-6">
+              <h3 className="text-xl font-semibold text-[var(--syntra-heading)] mb-2">Standard</h3>
+              <p className="text-3xl font-bold text-blue-400 mb-4">$2,000<span className="text-base text-[var(--syntra-text-muted)]">/month</span></p>
+              <p className="text-sm text-[var(--syntra-text-muted)]">Ideal for growing businesses with regular needs</p>
+            </div>
+            <div className="rounded-2xl bg-black/25 border border-[var(--syntra-border-soft)] p-6">
+              <h3 className="text-xl font-semibold text-[var(--syntra-heading)] mb-2">Premium</h3>
+              <p className="text-3xl font-bold text-blue-400 mb-4">$3,500<span className="text-base text-[var(--syntra-text-muted)]">/month</span></p>
+              <p className="text-sm text-[var(--syntra-text-muted)]">Comprehensive support for established businesses</p>
+            </div>
+          </div>
+        </section>
 
         <section className="max-w-3xl mx-auto rounded-2xl bg-black/25 border border-[var(--syntra-border-soft)] px-6 py-6 sm:px-8 sm:py-7 text-center shadow-sm shadow-black/40">
           <h2 className="text-lg sm:text-xl font-semibold text-[var(--syntra-heading)] mb-2">
@@ -46,9 +64,6 @@ export default function WorkWithUsPage() {
         {/* Divider */}
         <div className="h-px bg-[var(--syntra-border-soft)]/80 max-w-xs mx-auto" />
 
-        {/* One-time projects */}
-        <OneTimeProjects />
-
         {/* Services Guide Download */}
         <section className="mt-4 text-center">
           <a
@@ -59,9 +74,6 @@ export default function WorkWithUsPage() {
             <span>Download Services Guide (PDF)</span>
           </a>
         </section>
-
-        {/* Comparison Table */}
-        <ComparisonTable />
 
         {/* CTA */}
         <section className="mt-8 text-center">
