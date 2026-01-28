@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-start justify-center overflow-hidden section -mt-24 pt-16">
+    <section className="relative min-h-screen flex items-start justify-center overflow-hidden section pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
         {/* Hero background image */}
-        <div className="absolute inset-0 bg-[url('/brand-assets/hero-banner.png')] bg-cover bg-center bg-no-repeat" />
+        <div className="absolute -inset-x-0 -top-24 h-[calc(100%+6rem)] bg-[url('/brand-assets/hero-banner.png')] bg-cover bg-center bg-no-repeat" />
 
         {/* Enhanced overlay gradient for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-slate-950/60 to-slate-950/70" />
+        <div className="absolute -inset-x-0 -top-24 h-[calc(100%+6rem)] bg-gradient-to-br from-slate-900/40 via-slate-950/60 to-slate-950/70" />
 
         {/* Floating elements (kept subtle) */}
         <div className="absolute inset-0 overflow-hidden">
