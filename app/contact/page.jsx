@@ -1,6 +1,4 @@
 // app/contact/page.jsx
-import { motion } from 'framer-motion';
-import { fadeInUp, staggerContainer } from '@/lib/animations';
 import ContactForm from "@/components/ContactForm";
 import PageContainer from "@/components/PageContainer";
 
@@ -27,30 +25,18 @@ export default function ContactPage() {
 
           {/* Content */}
           <div className="container relative z-10">
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <motion.h1 
-                variants={fadeInUp}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8"
-              >
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90">
                   Get in Touch
                 </span>
                 <span className="block mt-4 text-blue-400">— Let's Start a Conversation</span>
-              </motion.h1>
+              </h1>
 
-              <motion.p
-                variants={fadeInUp}
-                className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10"
-              >
+              <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
                 Share what you're working on — we'll reply with ways Syntra can help.
-              </motion.p>
-            </motion.div>
+              </p>
+            </div>
           </div>
         </section>
         
