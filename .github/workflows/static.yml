@@ -32,11 +32,13 @@ jobs:
       - name: Install dependencies (include devDependencies)
         run: npm ci --include=dev
 
-      - name: Build
+      - name: Build (Next.js static export via output: export)
         run: npm run build
 
-      - name: Export (static HTML)
-        run: npm run export
+      - name: Verify export output exists
+        run: |
+          ls -la out || true
+          test -f out/index.html
 
       - name: Add .nojekyll
         run: touch out/.nojekyll
