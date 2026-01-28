@@ -148,23 +148,6 @@ export default function ProcessSection() {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* CTA */}
-        <motion.div
-          className="text-center mt-16"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-          variants={fadeInUp}
-        >
-          <p className="text-slate-400 mb-6">Ready to start your project?</p>
-          <a
-            href="/contact"
-            className="btn-primary"
-          >
-            Start Your Project
-          </a>
-        </motion.div>
       </div>
     </section>
   );

@@ -56,9 +56,7 @@ export default function FinalCTASection() {
               </Link>
 
               <Link
-                href="https://leeeeesamo.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/process"
                 className="btn-outline"
               >
                 See How It Works

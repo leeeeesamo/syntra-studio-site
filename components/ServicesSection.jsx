@@ -175,23 +175,6 @@ export default function ServicesSection() {
             />
           ))}
         </motion.div>
-
-        {/* CTA */}
-        <motion.div 
-          className="text-center mt-16"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={fadeInUp}
-        >
-          <p className="text-slate-400 mb-6">Ready to bring your vision to life?</p>
-          <a
-            href="/contact"
-            className="btn-primary"
-          >
-            Let's Build Your Website
-          </a>
-        </motion.div>
       </div>
     </section>
   );

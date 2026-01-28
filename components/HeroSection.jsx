@@ -80,26 +80,21 @@ export default function HeroSection() {
             Custom website design and development built for performance, clarity, and long-term reliability.
           </motion.p>
 
-          {/* CTA */}
+          {/* Subtle link */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="text-center"
           >
             <a
-              href="/contact"
-              className="btn-primary"
+              href="/process"
+              className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1 text-sm"
             >
-              Start Your Project
-            </a>
-            <a
-              href="https://leeeeesamo.github.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline"
-            >
-              View My Work
+              See the process
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </a>
           </motion.div>
         </div>
