@@ -15,7 +15,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      GITHUB_PAGES: true
+      GITHUB_PAGES: false
     steps:
       - uses: actions/checkout@v4
 
@@ -26,9 +26,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci --include=dev
-
-      - name: Verify Next config is loaded
-        run: node -e "import('./next.config.mjs').then(m => console.log('next config output:', m.default.output))"
 
       - name: Build site
         run: npm run build
