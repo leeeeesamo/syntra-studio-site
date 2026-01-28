@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://syntrasolutions.digital",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -20,7 +19,7 @@
     "framer-motion": "^12.23.26",
     "glob": "^10.3.10",
     "lucide-react": "^0.555.0",
-    "next": "^14.2.33",
+    "next": "^14.2.35",
     "next-sitemap": "^4.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
