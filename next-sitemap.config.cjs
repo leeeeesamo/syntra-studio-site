@@ -1,7 +1,10 @@
 /** @type {import('next-sitemap').IConfig} */
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://syntrasolutions.digital').replace(/\/$/, '');
+
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://syntra-studio.com',
+  siteUrl,
   generateRobotsTxt: true,
+
   robotsTxtOptions: {
     policies: [
       {
@@ -10,13 +13,12 @@ module.exports = {
         disallow: ['/admin/', '/api/'],
       },
     ],
-    additionalSitemaps: [
-      `${process.env.NEXT_PUBLIC_SITE_URL || 'https://syntra-studio.com'}/sitemap.xml`,
-    ],
+    // Optional: keep if you plan to host additional sitemaps later.
+    // If you only have one sitemap, you can remove this block entirely.
+    additionalSitemaps: [`${siteUrl}/sitemap.xml`],
   },
+
   exclude: ['/server-sitemap.xml', '/admin/*', '/api/*'],
   generateIndexSitemap: false,
   outDir: 'out',
-  // Add more configuration options as needed
-  // https://github.com/iamvishnusankar/next-sitemap#configuration-options
-}
+};
