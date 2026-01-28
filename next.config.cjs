@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
+const repoName = 'syntra-studio-site';
+const isGithubPages = process.env.GITHUB_PAGES === 'true';
+
 const nextConfig = {
   output: 'export',
   images: {
@@ -9,30 +12,26 @@ const nextConfig = {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://syntra-studio.com',
     NEXT_PUBLIC_GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
   },
-  // Enable React Strict Mode for better development experience
+
+  // GitHub Pages (project site) support:
+  // Only apply basePath/assetPrefix during the GitHub Actions deploy build.
+  basePath: isGithubPages ? `/${repoName}` : '',
+  assetPrefix: isGithubPages ? `/${repoName}/` : '',
+
   reactStrictMode: true,
-  // Enable production source maps for better debugging
   productionBrowserSourceMaps: true,
-  // Enable compression for better performance
   compress: true,
-  // Configure headers for security and performance
+
+  // NOTE: headers() do not apply on GitHub Pages (static hosting),
+  // but keeping this doesn't hurt for other hosts.
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
         ],
       },
     ];
