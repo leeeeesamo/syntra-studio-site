@@ -3,9 +3,9 @@ import PageHero from "@/components/PageHero";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
-  title: "Contact Syntra Digital",
+  title: "Contact Syntra Digital Solutions",
   description:
-    "Get in touch with Syntra Digital to discuss your web design and development project. Let's build something amazing together.",
+    "Get in touch with Syntra Digital Solutions to discuss virtual assistance, customer support, operations, or web design support.",
 };
 
 export default function ContactPage() {
@@ -13,7 +13,7 @@ export default function ContactPage() {
     <main className="space-y-12">
       <PageHero
         title="Get in Touch"
-        subtitle="Share your website project details — we'll reply with how we can help bring your vision to life."
+        subtitle="Share what you're working on — we'll reply with ways Syntra can help."
       />
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <ContactForm />

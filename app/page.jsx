@@ -9,6 +9,7 @@ import { Loader2 } from 'lucide-react';
 const HeroSection = lazy(() => import('@/components/HeroSection'));
 const ServicesSection = lazy(() => import('@/components/ServicesSection'));
 const DifferentiatorsSection = lazy(() => import('@/components/DifferentiatorsSection'));
+const ProcessSection = lazy(() => import('@/components/ProcessSection'));
 const FinalCTASection = lazy(() => import('@/components/FinalCTASection'));
 
 // Loading component
@@ -100,18 +101,22 @@ export default function HomePage() {
           <ServicesSection />
         </SectionWrapper>
         
-        {/* <SectionWrapper id="website-creation">
-          <WebsiteCreationSection />
-        </SectionWrapper> */}
-        
         <SectionWrapper id="differentiators" className="bg-slate-950">
           <DifferentiatorsSection />
+        </SectionWrapper>
+        
+        <SectionWrapper id="process">
+          <ProcessSection />
         </SectionWrapper>
         
         <SectionWrapper id="contact" className="bg-gradient-to-b from-slate-950 to-slate-900">
           <FinalCTASection />
         </SectionWrapper>
       </Suspense>
+      
+      {/* Add subtle cursor follower */}
+      <div className="fixed top-0 left-0 w-4 h-4 rounded-full bg-emerald-400/30 pointer-events-none -translate-x-1/2 -translate-y-1/2 z-50 mix-blend-difference" 
+           style={{ transform: 'translate(-50%, -50%)' }} />
     </main>
   );
 }
