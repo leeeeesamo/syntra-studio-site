@@ -59,23 +59,25 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="container relative z-10">
-        <div className="text-center">
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight mb-6 text-white drop-shadow-md"
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center max-w-4xl mx-auto"
+        >
+          <motion.h1 
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8"
           >
-            Reliable by Design.
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90">
+              Reliable by Design
+            </span>
           </motion.h1>
 
-          {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed mb-8 text-white/90 drop-shadow-md"
+            className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10"
           >
             Custom website design and development built for performance, clarity, and long-term reliability.
           </motion.p>
@@ -97,7 +99,7 @@ export default function HeroSection() {
               </svg>
             </a>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
