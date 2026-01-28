@@ -65,7 +65,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-white drop-shadow-md"
+            className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight mb-6 text-white drop-shadow-md"
           >
             Reliable by Design.
           </motion.h1>

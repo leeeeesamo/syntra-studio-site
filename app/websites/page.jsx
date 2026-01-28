@@ -151,7 +151,7 @@ export default function WebsitesPage() {
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90">
                 Website Design & Development
               </span>
-              <span className="block mt-4 text-blue-400">— Reliable by Design</span>
+              <span className="block mt-4 text-blue-400">— Built for Performance</span>
             </motion.h1>
 
             <motion.p
