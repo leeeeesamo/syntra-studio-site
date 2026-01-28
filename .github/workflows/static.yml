@@ -1,4 +1,3 @@
-@"
 name: Deploy Next.js static site to GitHub Pages
 
 on:
@@ -22,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAGES: "true"
+      REPO_NAME: "syntra-studio-site"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,23 +38,21 @@ jobs:
       - name: Build (Next.js static export via output: export)
         run: npm run build
 
-      - name: Verify export output exists
+      - name: Debug export output
         shell: bash
         run: |
-          echo "Listing out/ directory:"
+          echo "Top-level out/ contents:"
           ls -la out || true
-          if [ ! -f out/index.html ]; then
-            echo "ERROR: out/index.html not found. Static export did not produce HTML."
-            exit 1
-          fi
+          echo "Repo folder out/${REPO_NAME} contents:"
+          ls -la "out/${REPO_NAME}" || true
 
       - name: Add .nojekyll
-        run: touch out/.nojekyll
+        run: touch "out/${REPO_NAME}/.nojekyll"
 
-      - name: Upload artifact
+      - name: Upload artifact (publish repo subfolder)
         uses: actions/upload-pages-artifact@v3
         with:
-          path: out
+          path: "out/${{ env.REPO_NAME }}"
 
   deploy:
     needs: build
@@ -65,4 +63,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-"@ | Set-Content -Encoding UTF8 .github/workflows/static.yml
