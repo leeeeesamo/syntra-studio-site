@@ -113,10 +113,6 @@ export default function HomePage() {
           <FinalCTASection />
         </SectionWrapper>
       </Suspense>
-      
-      {/* Add subtle cursor follower */}
-      <div className="fixed top-0 left-0 w-4 h-4 rounded-full bg-emerald-400/30 pointer-events-none -translate-x-1/2 -translate-y-1/2 z-50 mix-blend-difference" 
-           style={{ transform: 'translate(-50%, -50%)' }} />
     </main>
   );
 }

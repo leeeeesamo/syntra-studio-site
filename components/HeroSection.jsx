@@ -79,6 +79,29 @@ export default function HeroSection() {
           >
             Custom website design and development built for performance, clarity, and long-term reliability.
           </motion.p>
+
+          {/* CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <a
+              href="/contact"
+              className="btn-primary"
+            >
+              Start Your Project
+            </a>
+            <a
+              href="https://leeeeesamo.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline"
+            >
+              View My Work
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>

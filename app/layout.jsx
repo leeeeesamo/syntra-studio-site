@@ -5,9 +5,9 @@ import Footer from "@/components/Footer";
 
 // SEO Configuration
 const seoConfig = {
-  defaultTitle: 'Syntra Digital Solutions',
-  description: 'Virtual assistance, customer support, marketing, and digital solutions — handled with structure, clarity, and care.',
-  canonical: 'https://syntra-studio.com',
+  defaultTitle: 'Syntra Digital | Reliable by Design',
+  description: 'Custom website design and development built for performance, clarity, and long-term reliability.',
+  canonical: 'https://syntrasolutions.digital',
   twitter: {
     handle: '@syntradigital',
   }
@@ -25,15 +25,9 @@ const websiteSchema = {
     `https://twitter.com/${seoConfig.twitter?.handle?.replace('@', '')}`,
   ].filter(Boolean),
   priceRange: '$$$',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Your City',
-    addressRegion: 'Your State',
-    addressCountry: 'Your Country'
-  },
   openingHours: 'Mo,Tu,We,Th,Fr 09:00-17:00',
   telephone: process.env.NEXT_PUBLIC_CONTACT_PHONE || '+1234567890',
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'contact@syntra-studio.com'
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'contact@syntrasolutions.digital'
 };
 
 export const metadata = {
@@ -44,13 +38,15 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: seoConfig.canonical,
-    site_name: seoConfig.defaultTitle,
+    site_name: 'Syntra Digital',
+    title: 'Syntra Digital | Reliable by Design',
+    description: 'Custom website design and development built for performance, clarity, and long-term reliability.',
     images: [
       {
-        url: `${seoConfig.canonical}/brand-assets/og-image.jpg`,
+        url: `${seoConfig.canonical}/brand-assets/og-image-2026.jpg`,
         width: 1200,
         height: 630,
-        alt: seoConfig.defaultTitle,
+        alt: 'Syntra Digital — Reliable by Design',
         type: 'image/jpeg',
       },
     ],
@@ -58,7 +54,17 @@ export const metadata = {
   twitter: {
     handle: seoConfig.twitter.handle,
     site: seoConfig.twitter.handle,
+    title: 'Syntra Digital | Reliable by Design',
+    description: 'Custom website design and development built for performance, clarity, and long-term reliability.',
     cardType: 'summary_large_image',
+    images: [
+      {
+        url: `${seoConfig.canonical}/brand-assets/og-image-2026.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'Syntra Digital — Reliable by Design',
+      },
+    ],
   },
   alternates: {
     canonical: seoConfig.canonical,

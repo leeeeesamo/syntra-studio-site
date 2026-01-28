@@ -14,7 +14,7 @@ const benefits = [
 
 export default function FinalCTASection() {
   return (
-    <section id="contact" className="section relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
+    <section id="contact" className="section relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       {/* Decorative elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-blue-500/5 blur-3xl" />
@@ -50,19 +50,18 @@ export default function FinalCTASection() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center whitespace-nowrap px-8 py-5 text-base font-semibold rounded-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-0.5 group"
+                className="btn-primary"
               >
-                Get Started
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                Request a Quote
               </Link>
 
               <Link
                 href="https://leeeeesamo.github.io/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center whitespace-nowrap px-6 py-5 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/50"
+                className="btn-outline"
               >
-                View Our Work
+                See How It Works
               </Link>
             </motion.div>
 

@@ -1,180 +1,65 @@
 'use client';
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, LayoutTemplate, CheckCircle, ChevronRight, Code } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Search, LayoutTemplate, Code, Rocket } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
-import { cn } from '@/lib/ui-utils';
 
 const steps = [
   {
     title: 'Plan',
-    description: 'We learn about your business, goals, and technical requirements to create a solid project foundation.',
+    subtitle: 'Discovery & Strategy',
+    description: 'We learn about your business, goals, scope, and timeline to create a solid project foundation.',
     icon: Search,
-    gradient: 'from-blue-400 to-blue-500',
     duration: '1-2 weeks',
-    details: [
+    deliverables: [
       'Project consultation',
-      'Requirements gathering',
+      'Requirements gathering', 
       'Technical assessment',
-      'Project proposal'
+      'Project proposal & timeline'
     ]
   },
   {
     title: 'Design',
-    description: 'We create wireframes and designs that align with your brand and focus on user experience.',
+    subtitle: 'Layout & Structure',
+    description: 'We create wireframes, visuals, copy, and structure that align with your brand and focus on user experience.',
     icon: LayoutTemplate,
-    gradient: 'from-blue-400 to-indigo-500',
     duration: '2-3 weeks',
-    details: [
+    deliverables: [
       'Wireframing & design',
       'UI/UX planning',
-      'Brand alignment',
-      'Design approval'
+      'Content structure',
+      'Brand alignment'
     ]
   },
   {
     title: 'Build',
-    description: 'We develop your website with clean code, modern technologies, and focus on performance.',
+    subtitle: 'Development & Performance',
+    description: 'We hand-code your website with modern technologies, focusing on performance and clean code.',
     icon: Code,
-    gradient: 'from-indigo-400 to-purple-500',
     duration: '2-3 weeks',
-    details: [
+    deliverables: [
       'Frontend development',
-      'Backend integration',
       'Performance optimization',
-      'Quality assurance'
+      'Quality assurance',
+      'Cross-device testing'
     ]
   },
   {
     title: 'Launch',
-    description: 'We deploy your website and provide ongoing support to ensure it runs smoothly.',
-    icon: CheckCircle,
-    gradient: 'from-purple-400 to-pink-500',
+    subtitle: 'Testing & Support',
+    description: 'We handle testing, deployment, and provide ongoing support to ensure your website runs smoothly.',
+    icon: Rocket,
     duration: '1 week',
-    details: [
-      'Testing & QA',
-      'Deployment',
+    deliverables: [
+      'Final testing & QA',
+      'Deployment & setup',
       'Performance monitoring',
-      'Launch support'
+      'Ongoing support'
     ]
   }
 ];
 
-const ProcessStep = ({ step, index, isActive, onClick }) => {
-  const Icon = step.icon;
-
-  return (
-    <motion.div
-      className={cn(
-        "relative group cursor-pointer transition-all duration-300",
-        isActive ? "md:flex-[1.2]" : "md:flex-1"
-      )}
-      onClick={onClick}
-      initial={false}
-      animate={{
-        paddingTop: isActive ? '1.5rem' : '3rem',
-      }}
-      transition={{ duration: 0.4, type: 'spring', bounce: 0.1 }}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') onClick();
-      }}
-      aria-pressed={isActive}
-    >
-      {/* Step connector line */}
-      {index > 0 && (
-        <div className="hidden md:block absolute left-0 top-1/2 -translate-x-1/2 h-0.5 w-16 bg-gradient-to-r from-slate-800 to-slate-700 -z-10" />
-      )}
-
-      <motion.div
-        className={cn(
-          "h-full bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-800",
-          "transition-all duration-300",
-          isActive
-            ? "shadow-xl shadow-blue-500/10 border-slate-700"
-            : "hover:border-slate-700 hover:bg-slate-900/70"
-        )}
-        whileHover={!isActive ? { y: -5 } : {}}
-      >
-        {/* Step number */}
-        <div className="flex items-center justify-between mb-6">
-          <div className={cn(
-            "flex items-center justify-center w-10 h-10 rounded-full font-bold text-lg",
-            `bg-gradient-to-br ${step.gradient} text-white`
-          )}>
-            {index + 1}
-          </div>
-          <div className={cn(
-            "text-xs font-medium px-3 py-1 rounded-full",
-            isActive ? "bg-blue-500/10 text-blue-400" : "bg-slate-800/50 text-slate-400"
-          )}>
-            {step.duration}
-          </div>
-        </div>
-
-        {/* Step content */}
-        <div className="space-y-4">
-          <div className="flex items-start gap-3">
-            <div className={`p-2.5 rounded-lg ${isActive ? 'bg-blue-500/10' : 'bg-slate-800/50'} mt-1`}>
-              <Icon className={cn(
-                "h-5 w-5",
-                isActive ? 'text-blue-400' : 'text-slate-400',
-                "transition-colors duration-300"
-              )} />
-            </div>
-            <h3 className={cn(
-              "text-xl font-semibold",
-              isActive ? "text-white" : "text-slate-300",
-              "transition-colors duration-300"
-            )}>
-              {step.title}
-            </h3>
-          </div>
-
-          <AnimatePresence initial={false}>
-            {isActive && (
-              <motion.div
-                key="details"
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 'auto', opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="overflow-hidden"
-              >
-                <div className="pl-11 space-y-4">
-                  <p className="text-slate-400">
-                    {step.description}
-                  </p>
-                  <ul className="space-y-2 mt-4">
-                    {step.details.map((item, i) => (
-                      <li key={i} className="flex items-center gap-2 text-slate-400 text-sm">
-                        <CheckCircle className="h-4 w-4 text-blue-400 flex-shrink-0" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <button
-                    type="button"
-                    className="inline-flex items-center text-sm font-medium px-4 py-2 rounded-lg transition-colors bg-blue-500/10 text-blue-400 hover:bg-blue-500/20"
-                  >
-                    Learn more
-                    <ChevronRight className="ml-1 h-4 w-4" />
-                  </button>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-};
-
 export default function ProcessSection() {
-  const [activeStep, setActiveStep] = useState(0);
-
   return (
     <section id="process" className="section relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
       {/* Decorative elements */}
@@ -191,10 +76,7 @@ export default function ProcessSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          variants={{
-            hidden: {},
-            show: { transition: { staggerChildren: 0.1 } }
-          }}
+          variants={staggerContainer}
         >
           <motion.span className="section-subtitle" variants={fadeInUp}>
             Our Development Process
@@ -209,59 +91,79 @@ export default function ProcessSection() {
 
         {/* Process Steps */}
         <motion.div
-          className="mt-16 relative"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16"
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
         >
-          {/* Mobile step indicators */}
-          <div className="md:hidden flex justify-center gap-2 mb-8">
-            {steps.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setActiveStep(i)}
-                className={`w-3 h-3 rounded-full transition-all ${i === activeStep ? 'bg-blue-400 w-8' : 'bg-slate-700'}`}
-                aria-label={`Go to step ${i + 1}`}
-              />
-            ))}
-          </div>
-
-          {/* Process steps */}
-          <div className="flex flex-col md:flex-row gap-6">
-            {steps.map((step, index) => (
-              <ProcessStep
-                key={step.title}
-                step={step}
-                index={index}
-                isActive={activeStep === index}
-                onClick={() => setActiveStep(index)}
-              />
-            ))}
-          </div>
-
-          {/* Mobile navigation */}
-          <div className="mt-8 flex justify-between md:hidden">
-            <button
-              type="button"
-              onClick={() => setActiveStep(prev => Math.max(0, prev - 1))}
-              disabled={activeStep === 0}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/50 text-slate-400 disabled:opacity-30"
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.title}
+              variants={fadeInUp}
+              className="card text-center group"
             >
-              <ChevronRight className="h-4 w-4 rotate-180" />
-              Previous
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveStep(prev => Math.min(steps.length - 1, prev + 1))}
-              disabled={activeStep === steps.length - 1}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/50 text-slate-400 disabled:opacity-30"
-            >
-              Next
-              <ChevronRight className="h-4 w-4" />
-            </button>
-          </div>
+              {/* Step Number */}
+              <div className="relative mb-6">
+                <div className="absolute inset-0 bg-blue-500/10 rounded-full blur-xl group-hover:bg-blue-500/20 transition-colors duration-300" />
+                <div className="relative bg-slate-800/50 rounded-full w-16 h-16 flex items-center justify-center border border-slate-700 group-hover:border-blue-500/30 transition-colors duration-300">
+                  <step.icon className="w-6 h-6 text-blue-400" />
+                </div>
+                <div className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+                  {index + 1}
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="space-y-3">
+                <h3 className="text-xl font-medium text-white group-hover:text-blue-400 transition-colors duration-300">
+                  {step.title}
+                </h3>
+                <p className="text-sm font-medium text-blue-400 uppercase tracking-wider">
+                  {step.subtitle}
+                </p>
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  {step.description}
+                </p>
+                
+                {/* Duration Badge */}
+                <div className="inline-flex items-center px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 text-xs text-slate-400">
+                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2" />
+                  {step.duration}
+                </div>
+
+                {/* Deliverables */}
+                <div className="mt-4 pt-4 border-t border-slate-800/50">
+                  <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-2">Deliverables</p>
+                  <ul className="space-y-1 text-left">
+                    {step.deliverables.map((deliverable, i) => (
+                      <li key={i} className="text-xs text-slate-400 flex items-start gap-2">
+                        <span className="text-blue-400 mt-0.5">•</span>
+                        {deliverable}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          className="text-center mt-16"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+        >
+          <p className="text-slate-400 mb-6">Ready to start your project?</p>
+          <a
+            href="/contact"
+            className="btn-primary"
+          >
+            Start Your Project
+          </a>
         </motion.div>
       </div>
     </section>

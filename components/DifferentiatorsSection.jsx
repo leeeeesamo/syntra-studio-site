@@ -28,7 +28,7 @@ const items = [
 
 export default function DifferentiatorsSection() {
   return (
-    <section className="section">
+    <section className="section relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
       <div className="container">
         <motion.div
           variants={staggerContainer}
@@ -72,10 +72,10 @@ export default function DifferentiatorsSection() {
                 hover:shadow-blue-500/10
               "
             >
-              <h3 className="text-xl font-semibold mb-3 text-white">
+              <h3 className="text-xl font-medium mb-3 text-white">
                 {item.title}
               </h3>
-              <p className="text-slate-300 text-base leading-relaxed">
+              <p className="text-slate-300 text-base leading-relaxed font-medium">
                 {item.description}
               </p>
             </motion.div>

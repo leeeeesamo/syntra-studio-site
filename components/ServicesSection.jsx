@@ -116,7 +116,7 @@ const ServiceCard = ({ service, index }) => {
 
 export default function ServicesSection() {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="section relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900">
       {/* Decorative elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5 [mask-image:linear-gradient(180deg,white,transparent)]" />
@@ -174,6 +174,23 @@ export default function ServicesSection() {
               index={index} 
             />
           ))}
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div 
+          className="text-center mt-16"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={fadeInUp}
+        >
+          <p className="text-slate-400 mb-6">Ready to bring your vision to life?</p>
+          <a
+            href="/contact"
+            className="btn-primary"
+          >
+            Let's Build Your Website
+          </a>
         </motion.div>
       </div>
     </section>
