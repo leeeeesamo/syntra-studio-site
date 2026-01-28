@@ -1,4 +1,4 @@
-name: Deploy Next.js static site to GitHub Pages
+﻿name: Deploy Next.js static site to GitHub Pages
 
 on:
   push:
@@ -21,7 +21,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAGES: "true"
-      REPO_NAME: "syntra-studio-site"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,27 +31,22 @@ jobs:
           node-version: "20"
           cache: npm
 
-      - name: Install dependencies (include devDependencies)
+      - name: Install dependencies
         run: npm ci --include=dev
 
-      - name: Build (Next.js static export via output: export)
+      - name: Build (output: export)
         run: npm run build
 
-      - name: Debug export output
-        shell: bash
-        run: |
-          echo "Top-level out/ contents:"
-          ls -la out || true
-          echo "Repo folder out/${REPO_NAME} contents:"
-          ls -la "out/${REPO_NAME}" || true
+      - name: Verify export output exists
+        run: test -f out/syntra-studio-site/index.html
 
       - name: Add .nojekyll
-        run: touch "out/${REPO_NAME}/.nojekyll"
+        run: touch out/syntra-studio-site/.nojekyll
 
-      - name: Upload artifact (publish repo subfolder)
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "out/${{ env.REPO_NAME }}"
+          path: out/syntra-studio-site
 
   deploy:
     needs: build
@@ -61,5 +55,4 @@ jobs:
       name: github-pages
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
