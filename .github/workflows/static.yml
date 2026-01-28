@@ -2,7 +2,9 @@ name: Deploy Next.js static site to GitHub Pages
 
 on:
   push:
-    branches: ["main", "feature/website-services"]
+    branches:
+      - main
+      - feature/website-services
   workflow_dispatch:
 
 permissions:
@@ -11,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: true
 
 jobs:
@@ -26,8 +28,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: "npm"
+          node-version: "20"
+          cache: npm
 
       - name: Install dependencies (include devDependencies)
         run: npm ci --include=dev
@@ -36,9 +38,14 @@ jobs:
         run: npm run build
 
       - name: Verify export output exists
+        shell: bash
         run: |
+          echo "Listing out/ directory:"
           ls -la out || true
-          test -f out/index.html
+          if [ ! -f out/index.html ]; then
+            echo "ERROR: out/index.html not found. Static export did not produce HTML."
+            exit 1
+          fi
 
       - name: Add .nojekyll
         run: touch out/.nojekyll
