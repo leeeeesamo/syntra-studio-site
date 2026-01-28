@@ -10,8 +10,8 @@ export default function HeroSection() {
         {/* Hero background image */}
         <div className="absolute inset-0 bg-[url('/brand-assets/hero-banner.png')] bg-cover bg-center bg-no-repeat" />
 
-        {/* Lighter overlay gradient to make hero image pop more */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/20 via-slate-950/30 to-slate-950/40" />
+        {/* Enhanced overlay gradient for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-slate-950/60 to-slate-950/70" />
 
         {/* Floating elements (kept subtle) */}
         <div className="absolute inset-0 overflow-hidden">
