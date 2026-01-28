@@ -121,6 +121,18 @@
     @apply transition-colors duration-200;
   }
 
+  /* Fix font rendering for smaller text */
+  .text-sm, .text-base, .text-lg {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+
+  /* Keep larger text crisp without smoothing */
+  .text-xl, .text-2xl, .text-3xl, .text-4xl, .text-5xl, .text-6xl, .text-7xl {
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+  }
+
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
     @apply font-display font-bold leading-tight tracking-tight text-slate-50;
