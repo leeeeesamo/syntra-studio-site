@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { fadeInUp, staggerContainer } from '@/lib/animations';
 
 export default function HeroSection() {
   return (
@@ -60,16 +59,12 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="container relative z-10">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
-          className="text-center"
-        >
+        <div className="text-center">
           {/* Headline */}
           <motion.h1
-            variants={fadeInUp}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-white drop-shadow-md"
           >
             Reliable by Design.
@@ -77,12 +72,14 @@ export default function HeroSection() {
 
           {/* Description */}
           <motion.p
-            variants={fadeInUp}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed mb-8 text-white/90 drop-shadow-md"
           >
             Custom website design and development built for performance, clarity, and long-term reliability.
           </motion.p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

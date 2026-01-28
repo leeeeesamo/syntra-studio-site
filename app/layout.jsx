@@ -1,10 +1,17 @@
 ﻿// app/layout.jsx
 import "@/styles/globals.css";
-import { DefaultSeo } from 'next-seo';
-import Script from 'next/script';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import seoConfig from '@/../next-seo.config';
+
+// SEO Configuration
+const seoConfig = {
+  defaultTitle: 'Syntra Digital Solutions',
+  description: 'Virtual assistance, customer support, marketing, and digital solutions — handled with structure, clarity, and care.',
+  canonical: 'https://syntra-studio.com',
+  twitter: {
+    handle: '@syntradigital',
+  }
+};
 
 // JSON-LD structured data for the homepage
 const websiteSchema = {
@@ -16,7 +23,6 @@ const websiteSchema = {
   logo: `${seoConfig.canonical}/brand-assets/logo.png`,
   sameAs: [
     `https://twitter.com/${seoConfig.twitter?.handle?.replace('@', '')}`,
-    seoConfig.additionalLinkTags?.find(link => link.rel === 'author')?.href
   ].filter(Boolean),
   priceRange: '$$$',
   address: {
@@ -34,8 +40,26 @@ export const metadata = {
   title: seoConfig.defaultTitle,
   description: seoConfig.description,
   metadataBase: new URL(seoConfig.canonical),
-  openGraph: seoConfig.openGraph,
-  twitter: seoConfig.twitter,
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: seoConfig.canonical,
+    site_name: seoConfig.defaultTitle,
+    images: [
+      {
+        url: `${seoConfig.canonical}/brand-assets/og-image.jpg`,
+        width: 1200,
+        height: 630,
+        alt: seoConfig.defaultTitle,
+        type: 'image/jpeg',
+      },
+    ],
+  },
+  twitter: {
+    handle: seoConfig.twitter.handle,
+    site: seoConfig.twitter.handle,
+    cardType: 'summary_large_image',
+  },
   alternates: {
     canonical: seoConfig.canonical,
   },
@@ -56,8 +80,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <DefaultSeo {...seoConfig} />
-        
         {/* Structured Data */}
         <script
           type="application/ld+json"
