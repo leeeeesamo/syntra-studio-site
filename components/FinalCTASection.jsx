@@ -56,10 +56,10 @@ export default function FinalCTASection() {
               </Link>
 
               <Link
-                href="/process"
+                href="/faq"
                 className="btn-outline"
               >
-                See How It Works
+                View FAQ
               </Link>
             </motion.div>
 

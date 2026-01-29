@@ -69,71 +69,59 @@ const StepCard = ({ step, index }) => {
 
 export default function HowItWorksSection() {
   return (
-    <section className="relative py-24 overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
+    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
       <div className="container">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="max-w-4xl mx-auto"
+          className="text-center max-w-3xl mx-auto mb-16"
         >
-          {/* Section Header */}
-          <motion.div className="text-center max-w-3xl mx-auto mb-16">
-            <motion.span 
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-4"
-              variants={fadeInUp}
-            >
-              <Rocket className="h-4 w-4" />
-              <span>Our Process</span>
-            </motion.span>
-            <motion.h2
-              variants={fadeInUp}
-              className="text-3xl sm:text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90 mb-4"
-            >
-              How It Works
-            </motion.h2>
-            <motion.p
-              variants={fadeInUp}
-              className="text-lg text-slate-400"
-            >
-              Our streamlined process takes your project from concept to launch in four clear steps.
-            </motion.p>
-          </motion.div>
-
-          {/* Steps Grid */}
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            {steps.map((step, index) => (
-              <StepCard 
-                key={step.title}
-                step={step}
-                index={index}
-              />
-            ))}
-          </motion.div>
-
-          {/* CTA */}
-          <motion.div 
-            className="text-center"
+          <motion.h2
             variants={fadeInUp}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90 mb-6"
           >
-            <a
-              href="/websites"
-              className="inline-flex items-center justify-center rounded-full font-medium text-sm px-8 py-4 border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800/50 transition-colors group"
-            >
-              Learn More
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </a>
-          </motion.div>
+            How It Works
+          </motion.h2>
+          <motion.p
+            variants={fadeInUp}
+            className="text-lg text-slate-400"
+          >
+            Our streamlined process takes your project from concept to launch in four clear steps.
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {steps.map((step, index) => (
+            <StepCard 
+              key={step.title}
+              step={step}
+              index={index}
+            />
+          ))}
+        </motion.div>
+
+        <motion.div 
+          className="text-center"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <a
+            href="/websites"
+            className="inline-flex items-center justify-center rounded-full font-medium text-sm px-8 py-4 border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800/50 transition-colors group"
+          >
+            Learn More
+            <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </a>
         </motion.div>
       </div>
     </section>

@@ -62,52 +62,43 @@ const DifferentiatorCard = ({ item, index }) => {
 
 export default function WhySyntraSection() {
   return (
-    <section className="relative py-24 overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
+    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
       <div className="container">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="max-w-4xl mx-auto"
+          className="text-center max-w-3xl mx-auto mb-16"
         >
-          <motion.div className="text-center max-w-3xl mx-auto mb-16">
-            <motion.span 
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-4"
-              variants={fadeInUp}
-            >
-              <Sparkles className="h-4 w-4" />
-              <span>Our Differentiators</span>
-            </motion.span>
-            <motion.h2
-              variants={fadeInUp}
-              className="text-3xl sm:text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90 mb-4"
-            >
-              Why Syntra Digital
-            </motion.h2>
-            <motion.p
-              variants={fadeInUp}
-              className="text-lg text-slate-400"
-            >
-              We're different because we focus on what matters: performance, reliability, and clear communication.
-            </motion.p>
-          </motion.div>
-
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
+          <motion.h2
+            variants={fadeInUp}
+            className="text-3xl sm:text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90 mb-6"
           >
-            {differentiators.map((item, index) => (
-              <DifferentiatorCard 
-                key={item.title}
-                item={item}
-                index={index}
-              />
-            ))}
-          </motion.div>
+            Why Syntra Digital
+          </motion.h2>
+          <motion.p
+            variants={fadeInUp}
+            className="text-lg text-slate-400"
+          >
+            We're different because we focus on what matters: performance, reliability, and clear communication.
+          </motion.p>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {differentiators.map((item, index) => (
+            <DifferentiatorCard 
+              key={item.title}
+              item={item}
+              index={index}
+            />
+          ))}
         </motion.div>
       </div>
     </section>

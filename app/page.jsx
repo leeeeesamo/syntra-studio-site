@@ -101,11 +101,11 @@ export default function HomePage() {
           <WhoWeBuildForSection />
         </SectionWrapper>
         
-        <SectionWrapper id="why-syntra" className="bg-slate-950">
+        <SectionWrapper id="why-syntra">
           <WhySyntraSection />
         </SectionWrapper>
         
-        <SectionWrapper id="how-it-works" className="bg-slate-950">
+        <SectionWrapper id="how-it-works">
           <HowItWorksSection />
         </SectionWrapper>
         
