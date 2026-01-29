@@ -1,67 +1,116 @@
-"use client";
+'use client';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
+import { Search, LayoutTemplate, Code, Rocket, ArrowRight } from 'lucide-react';
+import { fadeInUp, staggerContainer } from '@/lib/animations';
+import SectionHeader from '@/components/SectionHeader';
 
 const steps = [
   {
-    title: "Schedule a quick call",
-    body:
-      "We’ll talk through what you need, where things feel heavy, and what kind of support will make the biggest impact.",
-    label: "Step 1",
+    title: 'Plan',
+    description: 'We learn about your business and goals to create a solid foundation.',
+    icon: Search
   },
   {
-    title: "Select your support level",
-    body:
-      "Choose between ongoing partnership or a focused project — we’ll guide you toward the right fit based on your workflow and goals.",
-    label: "Step 2",
+    title: 'Design',
+    description: 'We create layouts and visuals that align with your brand and users.',
+    icon: LayoutTemplate
   },
   {
-    title: "Start with clarity and structure",
-    body:
-      "We set up simple, reliable systems and begin supporting you from day one — clear communication and steady follow-through included.",
-    label: "Step 3",
+    title: 'Build',
+    description: 'We develop your website with clean code and focus on performance.',
+    icon: Code
   },
+  {
+    title: 'Launch',
+    description: 'We deploy your website and provide ongoing support for success.',
+    icon: Rocket
+  }
 ];
+
+const StepCard = ({ step, index }) => {
+  const Icon = step.icon;
+  
+  return (
+    <motion.div
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ 
+        duration: 0.6, 
+        delay: index * 0.1,
+        ease: [0.16, 1, 0.3, 1]
+      }}
+      className="text-center group"
+    >
+      <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-800 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300">
+        {/* Step Number */}
+        <div className="relative mb-4">
+          <div className="absolute inset-0 bg-blue-500/10 rounded-full blur-xl group-hover:bg-blue-500/20 transition-colors duration-300" />
+          <div className="relative bg-slate-800/50 rounded-full w-12 h-12 flex items-center justify-center border border-slate-700 group-hover:border-blue-500/30 transition-colors duration-300 mx-auto">
+            <Icon className="w-5 h-5 text-blue-400" />
+          </div>
+          <div className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+            {index + 1}
+          </div>
+        </div>
+
+        {/* Content */}
+        <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+          {step.title}
+        </h3>
+        <p className="text-slate-300 text-sm leading-relaxed">
+          {step.description}
+        </p>
+      </div>
+    </motion.div>
+  );
+};
 
 export default function HowItWorksSection() {
   return (
-    <motion.section
-      className="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.2 }}
-    >
-      <h2 className="text-3xl sm:text-4xl font-semibold text-center text-[var(--syntra-heading)]">
-        Getting started
-      </h2>
-      <p className="mt-2 text-base sm:text-lg text-center text-[var(--syntra-text-muted)]">
-        A simple, three-step start.
-      </p>
-      <p className="text-center text-[var(--syntra-text-muted)] max-w-2xl mx-auto mb-12">
-        A clear path from first conversation to working together, so you always know what comes next.
-      </p>
+    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
+      <div className="container">
+        <SectionHeader
+          kicker="HOW IT WORKS"
+          title="How It Works"
+          description="Our streamlined process takes your project from concept to launch in four clear steps."
+          icon={Rocket}
+        />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {steps.map((step) => (
-          <article
-            key={step.title}
-            className="rounded-2xl bg-black/20 border border-[var(--syntra-border-soft)] p-6 flex flex-col gap-4 shadow-md"
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {steps.map((step, index) => (
+            <StepCard 
+              key={step.title}
+              step={step}
+              index={index}
+            />
+          ))}
+        </motion.div>
+
+        <motion.div 
+          className="text-center"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
+          <a
+            href="/websites"
+            className="inline-flex items-center justify-center rounded-full font-medium text-sm px-8 py-4 border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800/50 transition-colors group"
           >
-            <span className="inline-flex items-center justify-center text-xs uppercase tracking-wide px-3 py-1 rounded-full bg-white/5 border border-[var(--syntra-border-soft)] text-[var(--syntra-text-muted)]">
-              {step.label}
-            </span>
-            <h3 className="font-semibold text-lg text-[var(--syntra-heading)]">
-              {step.title}
-            </h3>
-            <p className="text-[var(--syntra-text-muted)] text-sm leading-relaxed">
-              {step.body}
-            </p>
-          </article>
-        ))}
+            Learn More
+            <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </a>
+        </motion.div>
       </div>
-
-      <div className="mt-10 border-t border-[var(--syntra-border-soft)] max-w-5xl mx-auto" />
-    </motion.section>
+    </section>
   );
 }
