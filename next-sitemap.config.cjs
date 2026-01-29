@@ -1,24 +1,21 @@
 /** @type {import('next-sitemap').IConfig} */
-const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://syntrasolutions.digital').replace(/\/$/, '');
-
 module.exports = {
-  siteUrl,
-  generateRobotsTxt: true,
+  siteUrl: "https://syntrasolutions.digital",
+  generateRobotsTxt: false, // we maintain public/robots.txt manually
+  sitemapSize: 7000,
 
-  robotsTxtOptions: {
-    policies: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/admin/', '/api/'],
-      },
-    ],
-    // Optional: keep if you plan to host additional sitemaps later.
-    // If you only have one sitemap, you can remove this block entirely.
-    additionalSitemaps: [`${siteUrl}/sitemap.xml`],
-  },
+  // Exclude legacy/archived routes that no longer exist
+  exclude: [
+    "/about",
+    "/deck",
+    "/process",
+    "/mission",
+    "/work-with-us",
+    "/services",
+    "/services/*",
 
-  exclude: ['/server-sitemap.xml', '/admin/*', '/api/*'],
-  generateIndexSitemap: false,
-  outDir: 'out',
+    // Next internals
+    "/_not-found",
+    "/404",
+  ],
 };

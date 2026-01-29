@@ -1,6 +1,6 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://syntra-studio.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://syntrasolutions.digital';
 const SITE_NAME = 'Syntra Digital Solutions';
-const SITE_DESCRIPTION = 'Virtual assistance, customer support, marketing, and digital solutions — handled with structure, clarity, and care.';
+const SITE_DESCRIPTION = 'Custom website design and development built for performance, clarity, and long-term reliability.';
 
 module.exports = {
   titleTemplate: `%s | ${SITE_NAME}`,
@@ -14,7 +14,7 @@ module.exports = {
     site_name: SITE_NAME,
     images: [
       {
-        url: `${SITE_URL}/brand-assets/og-image.jpg`,
+        url: `${SITE_URL}/brand-assets/og-image-2026.jpg`,
         width: 1200,
         height: 630,
         alt: SITE_NAME,

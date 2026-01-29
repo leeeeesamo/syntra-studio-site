@@ -3,9 +3,8 @@ import ContactForm from "@/components/ContactForm";
 import PageContainer from "@/components/PageContainer";
 
 export const metadata = {
-  title: "Contact Syntra Digital Solutions",
-  description:
-    "Get in touch with Syntra Digital Solutions to discuss virtual assistance, customer support, operations, or web design support.",
+  title: "Contact Syntra Digital | Start Your Website Project",
+  description: "Get in touch to discuss a new website or redesign. Share your goals and timeline, and we'll map the next steps."
 };
 
 export default function ContactPage() {
