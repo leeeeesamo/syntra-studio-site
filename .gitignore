@@ -1,12 +1,34 @@
 node_modules/
 .next/
 out/
-docs/
 dist/
+
+# Logs
 npm-debug.log
 yarn-error.log
-.env
-.env.local
+*.log
+
+# Env (secrets)
+.env.*
+
+# OS junk
 .DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# Tooling caches
+.eslintcache
+.turbo/
+.vercel/
+*.tsbuildinfo
+.swc/
+
+# Local helper files
 export-tree.ps1
 tree-site.txt
+
+# Optional: ignore archive folder if you don't want it in git
+_archived/
