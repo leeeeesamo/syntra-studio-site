@@ -348,7 +348,7 @@ export default function PricingPage() {
           >
             <a
               href="/contact"
-              className="inline-flex items-center justify-center rounded-full font-medium text-sm px-8 py-4 text-white bg-gradient-to-r from-emerald-500 to-emerald-600 shadow-lg hover:opacity-90 transition-opacity"
+              className="btn-primary"
             >
               Get Started
               <ArrowRight className="ml-2 w-4 h-4" />

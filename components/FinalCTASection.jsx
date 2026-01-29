@@ -62,32 +62,6 @@ export default function FinalCTASection() {
                 View FAQ
               </Link>
             </motion.div>
-
-            {/* Trust indicators */}
-            <motion.div
-              className="flex flex-wrap items-center justify-center gap-6 pt-8 border-t border-slate-800/50"
-              variants={fadeInUp}
-            >
-              <div className="flex items-center gap-2 text-slate-400 text-sm">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="h-8 w-8 rounded-full bg-slate-700 border-2 border-slate-800" />
-                  ))}
-                </div>
-                <span>Trusted by 40+ businesses</span>
-              </div>
-
-              <div className="h-4 w-px bg-slate-800/50" />
-
-              <div className="flex items-center gap-2 text-slate-400 text-sm">
-                <div className="flex items-center">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <span>5.0 from 24+ reviews</span>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </div>

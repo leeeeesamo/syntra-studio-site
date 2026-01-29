@@ -9,7 +9,7 @@ import { Loader2 } from 'lucide-react';
 const HeroSection = lazy(() => import('@/components/HeroSection'));
 const WhoWeBuildForSection = lazy(() => import('@/components/WhoWeBuildForSection'));
 const WhySyntraSection = lazy(() => import('@/components/WhySyntraSection'));
-const HowItWorksSection = lazy(() => import('@/components/HowItWorksSection'));
+const TestimonialsSection = lazy(() => import('@/components/TestimonialsSection'));
 const FinalCTASection = lazy(() => import('@/components/FinalCTASection'));
 
 // Loading component
@@ -105,8 +105,8 @@ export default function HomePage() {
           <WhySyntraSection />
         </SectionWrapper>
         
-        <SectionWrapper id="how-it-works">
-          <HowItWorksSection />
+        <SectionWrapper id="testimonials">
+          <TestimonialsSection />
         </SectionWrapper>
         
         <SectionWrapper id="contact" className="bg-gradient-to-b from-slate-950 to-slate-900">
