@@ -90,10 +90,10 @@ export default function HeroSection() {
             className="text-center"
           >
             <a
-              href="/process"
+              href="/faq"
               className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1 text-sm"
             >
-              See the process
+              View FAQ
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>

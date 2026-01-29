@@ -2,125 +2,89 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Monitor, Zap, Shield, Users, ArrowRight, CheckCircle } from 'lucide-react';
+import { Monitor, Zap, Shield, Users, ArrowRight, CheckCircle, Search, LayoutTemplate, Code, Rocket } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { cn } from '@/lib/ui-utils';
 import PageContainer from '@/components/PageContainer';
+import ServicesSection from '@/components/ServicesSection';
 
-const services = [
+const differentiators = [
   {
-    title: 'Custom Website Design',
-    description: 'Tailored websites built with clean code, modern design principles, and focus on performance and user experience.',
-    icon: Monitor,
-    features: ['Responsive design', 'Modern UI/UX', 'Brand alignment', 'SEO optimization'],
-    gradient: 'from-blue-400 to-blue-500'
+    title: 'Clean, Performant Code',
+    description:
+      'We write efficient, maintainable code that ensures fast load times and smooth user experiences.',
   },
   {
-    title: 'Performance Optimization',
-    description: 'Lightning-fast load times, smooth interactions, and technical optimization for search engines and user experience.',
-    icon: Zap,
-    features: ['Speed optimization', 'Core Web Vitals', 'Image optimization', 'Caching strategies'],
-    gradient: 'from-blue-400 to-indigo-500'
+    title: 'Responsive Design First',
+    description:
+      'Every website we build works flawlessly across all devices, from mobile to desktop.',
   },
   {
-    title: 'Responsive Development',
-    description: 'Flawless functionality across all devices and screen sizes, ensuring your website works perfectly everywhere.',
-    icon: Shield,
-    features: ['Mobile-first approach', 'Cross-browser compatibility', 'Touch-friendly interfaces', 'Consistent experience'],
-    gradient: 'from-indigo-400 to-purple-500'
+    title: 'Modern Web Standards',
+    description:
+      'We use current technologies and best practices to build websites that last.',
   },
   {
-    title: 'Ongoing Support',
-    description: 'Reliable maintenance, updates, and technical support to keep your website running smoothly and securely.',
-    icon: Users,
-    features: ['Regular updates', 'Security monitoring', 'Performance tracking', 'Technical support'],
-    gradient: 'from-purple-400 to-pink-500'
-  }
+    title: 'Website Maintenance',
+    description:
+      'Reliable ongoing support, updates, and improvements to keep your site running smoothly.',
+  },
 ];
 
-const ServiceCard = ({ service, index }) => {
-  const Icon = service.icon;
-  
-  return (
-    <motion.div
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ 
-        duration: 0.6, 
-        delay: index * 0.1,
-        ease: [0.16, 1, 0.3, 1]
-      }}
-      className="h-full"
-    >
-      <motion.div 
-        className="group h-full flex flex-col"
-        whileHover={{ y: -8 }}
-        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-      >
-        <div className={cn(
-          "relative h-full rounded-2xl p-px overflow-hidden",
-          "bg-gradient-to-br",
-          service.gradient,
-          "transition-all duration-500"
-        )}>
-          <div className={cn(
-            "relative h-full bg-slate-900/80 backdrop-blur-sm rounded-[calc(0.5rem-1px)] p-6 sm:p-8 flex flex-col",
-            "transition-all duration-300 group-hover:bg-slate-900/90"
-          )}>
-            {/* Icon with subtle background */}
-            <div className={cn(
-              "inline-flex h-12 w-12 items-center justify-center rounded-xl mb-6",
-              "bg-gradient-to-br",
-              service.gradient,
-              "text-white shadow-lg"
-            )}>
-              <Icon className="h-6 w-6" strokeWidth={1.75} />
-            </div>
-            
-            {/* Content */}
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-slate-400 leading-relaxed mb-6">
-                {service.description}
-              </p>
-              
-              {/* Features list */}
-              <ul className="space-y-2">
-                {service.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-2 text-slate-400 text-sm">
-                    <CheckCircle className="h-4 w-4 text-blue-400 flex-shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            {/* Learn more link */}
-            <div className="mt-auto pt-5 border-t border-slate-800">
-              <div className="inline-flex items-center text-sm font-medium text-blue-400 group-hover:text-blue-300 transition-colors">
-                Learn more
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </div>
-            </div>
-            
-            {/* Hover effect */}
-            <div className={cn(
-              "absolute inset-0 -z-10 rounded-xl opacity-0 group-hover:opacity-100",
-              "bg-gradient-to-br",
-              service.gradient,
-              "transition-opacity duration-500",
-              "mix-blend-overlay"
-            )} />
-          </div>
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-};
+const processSteps = [
+  {
+    title: 'Plan',
+    subtitle: 'Discovery & Strategy',
+    description: 'We learn about your business, goals, scope, and timeline to create a solid project foundation.',
+    icon: Search,
+    duration: '1-2 weeks',
+    deliverables: [
+      'Project consultation',
+      'Requirements gathering', 
+      'Technical assessment',
+      'Project proposal & timeline'
+    ]
+  },
+  {
+    title: 'Design',
+    subtitle: 'Layout & Structure',
+    description: 'We create wireframes, visuals, copy, and structure that align with your brand and focus on user experience.',
+    icon: LayoutTemplate,
+    duration: '2-3 weeks',
+    deliverables: [
+      'Wireframing & design',
+      'UI/UX planning',
+      'Content structure',
+      'Brand alignment'
+    ]
+  },
+  {
+    title: 'Build',
+    subtitle: 'Development & Performance',
+    description: 'We hand-code your website with modern technologies, focusing on performance and clean code.',
+    icon: Code,
+    duration: '2-3 weeks',
+    deliverables: [
+      'Frontend development',
+      'Performance optimization',
+      'Quality assurance',
+      'Cross-device testing'
+    ]
+  },
+  {
+    title: 'Launch',
+    subtitle: 'Testing & Support',
+    description: 'We handle testing, deployment, and provide ongoing support to ensure your website runs smoothly.',
+    icon: Rocket,
+    duration: '1 week',
+    deliverables: [
+      'Final testing & QA',
+      'Deployment & setup',
+      'Performance monitoring',
+      'Ongoing support'
+    ]
+  }
+];
 
 export default function WebsitesPage() {
   return (
@@ -167,67 +131,155 @@ export default function WebsitesPage() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="relative py-24 overflow-hidden">
+      {/* What We Build Section - Using original Home styling */}
+      <ServicesSection />
+
+      {/* Built for Performance Section */}
+      <section className="relative py-24 overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
+        <div className="container">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="text-center mb-12"
+          >
+            <motion.h2
+              variants={fadeInUp}
+              className="text-3xl sm:text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90 mb-4"
+            >
+              Built for Performance
+            </motion.h2>
+            <motion.p
+              variants={fadeInUp}
+              className="text-lg text-slate-400 max-w-2xl mx-auto"
+            >
+              Modern web development practices that ensure your website is fast,
+              reliable, and built to last.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            {differentiators.map((item, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-800 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300"
+              >
+                <h3 className="text-xl font-medium mb-3 text-white">
+                  {item.title}
+                </h3>
+                <p className="text-slate-300 text-base leading-relaxed font-medium">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Clear Steps to Success Section */}
+      <section className="relative py-24 overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
         {/* Decorative elements */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5 [mask-image:linear-gradient(180deg,white,transparent)]" />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-900/80 to-slate-950/90" />
+          <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)] opacity-5" />
+          <div className="absolute -top-40 right-0 w-96 h-96 rounded-full bg-indigo-500/5 blur-3xl" />
+          <div className="absolute -bottom-40 left-0 w-96 h-96 rounded-full bg-blue-500/5 blur-3xl" />
         </div>
-        
+
         <div className="container">
           {/* Section Header */}
-          <motion.div 
+          <motion.div
             className="text-center max-w-3xl mx-auto mb-16"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            variants={{
-              hidden: {},
-              show: {
-                transition: {
-                  staggerChildren: 0.1
-                }
-              }
-            }}
+            variants={staggerContainer}
           >
             <motion.span 
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-4"
               variants={fadeInUp}
             >
-              <Monitor className="h-4 w-4" />
-              <span>Our Services</span>
+              <Rocket className="h-4 w-4" />
+              <span>Our Development Process</span>
             </motion.span>
-            
             <motion.h2 
               className="text-3xl sm:text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90 mb-4"
               variants={fadeInUp}
             >
-              What We Build
+              Clear Steps to Success
             </motion.h2>
-            
             <motion.p 
               className="text-lg text-slate-400"
               variants={fadeInUp}
             >
-              Professional web design and development services focused on performance, reliability, and clean execution.
+              We follow a structured approach to deliver websites on time and to specification.
             </motion.p>
           </motion.div>
-          
-          {/* Services Grid */}
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+
+          {/* Process Steps */}
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.1 }}
           >
-            {services.map((service, index) => (
-              <ServiceCard 
-                key={service.title} 
-                service={service} 
-                index={index} 
-              />
+            {processSteps.map((step, index) => (
+              <motion.div
+                key={step.title}
+                variants={fadeInUp}
+                className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-800 text-center group"
+              >
+                {/* Step Number */}
+                <div className="relative mb-6">
+                  <div className="absolute inset-0 bg-blue-500/10 rounded-full blur-xl group-hover:bg-blue-500/20 transition-colors duration-300" />
+                  <div className="relative bg-slate-800/50 rounded-full w-16 h-16 flex items-center justify-center border border-slate-700 group-hover:border-blue-500/30 transition-colors duration-300">
+                    <step.icon className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <div className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">
+                    {index + 1}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="space-y-3">
+                  <h3 className="text-xl font-medium text-white group-hover:text-blue-400 transition-colors duration-300">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm font-medium text-blue-400 uppercase tracking-wider">
+                    {step.subtitle}
+                  </p>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {step.description}
+                  </p>
+                  
+                  {/* Duration Badge */}
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 text-xs text-slate-400">
+                    <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2" />
+                    {step.duration}
+                  </div>
+
+                  {/* Deliverables */}
+                  <div className="mt-4 pt-4 border-t border-slate-800/50">
+                    <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mb-2">Deliverables</p>
+                    <ul className="space-y-1 text-left">
+                      {step.deliverables.map((deliverable, i) => (
+                        <li key={i} className="text-xs text-slate-400 flex items-start gap-2">
+                          <span className="text-blue-400 mt-0.5">•</span>
+                          {deliverable}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>

@@ -30,7 +30,7 @@ export default function Header() {
           <nav className="flex gap-10 text-lg md:text-xl text-white">
             <Link href="/" className="hover:opacity-80 transition-opacity">Home</Link>
             <Link href="/websites" className="hover:opacity-80 transition-opacity">Websites</Link>
-            <Link href="/process" className="hover:opacity-80 transition-opacity">Process</Link>
+            <Link href="/faq" className="hover:opacity-80 transition-opacity">FAQ</Link>
             <Link href="/pricing" className="hover:opacity-80 transition-opacity">Pricing</Link>
             <Link href="/contact" className="hover:opacity-80 transition-opacity">Contact</Link>
             <Link
@@ -66,7 +66,7 @@ export default function Header() {
             <nav className="flex flex-col px-6 py-6 gap-6 text-lg text-white">
               <Link href="/" onClick={close} className="hover:opacity-80 transition-opacity">Home</Link>
               <Link href="/websites" onClick={close} className="hover:opacity-80 transition-opacity">Websites</Link>
-              <Link href="/process" onClick={close} className="hover:opacity-80 transition-opacity">Process</Link>
+              <Link href="/faq" onClick={close} className="hover:opacity-80 transition-opacity">FAQ</Link>
               <Link href="/pricing" onClick={close} className="hover:opacity-80 transition-opacity">Pricing</Link>
               <Link href="/contact" onClick={close} className="hover:opacity-80 transition-opacity">Contact</Link>
               <Link

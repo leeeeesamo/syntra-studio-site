@@ -7,9 +7,9 @@ import { Loader2 } from 'lucide-react';
 
 // Lazy load components
 const HeroSection = lazy(() => import('@/components/HeroSection'));
-const ServicesSection = lazy(() => import('@/components/ServicesSection'));
-const DifferentiatorsSection = lazy(() => import('@/components/DifferentiatorsSection'));
-const ProcessSection = lazy(() => import('@/components/ProcessSection'));
+const WhoWeBuildForSection = lazy(() => import('@/components/WhoWeBuildForSection'));
+const WhySyntraSection = lazy(() => import('@/components/WhySyntraSection'));
+const HowItWorksSection = lazy(() => import('@/components/HowItWorksSection'));
 const FinalCTASection = lazy(() => import('@/components/FinalCTASection'));
 
 // Loading component
@@ -97,16 +97,16 @@ export default function HomePage() {
       <Suspense fallback={<LoadingFallback />}>
         <HeroSection />
         
-        <SectionWrapper id="services">
-          <ServicesSection />
+        <SectionWrapper id="who-we-build-for">
+          <WhoWeBuildForSection />
         </SectionWrapper>
         
-        <SectionWrapper id="differentiators" className="bg-slate-950">
-          <DifferentiatorsSection />
+        <SectionWrapper id="why-syntra" className="bg-slate-950">
+          <WhySyntraSection />
         </SectionWrapper>
         
-        <SectionWrapper id="process">
-          <ProcessSection />
+        <SectionWrapper id="how-it-works" className="bg-slate-950">
+          <HowItWorksSection />
         </SectionWrapper>
         
         <SectionWrapper id="contact" className="bg-gradient-to-b from-slate-950 to-slate-900">
