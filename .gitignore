@@ -30,5 +30,5 @@ Thumbs.db
 export-tree.ps1
 tree-site.txt
 
-# Optional: ignore archive folder if you don't want it in git
+# Archive folder (ignored for now)
 _archived/
