@@ -7,6 +7,7 @@ import { CheckCircle2, ArrowRight, Zap, Shield, Users } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { cn } from '@/lib/ui-utils';
 import PageContainer from '@/components/PageContainer';
+import SectionHeader from '@/components/SectionHeader';
 
 const plans = [
   {
@@ -302,27 +303,12 @@ export default function PricingPage() {
       {/* Add-ons */}
       <section className="py-24 relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
         <div className="container">
-          <motion.div 
-            className="text-center max-w-3xl mx-auto mb-16"
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            <motion.h2 
-              className="text-3xl sm:text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90 mb-6"
-              variants={fadeInUp}
-            >
-              Optional Add-Ons
-            </motion.h2>
-            
-            <motion.p 
-              className="text-lg text-slate-400"
-              variants={fadeInUp}
-            >
-              Professional web design and development with transparent pricing.
-            </motion.p>
-          </motion.div>
+          <SectionHeader
+            kicker="ADD-ONS"
+            title="Optional Add-Ons"
+            description="Professional web design and development with transparent pricing."
+            icon={Zap}
+          />
 
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
@@ -346,39 +332,27 @@ export default function PricingPage() {
       {/* CTA Section */}
       <section className="relative py-24 overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
         <div className="container">
+          <SectionHeader
+            kicker="GET STARTED"
+            title="Ready to Get Started?"
+            description="Contact us to discuss your website project and get a detailed quote."
+            icon={ArrowRight}
+          />
+          
           <motion.div 
-            className="text-center max-w-3xl mx-auto"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            variants={fadeInUp}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            variants={staggerContainer}
           >
-            <motion.h2 
-              className="text-3xl sm:text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90 mb-6"
-              variants={fadeInUp}
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full font-medium text-sm px-8 py-4 text-white bg-gradient-to-r from-emerald-500 to-emerald-600 shadow-lg hover:opacity-90 transition-opacity"
             >
-              Ready to Get Started?
-            </motion.h2>
-            
-            <motion.p 
-              className="text-lg text-slate-400 mb-8"
-              variants={fadeInUp}
-            >
-              Contact us to discuss your website project and get a detailed quote.
-            </motion.p>
-            
-            <motion.div 
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
-              variants={fadeInUp}
-            >
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full font-medium text-sm px-8 py-4 text-white bg-gradient-to-r from-emerald-500 to-emerald-600 shadow-lg hover:opacity-90 transition-opacity"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </a>
-            </motion.div>
+              Get Started
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </a>
           </motion.div>
         </div>
       </section>

@@ -31,11 +31,6 @@ export default function Footer() {
                 Contact
               </Link>
             </p>
-            <p className="mt-1">
-              <Link href="/work-with-us" className="hover:text-white transition-colors">
-                Services
-              </Link>
-            </p>
           </div>
 
           {/* Legal - Right */}

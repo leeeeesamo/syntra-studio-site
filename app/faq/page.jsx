@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { cn } from '@/lib/ui-utils';
 import PageContainer from '@/components/PageContainer';
+import SectionHeader from '@/components/SectionHeader';
 
 const faqs = [
   {
@@ -169,6 +170,13 @@ export default function FAQPage() {
           </div>
           
           <div className="container">
+            <SectionHeader
+              kicker="FAQ"
+              title="Frequently Asked Questions"
+              description="Find answers to common questions about our web design process, pricing, and services. Can't find what you're looking for? Feel free to reach out."
+              icon={HelpCircle}
+            />
+
             <motion.div 
               className="max-w-4xl mx-auto"
               variants={staggerContainer}

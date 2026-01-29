@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Zap, Code, Shield, Sparkles } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
+import SectionHeader from '@/components/SectionHeader';
 
 const differentiators = [
   {
@@ -64,26 +65,12 @@ export default function WhySyntraSection() {
   return (
     <section className="py-24 relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
       <div className="container">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          className="text-center max-w-3xl mx-auto mb-16"
-        >
-          <motion.h2
-            variants={fadeInUp}
-            className="text-3xl sm:text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90 mb-6"
-          >
-            Why Syntra Digital
-          </motion.h2>
-          <motion.p
-            variants={fadeInUp}
-            className="text-lg text-slate-400"
-          >
-            We're different because we focus on what matters: performance, reliability, and clear communication.
-          </motion.p>
-        </motion.div>
+        <SectionHeader
+          kicker="WHY SYNTRA"
+          title="Why Syntra Digital"
+          description="We're different because we focus on what matters: performance, reliability, and clear communication."
+          icon={Sparkles}
+        />
 
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto"

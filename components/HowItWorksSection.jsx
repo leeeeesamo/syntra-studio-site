@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Search, LayoutTemplate, Code, Rocket, ArrowRight } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
+import SectionHeader from '@/components/SectionHeader';
 
 const steps = [
   {
@@ -71,26 +72,12 @@ export default function HowItWorksSection() {
   return (
     <section className="py-24 relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
       <div className="container">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          className="text-center max-w-3xl mx-auto mb-16"
-        >
-          <motion.h2
-            variants={fadeInUp}
-            className="text-3xl sm:text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90 mb-6"
-          >
-            How It Works
-          </motion.h2>
-          <motion.p
-            variants={fadeInUp}
-            className="text-lg text-slate-400"
-          >
-            Our streamlined process takes your project from concept to launch in four clear steps.
-          </motion.p>
-        </motion.div>
+        <SectionHeader
+          kicker="HOW IT WORKS"
+          title="How It Works"
+          description="Our streamlined process takes your project from concept to launch in four clear steps."
+          icon={Rocket}
+        />
 
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12"

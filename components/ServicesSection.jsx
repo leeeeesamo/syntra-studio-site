@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Monitor, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/ui-utils';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
+import SectionHeader from '@/components/SectionHeader';
 
 const services = [
   {
@@ -124,40 +125,12 @@ export default function ServicesSection() {
       </div>
       
       <div className="container">
-        {/* Section Header */}
-        <motion.div 
-          className="section-header text-center"
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.1 }}
-          variants={{
-            hidden: {},
-            show: {
-              transition: {
-                staggerChildren: 0.1
-              }
-            }
-          }}
-        >
-          <motion.span 
-            className="section-subtitle"
-            variants={fadeInUp}
-          >
-            Website Design Services
-          </motion.span>
-          <motion.h2 
-            className="section-title"
-            variants={fadeInUp}
-          >
-            What We Build
-          </motion.h2>
-          <motion.p 
-            className="section-description"
-            variants={fadeInUp}
-          >
-            Professional web design and development services focused on performance, reliability, and clean execution.
-          </motion.p>
-        </motion.div>
+        <SectionHeader
+          kicker="WHAT WE BUILD"
+          title="What We Build"
+          description="Professional web design and development services focused on performance, reliability, and clean execution."
+          icon={Monitor}
+        />
         
         {/* Services Grid */}
         <motion.div 
