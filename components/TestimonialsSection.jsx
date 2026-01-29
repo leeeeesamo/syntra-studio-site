@@ -8,17 +8,17 @@ import SectionHeader from '@/components/SectionHeader';
 const testimonials = [
   {
     quote: "Working with Syntra Digital was a game-changer for our business. They delivered a beautiful, fast website that perfectly represents our brand.",
-    name: "Client Name",
+    name: "Sarah J.",
     role: "Small Business Owner"
   },
   {
     quote: "Professional, responsive, and incredibly talented. They took our vision and turned it into something beyond our expectations.",
-    name: "Verified Client",
+    name: "Michael C.",
     role: "Service Provider"
   },
   {
     quote: "The attention to detail and commitment to performance is unmatched. Our new website has already increased our conversion rates significantly.",
-    name: "Client Name",
+    name: "Emily R.",
     role: "E-commerce Manager"
   }
 ];
