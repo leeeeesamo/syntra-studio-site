@@ -1,8 +1,8 @@
 import PricingClient from "./pricing.client";
 
 export const metadata = {
-  title: "Website Pricing | Transparent Packages | Syntra Digital",
-  description: "Straightforward website pricing with clear packages and optional add-ons. No hidden fees—just a reliable build and launch."
+  title: "Pricing | Syntra Digital",
+  description: "Clear pricing ranges for Syntra Digital services. Final quotes are based on your goals, system complexity, and implementation scope."
 };
 
 export default function PricingPage() {

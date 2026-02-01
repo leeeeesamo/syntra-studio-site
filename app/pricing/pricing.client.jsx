@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2, ArrowRight, Zap, Shield, Users } from 'lucide-react';
+import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { cn } from '@/lib/ui-utils';
 import PageContainer from '@/components/PageContainer';
@@ -10,95 +10,49 @@ import SectionHeader from '@/components/SectionHeader';
 
 const plans = [
   {
-    name: 'Starter Website',
-    description: 'Custom website design for small businesses and personal projects',
-    price: 'Starting at $1,200',
-    period: 'one-time',
+    name: 'Systems & Operations Foundation',
+    description:
+      'Strategy-first review and planning to align tools, workflows, and priorities before implementation.',
+    price: 'Starting at $1,500 - $3,000',
+    period: '',
     features: [
-      'Custom responsive design',
-      'Up to 5 pages',
-      'Mobile optimization',
-      'Performance optimization',
-      'Basic SEO setup',
-      'Contact form integration',
-      '1 month of support'
+      'Systems & workflow review',
+      'Findings + recommendations',
+      'Prioritized action plan'
     ],
     notIncluded: [],
     gradient: 'from-slate-600 to-slate-700',
     popular: false
   },
   {
-    name: 'Standard Website',
-    description: 'Professional website with advanced features for growing businesses',
-    price: 'Starting at $2,000',
-    period: 'one-time',
+    name: 'Website & Backend Implementation',
+    description:
+      'Design and build dependable systems tailored to how your business operates and how work flows day-to-day.',
+    price: 'Starting at $3,000 - $10,000+',
+    period: '',
     features: [
-      'Everything in Starter Website',
-      'Up to 15 pages',
-      'CMS integration',
-      'Advanced SEO implementation',
-      'Analytics setup',
-      '3 months of support',
-      'Performance monitoring',
-      'Security audit'
+      'Website design/rebuild (as needed)',
+      'Backend workflows + integrations',
+      'Testing, deployment, documentation'
     ],
     notIncluded: [],
     gradient: 'from-blue-500 to-blue-600',
     popular: true
   },
   {
-    name: 'Premium Website',
-    description: 'Comprehensive website solution for established businesses',
-    price: 'Starting at $3,000',
-    period: 'one-time',
+    name: 'Ongoing Systems Support (Optional)',
+    description:
+      'Structured support to keep systems stable and improving over time - without internal overhead.',
+    price: 'Starting at $500 - $2,500/month',
+    period: '',
     features: [
-      'Everything in Standard Website',
-      'Unlimited pages',
-      'Custom integrations',
-      'Advanced security features',
-      '6 months of support',
-      'Priority support',
-      'Dedicated project manager',
-      'Custom API development'
+      'Maintenance + troubleshooting',
+      'Enhancements/optimization',
+      'Periodic check-ins'
     ],
     notIncluded: [],
     gradient: 'from-purple-500 to-purple-600',
     popular: false
-  }
-];
-
-const addOns = [
-  {
-    name: 'Ongoing Maintenance',
-    description: 'Monthly updates, security patches, and performance monitoring',
-    features: [
-      'Regular updates',
-      'Security monitoring',
-      'Performance reports',
-      'Email support',
-      'Backup management'
-    ]
-  },
-  {
-    name: 'Content Updates',
-    description: 'Regular content changes and updates to keep your site fresh',
-    features: [
-      'Content changes',
-      'Image updates',
-      'Blog post management',
-      'Priority response'
-    ]
-  },
-  {
-    name: 'SEO Optimization',
-    description: 'Ongoing SEO work to improve your search rankings',
-    features: [
-      'Keyword research',
-      'On-page optimization',
-      'Content strategy',
-      'Monthly reports',
-      'Competitor analysis'
-    ]
   }
 ];
 
@@ -186,49 +140,12 @@ const PricingCard = ({ plan, index }) => {
                   : "bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white"
               )}
             >
-              Get Started
+              Request a Consultation
               <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </motion.div>
         </div>
       </motion.div>
-    </motion.div>
-  );
-};
-
-const AddOnCard = ({ addOn, index }) => {
-  return (
-    <motion.div
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ 
-        duration: 0.6, 
-        delay: index * 0.1,
-        ease: [0.16, 1, 0.3, 1]
-      }}
-      className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-800 hover:border-slate-700 transition-all duration-300"
-      whileHover={{ y: -4 }}
-    >
-      <div className="flex items-start justify-between mb-4">
-        <div>
-          <h4 className="text-lg font-semibold text-white mb-1">{addOn.name}</h4>
-          <p className="text-slate-400 text-sm">{addOn.description}</p>
-        </div>
-        <div className="p-2 rounded-lg bg-blue-500/10">
-          <Zap className="h-5 w-5 text-blue-400" />
-        </div>
-      </div>
-      
-      <ul className="space-y-2">
-        {addOn.features.map((feature, i) => (
-          <li key={i} className="flex items-center gap-2 text-slate-400 text-sm">
-            <CheckCircle2 className="h-4 w-4 text-blue-400 flex-shrink-0" />
-            <span>{feature}</span>
-          </li>
-        ))}
-      </ul>
     </motion.div>
   );
 };
@@ -262,17 +179,15 @@ export default function PricingClient() {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8"
             >
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90">
-                Transparent Pricing
+                Simple pricing ranges — scoped to your business
               </span>
-              <span className="block mt-4 text-blue-400">— No Hidden Fees</span>
             </motion.h1>
 
             <motion.p
               variants={fadeInUp}
               className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10"
             >
-              Clear, upfront pricing for professional web design and development services. 
-              Choose the plan that fits your needs or get a custom quote.
+              We provide clear pricing ranges to help you plan confidently. Final quotes are based on your goals, system complexity, and the amount of implementation required.
             </motion.p>
           </motion.div>
         </div>
@@ -299,31 +214,12 @@ export default function PricingClient() {
         </div>
       </section>
 
-      {/* Add-ons */}
       <section className="py-24 relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
         <div className="container">
           <SectionHeader
-            kicker="ADD-ONS"
-            title="Optional Add-Ons"
-            description="Professional web design and development with transparent pricing."
-            icon={Zap}
+            title="Pricing transparency"
+            description="We don't upsell unnecessary work - our goal is to build what you actually need. You'll get a clear scope before any project begins."
           />
-
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-          >
-            {addOns.map((addOn, index) => (
-              <AddOnCard 
-                key={addOn.name} 
-                addOn={addOn} 
-                index={index} 
-              />
-            ))}
-          </motion.div>
         </div>
       </section>
 
@@ -333,8 +229,8 @@ export default function PricingClient() {
         <div className="container">
           <SectionHeader
             kicker="GET STARTED"
-            title="Ready to Get Started?"
-            description="Contact us to discuss your website project and get a detailed quote."
+            title="Ready to get started?"
+            description="Request a consultation and we'll recommend the right starting point based on your current systems and goals."
             icon={ArrowRight}
           />
           
@@ -349,7 +245,7 @@ export default function PricingClient() {
               href="/contact"
               className="btn-primary"
             >
-              Get Started
+              Request a Consultation
               <ArrowRight className="ml-2 w-4 h-4" />
             </a>
           </motion.div>

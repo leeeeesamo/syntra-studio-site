@@ -10,44 +10,32 @@ import SectionHeader from '@/components/SectionHeader';
 
 const faqs = [
   {
-    question: 'How long does a typical website project take?',
-    answer: 'Most website projects take 6-8 weeks from start to finish. Simple brochure websites may take 4-6 weeks, while more complex projects with custom functionality can take 8-12 weeks. We\'ll provide a detailed timeline during the planning phase.'
+    question: 'Do you start with a Systems Review?',
+    answer: 'Most engagements start with our Systems & Operations Foundation. It is a strategy-first review that helps us understand how your business operates today, identify gaps, and define the right order of improvements before we build anything.'
   },
   {
-    question: 'What are your pricing ranges?',
-    answer: 'Our website projects typically range from $1,200 for starter websites to $3,000+ for premium solutions. The exact cost depends on your specific requirements, features, and timeline. We provide detailed quotes after understanding your needs.'
+    question: 'What affects pricing the most?',
+    answer: 'Scope and complexity. The biggest drivers are how many systems need to connect (forms, CRMs, scheduling, automation), the amount of custom workflow logic required, and how much existing structure we are working with. You will get a clear scope before any project begins.'
   },
   {
-    question: 'How many revisions are included?',
-    answer: 'We include two rounds of revisions for both design and development phases. Additional revisions can be accommodated at our hourly rate. We believe in clear communication to minimize revisions and ensure we get it right the first time.'
+    question: 'Do you offer ongoing support?',
+    answer: 'Yes. Ongoing Systems Support is available for businesses that want stability and improvements over time without internal overhead. Support typically includes maintenance, troubleshooting, incremental enhancements, and periodic check-ins.'
   },
   {
-    question: 'Do you provide ongoing support and maintenance?',
-    answer: 'Yes, we offer ongoing support plans starting at $200/month. These include security updates, performance monitoring, backups, and technical support. We also provide 30 days of post-launch support with all new projects.'
+    question: 'How long does a typical project take?',
+    answer: 'It depends on scope and complexity. The Systems & Operations Foundation is typically the fastest way to get clarity, and implementation timelines are set after that review. Most builds fall in the 6-12 week range once scope is confirmed.'
   },
   {
-    question: 'Who handles hosting and domain setup?',
-    answer: 'We can handle both hosting and domain setup for you, or work with your existing providers. We recommend reliable hosting solutions that meet your performance and security needs. Domain registration and hosting costs are separate from our development fees.'
+    question: 'Do you work with existing tools (CRM/scheduling/etc.)?',
+    answer: 'Yes. We often integrate with the tools you already use (or help you select better-fit ones). During the Systems & Operations Foundation, we review your current stack and identify what to keep, what to adjust, and what to replace.'
   },
   {
-    question: 'How do you handle communication during projects?',
-    answer: 'We use a combination of email, scheduled calls, and a project management tool to keep you updated. You\'ll receive regular progress updates and have a dedicated project manager. We typically have weekly check-in calls and are available for urgent matters.'
+    question: 'Do you only build websites?',
+    answer: 'No. Websites are often part of the work, but our focus is dependable systems that support day-to-day operations. That can include backend workflows, integrations, automations, and maintaining the systems that keep your business running.'
   },
   {
-    question: 'Do you work with existing websites or only new builds?',
-    answer: 'We do both! We can redesign existing websites, add new features, or build completely new sites from scratch. We\'ll assess your current situation and recommend the best approach for your goals and budget.'
-  },
-  {
-    question: 'What technologies do you use?',
-    answer: 'We primarily work with modern web technologies including React, Next.js, and Tailwind CSS for frontend development. For backend needs, we use Node.js, or work with your existing tech stack. We choose the right tools for your specific requirements.'
-  },
-  {
-    question: 'Is SEO included in your web design services?',
-    answer: 'Yes, we include basic on-page SEO optimization in all our projects - proper meta tags, semantic HTML, site structure, and performance optimization. For advanced SEO strategies, we can connect you with specialized SEO partners or provide consulting services.'
-  },
-  {
-    question: 'What happens after the website is launched?',
-    answer: 'After launch, we provide 30 days of complimentary support for any issues or adjustments. We also offer training so you can manage your content. For ongoing success, we recommend our maintenance plans to keep your site secure and performing well.'
+    question: 'Will I be locked into a retainer?',
+    answer: 'No. Ongoing Systems Support is optional. Some clients prefer a structured monthly plan; others only engage for the Systems & Operations Foundation and an implementation project.'
   }
 ];
 
@@ -153,8 +141,7 @@ export default function FAQClient() {
                 variants={fadeInUp}
                 className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10"
               >
-                Find answers to common questions about our web design process, pricing, and services. 
-                Can't find what you're looking for? Feel free to reach out.
+                Find answers to common questions about our process, pricing ranges, and what it looks like to build and maintain dependable systems.
               </motion.p>
             </motion.div>
           </div>
@@ -223,7 +210,7 @@ export default function FAQClient() {
                   href="/contact"
                   className="inline-flex items-center justify-center rounded-full font-medium text-sm px-8 py-4 text-white bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg hover:opacity-90 transition-opacity"
                 >
-                  Contact Us
+                  Request a Consultation
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
