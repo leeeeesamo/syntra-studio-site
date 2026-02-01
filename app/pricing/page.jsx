@@ -1,8 +1,8 @@
 import PricingClient from "./pricing.client";
 
 export const metadata = {
-  title: "Pricing | Syntra Digital",
-  description: "Clear pricing ranges for Syntra Digital services. Final quotes are based on your goals, system complexity, and implementation scope."
+  title: "Pricing | Website & System Services | Syntra Digital",
+  description: "View transparent pricing ranges for Syntra Digital’s services—from systems reviews to implementation and ongoing support for growing service businesses."
 };
 
 export default function PricingPage() {

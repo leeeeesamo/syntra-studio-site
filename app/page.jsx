@@ -1,8 +1,8 @@
 import HomeClient from "./home.client";
 
 export const metadata = {
-  title: "Reliable by Design | Syntra Digital",
-  description: "Syntra Digital partners with service-based businesses to build and maintain dependable websites and operational systems that support day-to-day work."
+  title: "Syntra Digital | Websites & Systems for Service Businesses",
+  description: "Syntra Digital builds reliable websites and backend systems for service-based businesses—so operations run smoothly today and scale with you."
 };
 
 export default function HomePage() {

@@ -21,8 +21,8 @@ Thumbs.db
 .idea/
 
 # next-sitemap outputs (generated at build)
-public/sitemap*.xml
-public/robots.txt
+#public/sitemap*.xml
+#public/robots.txt
 
 # Tooling caches
 .eslintcache
