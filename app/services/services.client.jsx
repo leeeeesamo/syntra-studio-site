@@ -26,7 +26,7 @@ const services = [
       'Teams outgrowing existing tools or processes',
       'Owners who want clarity before investing in changes'
     ],
-    pricing: 'Starting at $1,500 - $3,000'
+    pricing: 'Starting at $1,500 – $3,000'
   },
   {
     title: 'Website & Backend Implementation',
@@ -45,7 +45,7 @@ const services = [
       'Teams ready to modernize lead handling or operations',
       'Organizations seeking long-term stability in their systems'
     ],
-    pricing: 'Starting at $3,000 - $10,000+'
+    pricing: 'Starting at $3,000 – $10,000+'
   },
   {
     title: 'Ongoing Systems Support (Optional)',
@@ -64,7 +64,7 @@ const services = [
       'Teams that want systems handled proactively',
       'Owners who prefer predictable monthly support'
     ],
-    pricing: 'Starting at $500 - $2,500/month'
+    pricing: 'Starting at $500 – $2,500/month'
   }
 ];
 

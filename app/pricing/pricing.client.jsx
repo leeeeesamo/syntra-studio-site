@@ -13,7 +13,7 @@ const plans = [
     name: 'Systems & Operations Foundation',
     description:
       'Strategy-first review and planning to align tools, workflows, and priorities before implementation.',
-    price: 'Starting at $1,500 - $3,000',
+    price: 'Starting at $1,500 – $3,000',
     period: '',
     features: [
       'Systems & workflow review',
@@ -28,7 +28,7 @@ const plans = [
     name: 'Website & Backend Implementation',
     description:
       'Design and build dependable systems tailored to how your business operates and how work flows day-to-day.',
-    price: 'Starting at $3,000 - $10,000+',
+    price: 'Starting at $3,000 – $10,000+',
     period: '',
     features: [
       'Website design/rebuild (as needed)',
@@ -43,7 +43,7 @@ const plans = [
     name: 'Ongoing Systems Support (Optional)',
     description:
       'Structured support to keep systems stable and improving over time - without internal overhead.',
-    price: 'Starting at $500 - $2,500/month',
+    price: 'Starting at $500 – $2,500/month',
     period: '',
     features: [
       'Maintenance + troubleshooting',
