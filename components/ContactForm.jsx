@@ -46,6 +46,10 @@ export default function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (formData.company.trim()) {
+      return;
+    }
     
     // Client-side validation
     const errors = validateForm();
