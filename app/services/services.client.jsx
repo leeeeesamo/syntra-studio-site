@@ -25,8 +25,7 @@ const services = [
       'Businesses experiencing operational friction',
       'Teams outgrowing existing tools or processes',
       'Owners who want clarity before investing in changes'
-    ],
-    pricing: 'Starting at $1,500 – $3,000'
+    ]
   },
   {
     title: 'Website & Backend Implementation',
@@ -44,8 +43,7 @@ const services = [
       'Service businesses needing more than a brochure site',
       'Teams ready to modernize lead handling or operations',
       'Organizations seeking long-term stability in their systems'
-    ],
-    pricing: 'Starting at $3,000 – $10,000+'
+    ]
   },
   {
     title: 'Ongoing Systems Support (Optional)',
@@ -63,8 +61,7 @@ const services = [
       'Businesses without internal operations or IT support',
       'Teams that want systems handled proactively',
       'Owners who prefer predictable monthly support'
-    ],
-    pricing: 'Starting at $500 – $2,500/month'
+    ]
   }
 ];
 
@@ -89,12 +86,15 @@ const ServiceCard = ({ service, index }) => (
         <h3 className="text-2xl font-semibold text-white mb-4">
           {service.title}
         </h3>
-        <p className="text-slate-300 leading-relaxed mb-6">
+        <p className="text-slate-300 leading-relaxed mb-4">
           {service.description}
         </p>
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-200 text-sm font-medium">
-          {service.pricing}
-        </div>
+        <Link
+          href="/pricing"
+          className="inline-flex text-sm font-medium text-blue-300 hover:text-blue-200 transition-colors mb-6"
+        >
+          View pricing ranges →
+        </Link>
       </div>
 
       <div className="lg:w-1/2 grid gap-6 sm:grid-cols-2">

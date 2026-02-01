@@ -28,7 +28,7 @@ const plans = [
     name: 'Website & Backend Implementation',
     description:
       'Design and build dependable systems tailored to how your business operates and how work flows day-to-day.',
-    price: 'Starting at $3,000 – $10,000+',
+    price: 'Starting at $3,000+',
     period: '',
     features: [
       'Website design/rebuild (as needed)',

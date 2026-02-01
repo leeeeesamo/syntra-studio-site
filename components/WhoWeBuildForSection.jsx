@@ -45,13 +45,6 @@ export default function WhoWeBuildForSection() {
               </motion.li>
             ))}
           </motion.ul>
-
-          <motion.p
-            variants={fadeInUp}
-            className="mt-6 text-sm sm:text-base text-slate-400 text-center"
-          >
-            If you're looking for quick fixes or one-off tasks, we may not be the right fit - and that's okay.
-          </motion.p>
         </motion.div>
       </div>
     </section>
