@@ -15,7 +15,7 @@ const faqs = [
   },
   {
     question: 'What are your pricing ranges?',
-    answer: 'Our website projects typically range from $3,000 for basic brochure websites to $15,000+ for complex custom solutions. The exact cost depends on your specific requirements, features, and timeline. We provide detailed quotes after understanding your needs.'
+    answer: 'Our website projects typically range from $1,200 for starter websites to $3,000+ for premium solutions. The exact cost depends on your specific requirements, features, and timeline. We provide detailed quotes after understanding your needs.'
   },
   {
     question: 'How many revisions are included?',

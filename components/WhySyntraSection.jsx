@@ -1,30 +1,25 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Zap, Code, Shield, Sparkles } from 'lucide-react';
+import { Compass, Layers, ShieldCheck } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import SectionHeader from '@/components/SectionHeader';
 
 const differentiators = [
   {
-    title: 'Performance-First',
-    description: 'We build websites that load fast and rank well, focusing on Core Web Vitals and user experience from day one.',
-    icon: Zap
+    title: 'Strategy before implementation',
+    description: 'We take time to understand how your business actually works before building anything.',
+    icon: Compass
   },
   {
-    title: 'Clean Code Standards',
-    description: 'Maintainable, well-documented code that scales with your business and makes future updates simple.',
-    icon: Code
+    title: 'Built for day-to-day use',
+    description: 'Everything we design is meant to support real workflows - not just look good.',
+    icon: Layers
   },
   {
-    title: 'Long-Term Reliability',
-    description: 'We build websites that last, using modern best practices and proven technologies.',
-    icon: Shield
-  },
-  {
-    title: 'Clarity & Communication',
-    description: 'No jargon, no surprises. We explain everything clearly and keep you informed at every step.',
-    icon: Sparkles
+    title: 'Reliable, maintainable systems',
+    description: 'Our focus is long-term stability, not quick fixes or fragile setups.',
+    icon: ShieldCheck
   }
 ];
 
@@ -63,17 +58,12 @@ const DifferentiatorCard = ({ item, index }) => {
 
 export default function WhySyntraSection() {
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
+    <section className="section relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
       <div className="container">
-        <SectionHeader
-          kicker="WHY SYNTRA"
-          title="Why Syntra Digital"
-          description="We're different because we focus on what matters: performance, reliability, and clear communication."
-          icon={Sparkles}
-        />
+        <SectionHeader title="A calm, systems-first approach" />
 
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"

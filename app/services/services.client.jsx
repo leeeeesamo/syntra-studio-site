@@ -130,7 +130,7 @@ const ServiceCard = ({ service, index }) => (
   </motion.div>
 );
 
-export default function WebsitesClient() {
+export default function ServicesClient() {
   return (
     <PageContainer>
       <main className="overflow-hidden">

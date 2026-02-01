@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
-const ALLOWED = new Set(['/', '/websites', '/pricing', '/faq', '/contact']);
+const ALLOWED = new Set(['/', '/services', '/pricing', '/faq', '/contact']);
 
 module.exports = {
   siteUrl: "https://syntrasolutions.digital",
@@ -13,8 +13,6 @@ module.exports = {
     "/process",
     "/mission",
     "/work-with-us",
-    "/services",
-    "/services/*",
 
     // Next internals
     "/_not-found",
@@ -25,7 +23,7 @@ module.exports = {
   additionalPaths: async (config) => {
     const allowedRoutes = [
       { loc: '/', changefreq: 'weekly', priority: 1.0 },
-      { loc: '/websites', changefreq: 'monthly', priority: 0.9 },
+      { loc: '/services', changefreq: 'monthly', priority: 0.9 },
       { loc: '/pricing', changefreq: 'monthly', priority: 0.8 },
       { loc: '/faq', changefreq: 'monthly', priority: 0.7 },
       { loc: '/contact', changefreq: 'monthly', priority: 0.6 }
@@ -48,7 +46,7 @@ module.exports = {
     if (path === '/') {
       priority = 1.0;
       changefreq = 'weekly';
-    } else if (path === '/websites') {
+    } else if (path === '/services') {
       priority = 0.9;
     } else if (path === '/pricing') {
       priority = 0.8;

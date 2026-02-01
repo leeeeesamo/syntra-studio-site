@@ -1,16 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle, Zap, Star } from 'lucide-react';
 import Link from 'next/link';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
-
-const benefits = [
-  'Starter Website — Starting at $1,200',
-  'Standard Website — Starting at $2,000',
-  'Premium Website — Starting at $3,000',
-  'Custom solutions for your needs'
-];
 
 export default function FinalCTASection() {
   return (
@@ -33,33 +25,25 @@ export default function FinalCTASection() {
               className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100 mb-6"
               variants={fadeInUp}
             >
-              Ready to Build Your Website?
+              Let's bring structure to your systems
             </motion.h2>
 
             <motion.p
               className="text-xl text-slate-400 max-w-2xl mx-auto mb-12"
               variants={fadeInUp}
             >
-              Let&apos;s discuss how we can create a professional website that represents your business and helps you achieve your goals.
+              Start with a systems review and get clarity on what's working, what isn't, and what to fix first.
             </motion.p>
 
-            {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12"
+              className="flex items-center justify-center"
               variants={fadeInUp}
             >
               <Link
                 href="/contact"
                 className="btn-primary"
               >
-                Request a Quote
-              </Link>
-
-              <Link
-                href="/faq"
-                className="btn-outline"
-              >
-                View FAQ
+                Request a Consultation
               </Link>
             </motion.div>
           </motion.div>

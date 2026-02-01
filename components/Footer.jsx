@@ -11,7 +11,7 @@ export default function Footer() {
             <p className="font-medium text-[var(--syntra-text-main)]">Navigation</p>
             <nav className="mt-2 flex flex-col gap-1 text-xs sm:text-sm">
               <Link href="/" className="hover:text-white transition-colors">Home</Link>
-              <Link href="/websites" className="hover:text-white transition-colors">Websites</Link>
+              <Link href="/services" className="hover:text-white transition-colors">Services</Link>
               <Link href="/pricing" className="hover:text-white transition-colors">Pricing</Link>
               <Link href="/contact" className="hover:text-white transition-colors">Contact</Link>
               <Link href="/faq" className="hover:text-white transition-colors">FAQ</Link>

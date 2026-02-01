@@ -9,6 +9,7 @@ yarn-error.log
 *.log
 
 # Env (secrets)
+.env
 .env.*
 
 # OS junk
