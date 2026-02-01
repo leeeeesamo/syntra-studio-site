@@ -168,7 +168,7 @@ export default function ContactForm() {
       <textarea
         name="message"
         rows="5"
-        placeholder="Tell us about your website project..."
+        placeholder="Tell us about your business and what you’re trying to improve."
         value={formData.message}
         onChange={handleChange}
         required
