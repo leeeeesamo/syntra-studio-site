@@ -58,23 +58,27 @@ export default function ContactForm() {
     setStatus(null);
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://formspree.io/f/maqbnjal', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify({
-          name: `${formData.firstName} ${formData.lastName}`,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
           email: formData.email,
-          message: formData.message,
-          company: formData.company // Honeypot field
+          message: formData.message
         }),
       });
 
-      const result = await response.json();
+      const result = await response.json().catch(() => null);
 
-      if (result.ok) {
-        setStatus({ type: 'success', message: 'Thanks! I\'ll reply within 1 business day.' });
+      if (response.ok) {
+        setStatus({
+          type: 'success',
+          message: 'Thanks — your message was sent. We\'ll get back to you shortly.'
+        });
         // Clear form
         setFormData({
           firstName: '',
@@ -84,10 +88,14 @@ export default function ContactForm() {
           message: ''
         });
       } else {
-        setStatus({ type: 'error', message: result.error || 'Something went wrong. Please try again.' });
+        const message =
+          result?.error ||
+          result?.errors?.[0]?.message ||
+          'Something went wrong. Please try again.';
+        setStatus({ type: 'error', message });
       }
     } catch (error) {
-      setStatus({ type: 'error', message: 'Network error. Please try again.' });
+      setStatus({ type: 'error', message: 'Something went wrong. Please try again.' });
     } finally {
       setIsSubmitting(false);
     }
