@@ -2,8 +2,6 @@
    SYNTRA DESIGN SYSTEM
    Global CSS Variables and Base Styles
 =============================================== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 /* ============================================
    TAILWIND LAYERS
 =============================================== */
@@ -370,6 +368,22 @@
   margin: 20px auto;
   background: linear-gradient(to right, var(--syntra-gradient-start), var(--syntra-gradient-end));
   opacity: 0.4;
+}
+
+/* ============================================
+   HERO BACKGROUND (responsive, optimized)
+=============================================== */
+.hero-bg {
+  background-image: url('/brand-assets/hero-banner-mobile.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  .hero-bg {
+    background-image: url('/brand-assets/hero-banner.webp');
+  }
 }
 
 /* ============================================

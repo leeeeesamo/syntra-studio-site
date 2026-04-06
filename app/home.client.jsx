@@ -2,9 +2,9 @@
 
 import { lazy, Suspense } from 'react';
 import { Loader2 } from 'lucide-react';
+import HeroSection from '@/components/HeroSection';
 
-// Lazy load components
-const HeroSection = lazy(() => import('@/components/HeroSection'));
+// Lazy load below-fold components
 const ProblemSection = lazy(() => import('@/components/ProblemSection'));
 const WhySyntraSection = lazy(() => import('@/components/WhySyntraSection'));
 const ProcessSection = lazy(() => import('@/components/ProcessSection'));
@@ -22,8 +22,8 @@ const LoadingFallback = () => (
 export default function HomeClient() {
   return (
     <main className="overflow-hidden">
+      <HeroSection />
       <Suspense fallback={<LoadingFallback />}>
-        <HeroSection />
         <ProblemSection />
         <WhySyntraSection />
         <ProcessSection />

@@ -67,8 +67,8 @@ module.exports = {
       
       // Typography
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-        display: ['Cal Sans', 'Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['var(--font-inter)', 'Inter var', ...defaultTheme.fontFamily.sans],
+        display: ['var(--font-inter)', 'Cal Sans', 'Inter var', ...defaultTheme.fontFamily.sans],
         mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
       },
       
@@ -181,7 +181,7 @@ module.exports = {
         'fade-in': 'fadeIn 0.5s ease-out',
         'fade-up': 'fadeUp 0.5s ease-out',
         'fade-down': 'fadeDown 0.5s ease-out',
-        'fade-in-up': 'fadeInUp 0.6s ease-out',
+        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
         'fade-in-down': 'fadeInDown 0.6s ease-out',
         'scale-in': 'scaleIn 0.5s ease-out',
         'slide-up': 'slideUp 0.5s ease-out',
