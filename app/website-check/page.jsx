@@ -2,6 +2,15 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import {
+  formWrapperClass,
+  inputClass,
+  statusClass,
+  submitButtonClass,
+  fieldGridClass,
+  spinnerClass,
+  FORMSPREE_ENDPOINT,
+} from '@/lib/form-styles';
 
 // ---------- SVG icon helpers (inline to avoid extra deps) ----------
 const IconCheck = () => (
@@ -44,8 +53,10 @@ const IconUser = () => (
 export default function WebsiteCheckPage() {
   const [formData, setFormData] = useState({
     name: '',
+    businessName: '',
     email: '',
     website: '',
+    feedback: '',
     company: '', // honeypot
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -59,17 +70,15 @@ export default function WebsiteCheckPage() {
   const validateForm = () => {
     if (!formData.name.trim() || formData.name.trim().length < 2)
       return 'Please enter your name.';
+    if (!formData.businessName.trim() || formData.businessName.trim().length < 2)
+      return 'Please enter your business name.';
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email))
       return 'Please enter a valid email address.';
-    try {
-      const url = formData.website.trim();
-      if (!url) return 'Please enter your website URL.';
-      if (!/^https?:\/\//i.test(url) && !url.includes('.'))
-        return 'Please enter a valid website URL (e.g. yoursite.com).';
-    } catch {
-      return 'Please enter a valid website URL.';
-    }
+    const url = formData.website.trim();
+    if (!url) return 'Please enter your website URL.';
+    if (!/^https?:\/\//i.test(url) && !url.includes('.'))
+      return 'Please enter a valid website URL (e.g. yoursite.com).';
     return null;
   };
 
@@ -87,26 +96,38 @@ export default function WebsiteCheckPage() {
     setStatus(null);
 
     try {
-      const response = await fetch('https://formspree.io/f/maqbnjal', {
+      const payload = {
+        _subject: 'New Website Review Request',
+        name: formData.name,
+        businessName: formData.businessName,
+        email: formData.email,
+        website: formData.website,
+        source: 'website-check-landing',
+      };
+      if (formData.feedback.trim()) {
+        payload.feedback = formData.feedback;
+      }
+
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          _subject: 'New Website Review Request',
-          name: formData.name,
-          email: formData.email,
-          website: formData.website,
-          source: 'website-check-landing',
-        }),
+        body: JSON.stringify(payload),
       });
+
+      const result = await response.json().catch(() => null);
 
       if (response.ok) {
         setStatus({
           type: 'success',
-          message: "Thanks! I'll review your site and send your video within 1–2 days.",
+          message: "Thanks! I'll review your site and send your video within 1–2 business days.",
         });
-        setFormData({ name: '', email: '', website: '', company: '' });
+        setFormData({ name: '', businessName: '', email: '', website: '', feedback: '', company: '' });
       } else {
-        setStatus({ type: 'error', message: 'Something went wrong. Please try again.' });
+        const message =
+          result?.error ||
+          result?.errors?.[0]?.message ||
+          'Something went wrong. Please try again.';
+        setStatus({ type: 'error', message });
       }
     } catch {
       setStatus({ type: 'error', message: 'Something went wrong. Please try again.' });
@@ -143,12 +164,12 @@ export default function WebsiteCheckPage() {
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90">
-              Free Website Review for Local Businesses
+              Free Website Review to Help You Get More Calls, Leads, and Customers
             </span>
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10">
-            I&rsquo;ll record a quick 2–3 minute video showing exactly what I&rsquo;d improve on your site to help turn more visitors into real calls and customers.
+            I&rsquo;ll record a short personalized video showing what I&rsquo;d improve on your site so it&rsquo;s easier for visitors to take action.
           </p>
 
           <button
@@ -173,7 +194,7 @@ export default function WebsiteCheckPage() {
               'Slow mobile load times that cause people to leave before the page finishes',
               'Confusing or cluttered layouts that bury the most important information',
             ].map((item, i) => (
-              <div key={i} className="flex items-start gap-3 bg-slate-900/50 border border-slate-800/60 rounded-xl p-4">
+              <div key={i} className="flex items-start gap-3 bg-black/20 border border-[var(--syntra-border-soft)] rounded-xl p-4">
                 <IconAlert />
                 <p className="text-slate-300 text-base sm:text-lg leading-relaxed">{item}</p>
               </div>
@@ -213,7 +234,7 @@ export default function WebsiteCheckPage() {
             ].map((card, i) => (
               <div
                 key={i}
-                className="bg-slate-900/50 border border-slate-800/60 rounded-2xl p-6 sm:p-8 text-center"
+                className="bg-black/20 border border-[var(--syntra-border-soft)] rounded-2xl p-6 sm:p-8 text-center"
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 mb-5">
                   {card.icon}
@@ -230,19 +251,29 @@ export default function WebsiteCheckPage() {
         </div>
       </section>
 
-      {/* ======================== VIDEO PLACEHOLDER (Optional) ======================== */}
-      <section className="py-16 md:py-20 border-t border-slate-800/50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
-            Here&rsquo;s What a Review Looks Like
+      {/* ======================== WHAT I'LL REVIEW ======================== */}
+      <section className="py-20 md:py-28 border-t border-slate-800/50">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
+            What I&rsquo;ll Cover in Your Review
           </h2>
-          <div className="aspect-video bg-slate-900/60 border border-slate-800/60 rounded-2xl flex flex-col items-center justify-center gap-3">
-            <div className="w-16 h-16 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
-              <svg className="w-8 h-8 text-blue-400 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-            <p className="text-slate-500 text-sm">Example video coming soon</p>
+          <p className="text-slate-400 text-base sm:text-lg text-center mb-10 max-w-2xl mx-auto">
+            Every review is tailored to your site. Here&rsquo;s what I typically look at:
+          </p>
+
+          <div className="space-y-4">
+            {[
+              'First impression — does your homepage clearly communicate what you do and who you help?',
+              'Calls-to-action — are visitors being guided toward contacting you or taking the next step?',
+              'Mobile experience — does the site load fast and work well on phones?',
+              'Layout and clarity — is the most important information easy to find?',
+              'Quick SEO check — are the basics in place so people can find you on Google?',
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3 bg-black/20 border border-[var(--syntra-border-soft)] rounded-xl p-4">
+                <IconCheck />
+                <p className="text-slate-300 text-base leading-relaxed">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -261,27 +292,17 @@ export default function WebsiteCheckPage() {
 
           <form
             onSubmit={handleSubmit}
-            className="space-y-5 bg-slate-900/50 border border-slate-800/60 rounded-2xl p-6 sm:p-8 shadow-xl"
+            className={formWrapperClass}
           >
-            {/* Status messages */}
+            {/* Status Messages */}
             {status && (
-              <div
-                className={`p-4 rounded-xl text-sm ${
-                  status.type === 'success'
-                    ? 'bg-green-500/10 border border-green-500/20 text-green-300'
-                    : 'bg-red-500/10 border border-red-500/20 text-red-300'
-                }`}
-              >
+              <div className={statusClass(status.type)}>
                 {status.message}
               </div>
             )}
 
-            <div>
-              <label htmlFor="wc-name" className="block text-sm font-medium text-slate-300 mb-1.5">
-                Name
-              </label>
+            <div className={fieldGridClass}>
               <input
-                id="wc-name"
                 type="text"
                 name="name"
                 placeholder="Your name"
@@ -289,50 +310,61 @@ export default function WebsiteCheckPage() {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                className="w-full p-3 rounded-xl bg-black/30 border border-[var(--syntra-border-soft)] text-white text-sm placeholder:text-slate-500 focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/30 transition-colors"
+                className={inputClass}
               />
-            </div>
-
-            <div>
-              <label htmlFor="wc-email" className="block text-sm font-medium text-slate-300 mb-1.5">
-                Email
-              </label>
               <input
-                id="wc-email"
-                type="email"
-                name="email"
-                placeholder="you@email.com"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                disabled={isSubmitting}
-                className="w-full p-3 rounded-xl bg-black/30 border border-[var(--syntra-border-soft)] text-white text-sm placeholder:text-slate-500 focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/30 transition-colors"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="wc-website" className="block text-sm font-medium text-slate-300 mb-1.5">
-                Website URL
-              </label>
-              <input
-                id="wc-website"
                 type="text"
-                name="website"
-                placeholder="yoursite.com"
-                value={formData.website}
+                name="businessName"
+                placeholder="Business name"
+                value={formData.businessName}
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                className="w-full p-3 rounded-xl bg-black/30 border border-[var(--syntra-border-soft)] text-white text-sm placeholder:text-slate-500 focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/30 transition-colors"
+                className={inputClass}
               />
             </div>
 
-            {/* Honeypot */}
+            <input
+              type="email"
+              name="email"
+              placeholder="Email address"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              disabled={isSubmitting}
+              className={inputClass}
+            />
+
+            <input
+              type="text"
+              name="website"
+              placeholder="Website URL (e.g. yoursite.com)"
+              value={formData.website}
+              onChange={handleChange}
+              required
+              disabled={isSubmitting}
+              className={inputClass}
+            />
+
+            <textarea
+              name="feedback"
+              rows="3"
+              placeholder="What would you like feedback on? (optional)"
+              value={formData.feedback}
+              onChange={handleChange}
+              disabled={isSubmitting}
+              className={inputClass}
+            />
+
+            {/* Honeypot field - hidden from users */}
             <input
               type="text"
               name="company"
+              placeholder="Company name (optional)"
               value={formData.company}
               onChange={handleChange}
+              className={inputClass}
+              disabled={isSubmitting}
               style={{ display: 'none' }}
               aria-hidden="true"
               tabIndex="-1"
@@ -341,11 +373,11 @@ export default function WebsiteCheckPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="btn-primary w-full flex items-center justify-center text-center text-base py-3.5 disabled:opacity-50 disabled:cursor-not-allowed"
+              className={submitButtonClass}
             >
               {isSubmitting ? (
                 <>
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2" />
+                  <div className={spinnerClass} />
                   Sending...
                 </>
               ) : (
@@ -355,7 +387,7 @@ export default function WebsiteCheckPage() {
           </form>
 
           <p className="text-center text-slate-500 text-sm mt-5">
-            I&rsquo;ll review your site and send your video within 1–2 days.
+            I&rsquo;ll review your site and send your video within 1–2 business days.
           </p>
         </div>
       </section>
@@ -363,20 +395,23 @@ export default function WebsiteCheckPage() {
       {/* ======================== ABOUT ======================== */}
       <section className="py-20 md:py-28 border-t border-slate-800/50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-slate-900/50 border border-slate-800/60 rounded-2xl p-6 sm:p-8">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-black/20 border border-[var(--syntra-border-soft)] rounded-2xl p-6 sm:p-8">
             <div className="shrink-0 w-14 h-14 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
               <IconUser />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-white mb-3">About</h2>
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
-                I work with small businesses to improve their websites and backend systems. Most sites don&rsquo;t need a full rebuild—just a few smart tweaks that make it easier for customers to take action.
+              <h2 className="text-2xl font-bold text-white mb-3">About Syntra Digital</h2>
+              <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-3">
+                I&rsquo;m the founder of Syntra Digital, where I help small and local businesses get more from their websites. Most sites are closer than you think — they just need a few targeted adjustments to convert more visitors into real inquiries.
+              </p>
+              <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-4">
+                I&rsquo;ve worked with service businesses across multiple industries to improve clarity, speed, and lead flow. Every recommendation I make is practical, specific, and focused on results.
               </p>
               <Link
                 href="/services"
                 className="text-blue-400 text-sm font-medium hover:text-blue-300 transition-colors"
               >
-                Learn more about what I do &rarr;
+                See how I can help &rarr;
               </Link>
             </div>
           </div>

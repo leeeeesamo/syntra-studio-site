@@ -1,6 +1,15 @@
 'use client';
 
 import { useState } from 'react';
+import {
+  formWrapperClass,
+  inputClass,
+  statusClass,
+  submitButtonClass,
+  fieldGridClass,
+  spinnerClass,
+  FORMSPREE_ENDPOINT,
+} from '@/lib/form-styles';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -62,7 +71,7 @@ export default function ContactForm() {
     setStatus(null);
 
     try {
-      const response = await fetch('https://formspree.io/f/maqbnjal', {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -106,18 +115,15 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 bg-black/20 border border-[var(--syntra-border-soft)] rounded-2xl p-8 shadow-lg">
+    <form onSubmit={handleSubmit} className={formWrapperClass}>
       {/* Status Messages */}
       {status && (
-        <div className={`p-4 rounded-lg text-sm ${status.type === 'success' 
-          ? 'bg-green-500/10 border border-green-500/20 text-green-300' 
-          : 'bg-red-500/10 border border-red-500/20 text-red-300'
-        }`}>
+        <div className={statusClass(status.type)}>
           {status.message}
         </div>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className={fieldGridClass}>
         <input
           type="text"
           name="firstName"
@@ -125,7 +131,7 @@ export default function ContactForm() {
           value={formData.firstName}
           onChange={handleChange}
           required
-          className="w-full p-3 rounded-xl bg-black/30 border border-[var(--syntra-border-soft)] text-white text-sm placeholder:text-slate-400"
+          className={inputClass}
           disabled={isSubmitting}
         />
         <input
@@ -135,7 +141,7 @@ export default function ContactForm() {
           value={formData.lastName}
           onChange={handleChange}
           required
-          className="w-full p-3 rounded-xl bg-black/30 border border-[var(--syntra-border-soft)] text-white text-sm placeholder:text-slate-400"
+          className={inputClass}
           disabled={isSubmitting}
         />
       </div>
@@ -147,7 +153,7 @@ export default function ContactForm() {
         value={formData.email}
         onChange={handleChange}
         required
-        className="w-full p-3 rounded-xl bg-black/30 border border-[var(--syntra-border-soft)] text-white text-sm placeholder:text-slate-400"
+        className={inputClass}
         disabled={isSubmitting}
       />
 
@@ -158,7 +164,7 @@ export default function ContactForm() {
         placeholder="Company name (optional)"
         value={formData.company}
         onChange={handleChange}
-        className="w-full p-3 rounded-xl bg-black/30 border border-[var(--syntra-border-soft)] text-white text-sm placeholder:text-slate-400"
+        className={inputClass}
         disabled={isSubmitting}
         style={{ display: 'none' }}
         aria-hidden="true"
@@ -172,18 +178,18 @@ export default function ContactForm() {
         value={formData.message}
         onChange={handleChange}
         required
-        className="w-full p-3 rounded-xl bg-black/30 border border-[var(--syntra-border-soft)] text-white text-sm placeholder:text-slate-400"
+        className={inputClass}
         disabled={isSubmitting}
       ></textarea>
 
       <button
         type="submit"
         disabled={isSubmitting}
-        className="btn-primary w-full flex items-center justify-center text-center disabled:opacity-50 disabled:cursor-not-allowed"
+        className={submitButtonClass}
       >
         {isSubmitting ? (
           <>
-            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+            <div className={spinnerClass}></div>
             Sending...
           </>
         ) : (
