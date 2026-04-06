@@ -42,6 +42,12 @@ export default function Header() {
               My Portfolio
             </Link>
           </nav>
+          <Link
+            href="/website-check/"
+            className="btn-primary ml-6 text-sm px-4 py-2 whitespace-nowrap"
+          >
+            Get Free Review
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -77,6 +83,13 @@ export default function Header() {
                 className="hover:opacity-80 transition-opacity"
               >
                 My Portfolio
+              </Link>
+              <Link
+                href="/website-check/"
+                onClick={close}
+                className="btn-primary text-center text-base px-5 py-3 mt-2"
+              >
+                Get Free Review
               </Link>
             </nav>
           </motion.div>
