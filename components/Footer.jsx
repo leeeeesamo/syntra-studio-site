@@ -18,6 +18,9 @@ export default function Footer() {
               <Link href="/" className="transition-colors hover:text-white">
                 Home
               </Link>
+              <Link href="/about" className="transition-colors hover:text-white">
+                About
+              </Link>
               <Link href="/services" className="transition-colors hover:text-white">
                 Services
               </Link>
@@ -74,9 +77,20 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-2 border-t border-[var(--syntra-border-soft)] pt-6 text-xs text-[var(--syntra-text-muted)] sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Syntra Digital. All rights reserved.</p>
-          <Link href="/contact" className="transition-colors hover:text-white">
-            Contact
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link href="/contact" className="transition-colors hover:text-white">
+              Contact
+            </Link>
+            <a
+              href="https://www.linkedin.com/company/syntra-digital"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-white"
+              aria-label="Syntra Digital on LinkedIn"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
       </div>
     </footer>

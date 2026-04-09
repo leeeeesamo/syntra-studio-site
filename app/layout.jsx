@@ -37,7 +37,12 @@ const websiteSchema = {
   logo: `${seoConfig.canonical}/brand-assets/logo.png`,
   sameAs: [
     `https://twitter.com/${seoConfig.twitter?.handle?.replace("@", "")}`,
+    "https://www.linkedin.com/company/syntra-digital",
   ].filter(Boolean),
+  areaServed: {
+    "@type": "City",
+    name: "Birmingham, Alabama",
+  },
   priceRange: "$$$",
   openingHours: "Mo,Tu,We,Th,Fr 09:00-17:00",
   telephone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "+1234567890",
@@ -83,6 +88,14 @@ export const metadata = {
       },
     ],
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+      { url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+    ],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+  },
   alternates: {
     canonical: seoConfig.canonical,
   },
@@ -103,6 +116,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        {/* Security: Referrer policy (meta fallback for static hosting) */}
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+
         {/* Preload hero background image — responsive WebP for faster LCP */}
         <link
           rel="preload"

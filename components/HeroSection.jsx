@@ -51,7 +51,7 @@ export default function HeroSection() {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90">
-              Systems that support your business - not slow it down.
+              Websites and tools that work as hard as you do.
             </span>
           </h1>
 
@@ -59,14 +59,14 @@ export default function HeroSection() {
             className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-6 animate-fade-in-up animate-delay-100"
             style={{ opacity: 0 }}
           >
-            Syntra Digital partners with service-based businesses to build and maintain dependable websites and operational systems that actually support day-to-day work.
+            Syntra Digital helps service-based businesses build dependable websites, streamline their workflows, and create digital infrastructure that supports real day-to-day operations.
           </p>
 
           <p
             className="text-base sm:text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed mb-10 animate-fade-in-up animate-delay-200"
             style={{ opacity: 0 }}
           >
-            From strategy and implementation to ongoing systems support, we focus on building infrastructure you can rely on.
+            From planning and implementation to ongoing support — we focus on building things you can rely on long after launch.
           </p>
 
           <div

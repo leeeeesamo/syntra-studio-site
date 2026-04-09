@@ -13,7 +13,7 @@ export default function ProblemSection() {
       </div>
 
       <div className="container">
-        <SectionHeader title="When your systems don't support your work, everything feels harder than it should." />
+        <SectionHeader title="When your tools can't keep up, everything feels harder than it should." />
 
         <motion.div
           className="max-w-3xl mx-auto text-center"
@@ -26,13 +26,13 @@ export default function ProblemSection() {
             variants={fadeInUp}
             className="text-lg text-slate-300 leading-relaxed mb-6"
           >
-            Many service-based businesses outgrow the tools and processes they started with. Websites become disconnected from operations, manual work piles up, and important information lives in too many places. Over time, this creates friction, inefficiency, and unnecessary stress.
+            Many service-based businesses outgrow the tools and processes they started with. The website stops reflecting what you actually offer, manual work piles up, and important details get lost between emails, spreadsheets, and sticky notes. Over time, this creates friction that slows everything down.
           </motion.p>
           <motion.p
             variants={fadeInUp}
             className="text-lg text-slate-300 leading-relaxed"
           >
-            Syntra exists to bring structure, clarity, and reliability back to how your business operates.
+            Syntra exists to bring structure, clarity, and reliability back to how your business runs — starting with the technology you depend on every day.
           </motion.p>
         </motion.div>
       </div>

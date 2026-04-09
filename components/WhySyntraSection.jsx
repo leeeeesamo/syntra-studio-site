@@ -60,7 +60,7 @@ export default function WhySyntraSection() {
   return (
     <section className="section relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
       <div className="container">
-        <SectionHeader title="A calm, systems-first approach" />
+        <SectionHeader title="A calm, structured approach" />
 
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
