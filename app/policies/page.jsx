@@ -3,8 +3,16 @@ import Link from "next/link";
 export const metadata = {
   title: "Company Policies | Syntra Digital",
   description:
-    "Review Syntra Digital's company policies covering service terms, payments, project scope, confidentiality, and more.",
+    "How Syntra Digital works with clients — covering service terms, payments, project scope, confidentiality, and expectations.",
 };
+
+function IconBriefcase() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
+      <path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M4 9h16v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9Zm0 0a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2" stroke="currentColor" strokeWidth="1.8" />
+    </svg>
+  );
+}
 
 function IconFileText() {
   return (
@@ -51,23 +59,6 @@ function IconShield() {
   );
 }
 
-function IconLock() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-      <path d="M8 11V8a4 4 0 1 1 8 0v3M7 11h10a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1Z" stroke="currentColor" strokeWidth="1.8" />
-    </svg>
-  );
-}
-
-function IconXCircle() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.8" />
-      <path d="m15 9-6 6M9 9l6 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
-    </svg>
-  );
-}
-
 function IconAlertTriangle() {
   return (
     <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
@@ -76,34 +67,23 @@ function IconAlertTriangle() {
   );
 }
 
-function IconMail() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-      <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
-      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-
-function IconBriefcase() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
-      <path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M4 9h16v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9Zm0 0a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2" stroke="currentColor" strokeWidth="1.8" />
-    </svg>
-  );
-}
-
 const sections = [
   {
-    id: "overview",
-    title: "Overview",
+    id: "how-we-work",
+    title: "How We Work",
     icon: <IconBriefcase />,
     body: (
-      <p>
-        At Syntra Digital, we are committed to delivering reliable, high-quality solutions
-        that help businesses operate more efficiently. The following policies outline how we
-        work with clients to ensure clarity, consistency, and successful project outcomes.
-      </p>
+      <>
+        <p>
+          Syntra Digital builds websites and systems that help businesses communicate clearly,
+          run more efficiently, and grow with confidence. Every project starts with a conversation
+          about your goals, followed by a clear plan so you always know what to expect.
+        </p>
+        <p>
+          The policies below outline how we keep things organized, transparent, and fair for
+          both sides throughout the process.
+        </p>
+      </>
     ),
   },
   {
@@ -113,26 +93,38 @@ const sections = [
     body: (
       <>
         <p>
-          All services provided by Syntra Digital are tailored to each client's specific needs.
-          Project details, timelines, and deliverables will be clearly defined before work begins.
+          All services are tailored to each client. Before work begins, we define the project
+          scope, timeline, and deliverables so expectations are clear from the start.
         </p>
         <p>
-          Any additional work outside the agreed scope may require a revised estimate or separate agreement.
+          Work outside the original agreement may require a revised estimate or a separate
+          project phase.
+        </p>
+        <p>
+          Either party may end a project at any time with written notice. If a project is
+          ended early, any work completed up to that point will be billed accordingly.
+          Deposits are non-refundable once work has begun.
         </p>
       </>
     ),
   },
   {
-    id: "payment-policy",
-    title: "Payment Policy",
+    id: "payment-billing",
+    title: "Payment & Billing",
     icon: <IconCreditCard />,
     body: (
-      <ul>
-        <li>Payment terms will be outlined prior to project start.</li>
-        <li>Projects may require an upfront deposit.</li>
-        <li>Remaining balances are due based on agreed milestones or completion.</li>
-        <li>Late payments may result in paused work or delayed delivery.</li>
-      </ul>
+      <>
+        <p>
+          Payment terms are outlined before any project begins. Here is how billing
+          typically works:
+        </p>
+        <ul>
+          <li>A deposit may be required to secure your project start date.</li>
+          <li>Remaining balances are invoiced at agreed milestones or upon completion.</li>
+          <li>Invoices are due within the timeframe stated on the invoice.</li>
+          <li>Late payments may result in paused work until the balance is resolved.</li>
+        </ul>
+      </>
     ),
   },
   {
@@ -141,12 +133,19 @@ const sections = [
     icon: <IconClipboard />,
     body: (
       <>
-        <p>Each project includes a defined scope of work.</p>
+        <p>
+          Every project includes a clearly defined scope of work. We want you to be happy
+          with the result, and revisions are a normal part of the process.
+        </p>
         <ul>
-          <li>Minor revisions are included where specified.</li>
-          <li>Additional revisions or changes beyond scope may incur additional charges.</li>
-          <li>Significant changes after project approval may require a new project phase.</li>
+          <li>Revisions included in your project will be specified in the original agreement.</li>
+          <li>Additional revisions or requests beyond the agreed scope may be quoted separately.</li>
+          <li>Significant direction changes after approval may require a new project phase.</li>
         </ul>
+        <p>
+          If something comes up during the project, we will always discuss it with you before
+          any additional work or cost is applied.
+        </p>
       </>
     ),
   },
@@ -156,90 +155,66 @@ const sections = [
     icon: <IconUsers />,
     body: (
       <>
-        <p>To ensure timely delivery, clients are responsible for:</p>
+        <p>
+          A smooth project depends on good communication from both sides. To help us deliver
+          on time and on target, we ask that clients:
+        </p>
         <ul>
-          <li>Providing accurate content, assets, and requirements</li>
-          <li>Responding to requests in a timely manner</li>
-          <li>Reviewing and approving deliverables promptly</li>
+          <li>Provide content, assets, and requirements as agreed upon</li>
+          <li>Respond to questions and feedback requests in a timely manner</li>
+          <li>Review and approve deliverables within the agreed timeline</li>
         </ul>
-        <p>Delays in communication may impact project timelines.</p>
+        <p>
+          Delays in communication or approvals may shift the project timeline. We will always
+          keep you informed if that happens.
+        </p>
       </>
     ),
   },
   {
-    id: "data-security",
-    title: "Data & Security",
+    id: "data-security-confidentiality",
+    title: "Data, Security & Confidentiality",
     icon: <IconShield />,
     body: (
       <>
         <p>
-          Syntra Digital implements best practices to protect client data and systems.
+          We take the security of your information seriously. Any client data, credentials,
+          or project materials shared with us are treated as confidential and will never be
+          disclosed without your permission.
         </p>
-        <p>However, clients are responsible for:</p>
+        <p>
+          Syntra Digital follows best practices to protect client data and systems during
+          every engagement. That said, clients are responsible for:
+        </p>
         <ul>
-          <li>Maintaining secure access credentials</li>
-          <li>Backing up critical data where applicable</li>
+          <li>Maintaining secure access credentials on their end</li>
+          <li>Keeping backups of critical data where applicable</li>
         </ul>
+        <p>
+          If you have specific security requirements, let us know and we will accommodate
+          them wherever possible.
+        </p>
       </>
     ),
   },
   {
-    id: "confidentiality",
-    title: "Confidentiality",
-    icon: <IconLock />,
-    body: (
-      <p>
-        All client information, materials, and project details are treated as confidential
-        and will not be shared without permission.
-      </p>
-    ),
-  },
-  {
-    id: "termination",
-    title: "Termination",
-    icon: <IconXCircle />,
-    body: (
-      <>
-        <p>Either party may terminate a project with written notice.</p>
-        <ul>
-          <li>Work completed up to the termination date will be billed accordingly.</li>
-          <li>Deposits are non-refundable once work has begun.</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    id: "liability",
-    title: "Liability Disclaimer",
+    id: "expectations-limitations",
+    title: "Expectations & Limitations",
     icon: <IconAlertTriangle />,
     body: (
       <>
-        <p>Syntra Digital is not liable for:</p>
-        <ul>
-          <li>Third-party service failures (hosting, APIs, integrations)</li>
-          <li>Loss of data due to external factors</li>
-          <li>Business losses resulting from website or system downtime</li>
-        </ul>
-      </>
-    ),
-  },
-  {
-    id: "contact",
-    title: "Contact",
-    icon: <IconMail />,
-    body: (
-      <>
-        <p>For any questions regarding these policies, please contact:</p>
         <p>
-          <strong>Syntra Digital</strong>
-          <br />
-          <a href="mailto:contact@syntrasolutions.digital" className="legal-inline-link">
-            contact@syntrasolutions.digital
-          </a>
-          <br />
-          <a href="https://syntrasolutions.digital" className="legal-inline-link">
-            syntrasolutions.digital
-          </a>
+          We put real care into every project and stand behind our work. However, there are
+          a few things worth noting:
+        </p>
+        <ul>
+          <li>We cannot guarantee specific business outcomes such as revenue, traffic, or rankings.</li>
+          <li>Third-party platforms (hosting providers, APIs, integrations) operate outside our control and may experience their own downtime or changes.</li>
+          <li>We are not responsible for data loss caused by external factors beyond the scope of our work.</li>
+        </ul>
+        <p>
+          Our goal is always to deliver work that makes a measurable difference for your
+          business — and we are transparent about what is and is not within our control.
         </p>
       </>
     ),
@@ -254,8 +229,8 @@ export default function PoliciesPage() {
           <div className="legal-badge">Reliable by Design</div>
           <h1>Company Policies</h1>
           <p>
-            At Syntra Digital, we are committed to delivering reliable, high-quality solutions
-            that help businesses operate more efficiently.
+            How we work with clients — clear expectations, fair terms, and
+            a straightforward process from start to finish.
           </p>
         </div>
       </section>
