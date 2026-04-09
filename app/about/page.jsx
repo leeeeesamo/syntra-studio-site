@@ -24,9 +24,6 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5 [mask-image:linear-gradient(180deg,white,transparent)]" />
           </div>
           <div className="container relative z-10 text-center max-w-[44rem] mx-auto py-24">
-            <span className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs sm:text-sm font-medium uppercase tracking-wider mb-6">
-              About Syntra Digital
-            </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90">
                 Built with experience. Designed to last.
