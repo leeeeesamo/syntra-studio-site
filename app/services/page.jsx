@@ -1,9 +1,9 @@
 import ServicesClient from "./services.client";
 
 export const metadata = {
-  title: "Services | Websites & Backend Systems | Syntra Digital",
+  title: "Services | Practical Websites & Business Tools | Syntra Digital",
   description:
-    "Explore Syntra Digital’s structured services: systems reviews, website & backend implementation, and optional ongoing support for service-based teams."
+    "Syntra Digital helps service businesses improve their website, reduce manual work, and streamline day-to-day operations with practical, reliable tools."
 };
 
 export default function ServicesPage() {

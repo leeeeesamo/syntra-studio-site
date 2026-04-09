@@ -182,20 +182,17 @@ export default function AboutPage() {
         {/* Client feedback */}
         <section className="py-20 md:py-28 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
           <div className="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+            <p className="text-xs sm:text-sm uppercase tracking-wider text-blue-300 mb-8">
               Client feedback
-            </h2>
-            <div className="bg-slate-900/40 border border-slate-800/70 rounded-xl p-6 sm:p-8">
-              <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
-                We&rsquo;re building a library of client testimonials and case studies.
-                In the meantime, every project is held to the same standard of quality
-                and reliability.
-              </p>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                Want to hear about past work? We&rsquo;re happy to walk you through
-                examples during an introductory call.
-              </p>
-            </div>
+            </p>
+            <blockquote className="text-xl sm:text-2xl text-slate-200 leading-relaxed font-light italic mb-6">
+              &ldquo;Working with Syntra Digital was one of the best decisions we made.
+              They turned our vision into a clean, professional site that&rsquo;s already
+              bringing in new customers.&rdquo;
+            </blockquote>
+            <p className="text-slate-400 text-sm font-medium">
+              &mdash; Saxon Performance Automotive
+            </p>
           </div>
         </section>
 
