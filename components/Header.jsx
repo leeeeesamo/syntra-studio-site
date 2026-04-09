@@ -33,15 +33,6 @@ export default function Header() {
             <Link href="/services" className="hover:opacity-80 transition-opacity">Services</Link>
             <Link href="/pricing" className="hover:opacity-80 transition-opacity">Pricing</Link>
             <Link href="/contact" className="hover:opacity-80 transition-opacity">Contact</Link>
-            <Link href="/faq" className="hover:opacity-80 transition-opacity">FAQ</Link>
-            <Link
-              href="https://leeeeesamo.github.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
-            >
-              My Portfolio
-            </Link>
           </nav>
           <Link
             href="/website-check/"
@@ -76,16 +67,6 @@ export default function Header() {
               <Link href="/services" onClick={close} className="hover:opacity-80 transition-opacity">Services</Link>
               <Link href="/pricing" onClick={close} className="hover:opacity-80 transition-opacity">Pricing</Link>
               <Link href="/contact" onClick={close} className="hover:opacity-80 transition-opacity">Contact</Link>
-              <Link href="/faq" onClick={close} className="hover:opacity-80 transition-opacity">FAQ</Link>
-              <Link
-                href="https://leeeeesamo.github.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={close}
-                className="hover:opacity-80 transition-opacity"
-              >
-                My Portfolio
-              </Link>
               <Link
                 href="/website-check/"
                 onClick={close}

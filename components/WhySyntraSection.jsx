@@ -17,8 +17,8 @@ const differentiators = [
     icon: Layers
   },
   {
-    title: 'Reliable, maintainable systems',
-    description: 'Our focus is long-term stability, not quick fixes or fragile setups.',
+    title: 'Reliable and maintainable',
+    description: 'Our focus is long-term stability — not quick fixes or fragile setups that need rebuilding later.',
     icon: ShieldCheck
   }
 ];

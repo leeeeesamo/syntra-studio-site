@@ -25,14 +25,14 @@ export default function FinalCTASection() {
               className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100 mb-6"
               variants={fadeInUp}
             >
-              Let's bring structure to your systems
+              Ready to build something that works?
             </motion.h2>
 
             <motion.p
               className="text-xl text-slate-400 max-w-2xl mx-auto mb-12"
               variants={fadeInUp}
             >
-              Start with a systems review and get clarity on what's working, what isn't, and what to fix first.
+              Tell us about your business and get clarity on what's working, what could improve, and where to start.
             </motion.p>
 
             <motion.div

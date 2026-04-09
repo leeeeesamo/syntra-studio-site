@@ -7,13 +7,13 @@ import SectionHeader from '@/components/SectionHeader';
 
 const steps = [
   {
-    title: 'Systems & Operations Foundation',
-    description: 'We assess your current setup, identify gaps, and define a clear plan forward.',
+    title: 'Discovery & Planning',
+    description: 'We assess your current setup, identify gaps, and map out a clear plan forward.',
     icon: Layers
   },
   {
     title: 'Website & Backend Implementation',
-    description: 'We design and build dependable systems tailored to your operations.',
+    description: 'We design and build dependable websites and tools tailored to your operations.',
     icon: LayoutTemplate
   },
   {

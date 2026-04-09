@@ -74,7 +74,7 @@ export default function HeroSection() {
             style={{ opacity: 0 }}
           >
             <Link href="/contact" className="btn-primary">
-              Start with a Systems Review
+              Get a Free Consultation
             </Link>
           </div>
         </div>

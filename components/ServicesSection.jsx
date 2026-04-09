@@ -9,9 +9,9 @@ import SectionHeader from '@/components/SectionHeader';
 
 const services = [
   {
-    title: 'Systems & Operations Foundation',
+    title: 'Discovery & Planning',
     href: '/services',
-    body: 'Strategic review and planning to align tools, workflows, and priorities before implementation.',
+    body: 'Strategic review to align your tools, workflows, and priorities before any implementation begins.',
     icon: Compass,
     gradient: 'from-blue-400 to-blue-500',
     iconColor: 'text-blue-400',
@@ -21,7 +21,7 @@ const services = [
   {
     title: 'Website & Backend Implementation',
     href: '/services',
-    body: 'Design and build dependable systems tailored to your operations and daily workflows.',
+    body: 'Design and build dependable websites and tools tailored to your operations and daily workflows.',
     icon: LayoutTemplate,
     gradient: 'from-blue-400 to-indigo-500',
     iconColor: 'text-blue-400',
@@ -29,9 +29,9 @@ const services = [
     borderColor: 'border-blue-500/20'
   },
   {
-    title: 'Ongoing Systems Support',
+    title: 'Ongoing Support',
     href: '/services',
-    body: 'Structured, responsive support to keep systems stable and improving over time.',
+    body: 'Structured, responsive support to keep everything running smoothly and improving over time.',
     icon: ShieldCheck,
     gradient: 'from-indigo-400 to-purple-500',
     iconColor: 'text-indigo-400',
