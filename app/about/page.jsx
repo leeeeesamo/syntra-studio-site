@@ -2,11 +2,11 @@ import Link from "next/link";
 import PageContainer from "@/components/PageContainer";
 
 export const metadata = {
-  title: "About Syntra Digital | Web Design & Business Tools — Birmingham, AL",
+  title: "About Syntra Digital | Web Design & Business Tools",
   description:
-    "Syntra Digital builds reliable websites and business tools for service companies. Based in Birmingham, Alabama — founded on real IT and operations experience.",
+    "Syntra Digital builds reliable websites and business tools for service companies — founded on real IT and operations experience.",
   openGraph: {
-    title: "About Syntra Digital | Web Design & Business Tools — Birmingham, AL",
+    title: "About Syntra Digital | Web Design & Business Tools",
     description:
       "Reliable websites and business tools for service companies. Founded on real IT and operations experience.",
     url: "https://syntrasolutions.digital/about",
@@ -23,124 +23,121 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-950/80 to-slate-950" />
             <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5 [mask-image:linear-gradient(180deg,white,transparent)]" />
           </div>
-          <div className="container relative z-10 text-center max-w-3xl mx-auto py-20">
+          <div className="container relative z-10 text-center max-w-[44rem] mx-auto py-24">
             <span className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs sm:text-sm font-medium uppercase tracking-wider mb-6">
               About Syntra Digital
             </span>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90">
-                Built on real experience, not just good design
+                Built with experience. Designed to last.
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 leading-relaxed">
-              Syntra Digital is a web and business technology studio based in Birmingham, Alabama.
-              We help service companies build websites and tools that actually make their day-to-day work easier.
+              We help service companies build websites and tools that make
+              day-to-day work easier — backed by real technical and operations experience.
             </p>
           </div>
         </section>
 
         {/* What we do */}
-        <section className="py-16 md:py-24 border-t border-slate-800/50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 md:py-28 border-t border-slate-800/50">
+          <div className="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
               What we do
             </h2>
             <div className="space-y-5 text-slate-300 text-base sm:text-lg leading-relaxed">
               <p>
-                We design and build websites, internal tools, and digital workflows for service-based
-                businesses — the kind of companies where real work happens in the field, at the office,
-                or face-to-face with clients. Contractors, consultants, professional firms, home service
-                providers, and growing local teams.
+                We design and build websites, internal tools, and digital workflows for
+                service-based businesses — contractors, consultants, professional firms,
+                home service providers, and growing teams.
               </p>
               <p>
-                Most of these businesses don&rsquo;t need a flashy app or an enterprise platform. They
-                need a clear, professional website that communicates what they do, a setup that reduces
-                busywork, and tools that don&rsquo;t break when things get busy.
+                Most don&rsquo;t need a flashy app or enterprise platform. They need a
+                professional website, a setup that reduces busywork, and tools that
+                hold up when things get busy.
               </p>
               <p>
-                That&rsquo;s our focus — practical, reliable digital infrastructure that supports the
-                way you already work, and makes it easier to grow.
+                That&rsquo;s our focus — practical, reliable infrastructure that supports
+                the way you already work.
               </p>
             </div>
           </div>
         </section>
 
         {/* Why it exists */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 md:py-28 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+          <div className="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
               Why Syntra exists
             </h2>
             <div className="space-y-5 text-slate-300 text-base sm:text-lg leading-relaxed">
               <p>
-                Too many small businesses get stuck with websites that were thrown together quickly, tools
-                that don&rsquo;t talk to each other, and processes held together by email and guesswork.
-                They know something needs to change, but they don&rsquo;t have time to figure it out
-                — and they don&rsquo;t trust most agencies to really understand how they work.
+                Too many small businesses get stuck with websites thrown together quickly,
+                tools that don&rsquo;t connect, and processes held together by email and
+                guesswork. They know something needs to change but don&rsquo;t trust most
+                agencies to really understand how they work.
               </p>
               <p>
-                Syntra Digital was started to close that gap. We bring a technical, operations-first
-                perspective to web design and business tooling — so you end up with something that
-                actually fits your workflow, not just a nice-looking template.
+                We started Syntra to close that gap — bringing a technical, operations-first
+                perspective to web design and business tooling so you get something that
+                fits your workflow, not just a template.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Founder / Credibility */}
-        <section className="py-16 md:py-24 border-t border-slate-800/50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Who we are */}
+        <section className="py-20 md:py-28 border-t border-slate-800/50">
+          <div className="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
-              Who&rsquo;s behind it
+              Who we are
             </h2>
             <div className="space-y-5 text-slate-300 text-base sm:text-lg leading-relaxed">
               <p>
-                Syntra Digital is led by someone with hands-on experience in IT infrastructure, technical
-                operations, and workflow design — not just web development. Years of working with real
-                business technology (networking, servers, support escalation, documentation, process
-                improvement) shaped how we approach every project.
+                Syntra Digital is led by someone with hands-on experience in IT infrastructure,
+                technical operations, and workflow design — not just web development. That
+                background shapes how we approach every project.
               </p>
               <p>
-                That means we don&rsquo;t just think about how a site looks. We think about how it fits
-                into the way you run your business — how customers find you, how requests get handled,
-                and how your team stays organized behind the scenes.
+                We don&rsquo;t just think about how a site looks. We think about how it fits
+                into the way you run your business — how customers find you, how requests
+                get handled, and how your team stays organized.
               </p>
               <p>
-                Based in Birmingham, Alabama, we work with local and remote clients alike. Every
-                engagement starts with a conversation about your goals, not a sales pitch.
+                Every engagement starts with a conversation about your goals, not a sales pitch.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Why businesses choose Syntra */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">
-              Why businesses choose Syntra
+        {/* Why businesses choose us */}
+        <section className="py-20 md:py-28 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+          <div className="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10">
+              Why businesses choose us
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {[
                 {
-                  title: "Technical depth, not just design skills",
-                  desc: "Our background in IT and operations means we understand what goes on behind the scenes of a business — not just what shows up on screen.",
+                  title: "Technical depth",
+                  desc: "We understand how businesses actually run — not just how they look online.",
                 },
                 {
-                  title: "We build things that last",
-                  desc: "Every project is built with long-term reliability in mind. No fragile setups, no shortcuts that break six months later.",
+                  title: "Built to last",
+                  desc: "No fragile setups or shortcuts. Everything is made for long-term reliability.",
                 },
                 {
-                  title: "Straightforward communication",
-                  desc: "No jargon, no upsells. We explain what we recommend, why it matters, and what it costs — clearly.",
+                  title: "Clear communication",
+                  desc: "No jargon, no upsells. We explain what we recommend and why.",
                 },
                 {
-                  title: "Focused on your actual workflow",
-                  desc: "We start by understanding how your business runs day-to-day, then build around that — not the other way around.",
+                  title: "Workflow-first approach",
+                  desc: "We build around how you work — not the other way around.",
                 },
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="bg-slate-900/40 border border-slate-800/70 rounded-xl p-5"
+                  className="bg-slate-900/40 border border-slate-800/70 rounded-xl p-6"
                 >
                   <h3 className="text-white font-semibold mb-2">{item.title}</h3>
                   <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
@@ -151,31 +148,31 @@ export default function AboutPage() {
         </section>
 
         {/* What we value */}
-        <section className="py-16 md:py-24 border-t border-slate-800/50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+        <section className="py-20 md:py-28 border-t border-slate-800/50">
+          <div className="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-10">
               What we value
             </h2>
-            <div className="space-y-6 text-slate-300 text-base sm:text-lg leading-relaxed">
+            <div className="space-y-8 text-slate-300 text-base sm:text-lg leading-relaxed">
               <div>
                 <h3 className="text-white font-semibold mb-1">Clarity over complexity</h3>
                 <p>
-                  We keep things simple on purpose. Clean code, clear communication, and
-                  straightforward solutions that are easy to maintain and grow with.
+                  Clean code, clear communication, and straightforward solutions
+                  you can maintain and grow with.
                 </p>
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-1">Reliability over novelty</h3>
                 <p>
-                  We use proven, well-supported tools and frameworks. The goal is stability you
-                  can count on — not chasing trends that will need replacing in a year.
+                  Proven tools and frameworks that deliver stability — not
+                  trends that need replacing in a year.
                 </p>
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-1">Honesty over hype</h3>
                 <p>
-                  If something isn&rsquo;t the right fit, we&rsquo;ll say so. We&rsquo;d rather
-                  build trust through transparency than overpromise and underdeliver.
+                  We&rsquo;d rather build trust through transparency than
+                  overpromise and underdeliver.
                 </p>
               </div>
             </div>
@@ -183,35 +180,33 @@ export default function AboutPage() {
         </section>
 
         {/* Client feedback */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 md:py-28 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+          <div className="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
               Client feedback
             </h2>
             <div className="bg-slate-900/40 border border-slate-800/70 rounded-xl p-6 sm:p-8">
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-4">
-                We&rsquo;re currently building a stronger library of client testimonials and case
-                studies. In the meantime, our work is grounded in real-world IT, operations, and
-                implementation experience — and every project is built to the same standard we&rsquo;d
-                hold ourselves to.
+                We&rsquo;re building a library of client testimonials and case studies.
+                In the meantime, every project is held to the same standard of quality
+                and reliability.
               </p>
               <p className="text-slate-400 text-sm leading-relaxed">
-                If you&rsquo;d like to hear more about past work or see examples relevant to your
-                business, we&rsquo;re happy to walk you through it during an introductory call.
+                Want to hear about past work? We&rsquo;re happy to walk you through
+                examples during an introductory call.
               </p>
             </div>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="py-16 md:py-24 border-t border-slate-800/50">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="py-20 md:py-28 border-t border-slate-800/50">
+          <div className="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Want to see if we&rsquo;re a good fit?
+              Let&rsquo;s see if this is a good fit.
             </h2>
-            <p className="text-slate-400 text-base sm:text-lg mb-8">
-              Start with a quick conversation — no commitment, no pressure. Tell us about your
-              business and we&rsquo;ll share how we can help.
+            <p className="text-slate-400 text-base sm:text-lg mb-10">
+              Start with a quick conversation — no commitment, no pressure.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact" className="btn-primary">
