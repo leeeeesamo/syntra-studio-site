@@ -40,24 +40,25 @@ module.exports = {
   additionalLinkTags: [
     {
       rel: 'icon',
-      type: 'image/png',
-      sizes: '32x32',
-      href: '/brand-assets/favicon-32.png',
+      type: 'image/x-icon',
+      href: '/favicon.ico',
     },
     {
       rel: 'icon',
       type: 'image/png',
-      sizes: '192x192',
-      href: '/brand-assets/favicon-192.png',
+      sizes: '32x32',
+      href: '/favicon-32x32.png',
+    },
+    {
+      rel: 'icon',
+      type: 'image/png',
+      sizes: '16x16',
+      href: '/favicon-16x16.png',
     },
     {
       rel: 'apple-touch-icon',
       sizes: '180x180',
-      href: '/brand-assets/apple-touch-icon.png',
-    },
-    {
-      rel: 'manifest',
-      href: '/site.webmanifest',
+      href: '/apple-touch-icon.png',
     },
   ],
 };
