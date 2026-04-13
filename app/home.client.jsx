@@ -12,6 +12,7 @@ const ServicesSection = lazy(() => import('@/components/ServicesSection'));
 const WhoWeBuildForSection = lazy(() => import('@/components/WhoWeBuildForSection'));
 const ExperienceSection = lazy(() => import('@/components/ExperienceSection'));
 const InPracticeSection = lazy(() => import('@/components/InPracticeSection'));
+const HowWeWorkSection = lazy(() => import('@/components/HowWeWorkSection'));
 const FinalCTASection = lazy(() => import('@/components/FinalCTASection'));
 
 // Loading component
@@ -33,6 +34,7 @@ export default function HomeClient() {
         <WhoWeBuildForSection />
         <ExperienceSection />
         <InPracticeSection />
+        <HowWeWorkSection />
         <FinalCTASection />
       </Suspense>
     </main>

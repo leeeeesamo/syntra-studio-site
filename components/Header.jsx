@@ -31,6 +31,7 @@ export default function Header() {
             <Link href="/" className="hover:opacity-80 transition-opacity">Home</Link>
             <Link href="/about" className="hover:opacity-80 transition-opacity">About</Link>
             <Link href="/services" className="hover:opacity-80 transition-opacity">Services</Link>
+            <Link href="/work-with-us" className="hover:opacity-80 transition-opacity">Work With Us</Link>
             <Link href="/pricing" className="hover:opacity-80 transition-opacity">Pricing</Link>
             <Link href="/contact" className="hover:opacity-80 transition-opacity">Contact</Link>
           </nav>
@@ -65,6 +66,7 @@ export default function Header() {
               <Link href="/" onClick={close} className="hover:opacity-80 transition-opacity">Home</Link>
               <Link href="/about" onClick={close} className="hover:opacity-80 transition-opacity">About</Link>
               <Link href="/services" onClick={close} className="hover:opacity-80 transition-opacity">Services</Link>
+              <Link href="/work-with-us" onClick={close} className="hover:opacity-80 transition-opacity">Work With Us</Link>
               <Link href="/pricing" onClick={close} className="hover:opacity-80 transition-opacity">Pricing</Link>
               <Link href="/contact" onClick={close} className="hover:opacity-80 transition-opacity">Contact</Link>
               <Link
