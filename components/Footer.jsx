@@ -60,6 +60,7 @@ export default function Footer() {
               Resources
             </p>
             <nav className="mt-4 flex flex-col items-center gap-2.5 text-xs sm:text-sm">
+              <Link href="/work-with-us" className="transition-colors hover:text-white">Work With Us</Link>
               <Link href="/faq" className="transition-colors hover:text-white">FAQ</Link>
               <Link href="/website-check/" className="transition-colors hover:text-white">Free Website Review</Link>
               <a

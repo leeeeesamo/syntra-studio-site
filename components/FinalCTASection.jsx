@@ -36,7 +36,7 @@ export default function FinalCTASection() {
             </motion.p>
 
             <motion.div
-              className="flex items-center justify-center"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4"
               variants={fadeInUp}
             >
               <Link
@@ -44,6 +44,12 @@ export default function FinalCTASection() {
                 className="btn-primary"
               >
                 Request a Consultation
+              </Link>
+              <Link
+                href="/work-with-us"
+                className="text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
+              >
+                Learn how we work &rarr;
               </Link>
             </motion.div>
           </motion.div>

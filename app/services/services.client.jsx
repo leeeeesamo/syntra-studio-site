@@ -327,10 +327,10 @@ export default function ServicesClient() {
                   Get Free Website Review
                 </Link>
                 <Link
-                  href="/contact"
+                  href="/work-with-us"
                   className="text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
                 >
-                  Or get in touch &rarr;
+                  See how we work &rarr;
                 </Link>
               </motion.div>
             </motion.div>
