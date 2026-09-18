@@ -14,7 +14,7 @@ const inter = Inter({
 
 // SEO Configuration
 const seoConfig = {
-  defaultTitle: "Syntra Digital | Reliable by Design",
+  defaultTitle: "Syntra Digital Solutions | Reliable by Design",
   description:
     "Custom website design and development built for performance, clarity, and long-term reliability.",
   canonical: "https://syntrasolutions.digital",
@@ -58,8 +58,8 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: seoConfig.canonical,
-    site_name: "Syntra Digital",
-    title: "Syntra Digital | Reliable by Design",
+    site_name: "Syntra Digital Solutions",
+    title: "Syntra Digital Solutions | Reliable by Design",
     description:
       "Custom website design and development built for performance, clarity, and long-term reliability.",
     images: [
@@ -67,7 +67,7 @@ export const metadata = {
         url: `${seoConfig.canonical}/brand-assets/og-image-2026.jpg`,
         width: 1200,
         height: 630,
-        alt: "Syntra Digital — Reliable by Design",
+        alt: "Syntra Digital Solutions — Reliable by Design",
         type: "image/jpeg",
       },
     ],
@@ -75,7 +75,7 @@ export const metadata = {
   twitter: {
     handle: seoConfig.twitter.handle,
     site: seoConfig.twitter.handle,
-    title: "Syntra Digital | Reliable by Design",
+    title: "Syntra Digital Solutions | Reliable by Design",
     description:
       "Custom website design and development built for performance, clarity, and long-term reliability.",
     cardType: "summary_large_image",
@@ -84,7 +84,7 @@ export const metadata = {
         url: `${seoConfig.canonical}/brand-assets/og-image-2026.jpg`,
         width: 1200,
         height: 630,
-        alt: "Syntra Digital — Reliable by Design",
+        alt: "Syntra Digital Solutions — Reliable by Design",
       },
     ],
   },

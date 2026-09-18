@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Company Policies | Syntra Digital",
+  title: "Company Policies | Syntra Digital Solutions",
   description:
-    "How Syntra Digital works with clients — covering service terms, payments, project scope, confidentiality, and expectations.",
+    "How Syntra Digital Solutions works with clients — covering service terms, payments, project scope, confidentiality, and expectations.",
 };
 
 function IconBriefcase() {
@@ -75,7 +75,7 @@ const sections = [
     body: (
       <>
         <p>
-          Syntra Digital builds websites and systems that help businesses communicate clearly,
+          Syntra Digital Solutions builds websites and systems that help businesses communicate clearly,
           run more efficiently, and grow with confidence. Every project starts with a conversation
           about your goals, followed by a clear plan so you always know what to expect.
         </p>
@@ -183,7 +183,7 @@ const sections = [
           disclosed without your permission.
         </p>
         <p>
-          Syntra Digital follows best practices to protect client data and systems during
+          Syntra Digital Solutions follows best practices to protect client data and systems during
           every engagement. That said, clients are responsible for:
         </p>
         <ul>

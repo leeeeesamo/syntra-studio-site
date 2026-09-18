@@ -1,4 +1,4 @@
-# Technical Audit Notes — Syntra Digital
+# Technical Audit Notes — Syntra Digital Solutions
 
 Last updated: 2026-04-08
 

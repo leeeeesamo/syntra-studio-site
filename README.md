@@ -1,4 +1,4 @@
-# Syntra Digital Site
+# Syntra Digital Solutions Site
 
 ## Post-launch SEO
 - Submit https://syntrasolutions.digital/sitemap.xml in Google Search Console

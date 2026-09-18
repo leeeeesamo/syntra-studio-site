@@ -15,7 +15,7 @@ const sections = [
     title: "Acceptance of Terms",
     content: (
       <p>
-        By using this website or engaging Syntra Digital for services, you agree to these Terms of Service.
+        By using this website or engaging Syntra Digital Solutions for services, you agree to these Terms of Service.
         If you do not agree, you should not use the site or proceed with services.
       </p>
     ),
@@ -25,7 +25,7 @@ const sections = [
     title: "Services",
     content: (
       <p>
-        Syntra Digital provides website design, backend systems support, digital infrastructure, and related
+        Syntra Digital Solutions provides website design, backend systems support, digital infrastructure, and related
         consulting services. Specific deliverables, timelines, and pricing are defined separately through
         proposals, invoices, or written agreements.
       </p>
@@ -71,7 +71,7 @@ const sections = [
     title: "Third-Party Services",
     content: (
       <p>
-        Syntra Digital may recommend or work with third-party services such as hosting providers, domain registrars,
+        Syntra Digital Solutions may recommend or work with third-party services such as hosting providers, domain registrars,
         analytics tools, plugins, payment platforms, or software vendors. We are not responsible for outages,
         policy changes, billing issues, or disruptions caused by third-party services.
       </p>
@@ -82,7 +82,7 @@ const sections = [
     title: "No Guarantee of Specific Results",
     content: (
       <p>
-        While websites and systems are built with performance and usability in mind, Syntra Digital does not
+        While websites and systems are built with performance and usability in mind, Syntra Digital Solutions does not
         guarantee specific business outcomes such as search rankings, lead volume, conversions, or revenue growth.
       </p>
     ),
@@ -92,7 +92,7 @@ const sections = [
     title: "Limitation of Liability",
     content: (
       <p>
-        To the maximum extent permitted by law, Syntra Digital is not liable for indirect, incidental, special,
+        To the maximum extent permitted by law, Syntra Digital Solutions is not liable for indirect, incidental, special,
         consequential, or business interruption damages, including lost revenue, lost data, or lost profits arising
         from use of this website or related services.
       </p>
@@ -128,7 +128,7 @@ export default function TermsPage() {
           <div className="legal-badge">Service Terms</div>
           <h1>Terms of Service</h1>
           <p>
-            The general terms that apply to use of this website and to working with Syntra Digital.
+            The general terms that apply to use of this website and to working with Syntra Digital Solutions.
           </p>
         </div>
       </section>

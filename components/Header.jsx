@@ -21,7 +21,7 @@ export default function Header() {
             className="h-12 sm:h-14"
           />
           <span className="text-lg sm:text-xl md:text-2xl font-medium tracking-wide">
-            Syntra Digital
+            Syntra Digital Solutions
           </span>
         </Link>
 

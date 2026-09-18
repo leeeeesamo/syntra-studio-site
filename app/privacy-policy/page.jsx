@@ -15,7 +15,7 @@ const sections = [
     title: "Overview",
     content: (
       <p>
-        Syntra Digital respects your privacy and is committed to handling information responsibly.
+        Syntra Digital Solutions respects your privacy and is committed to handling information responsibly.
         This Privacy Policy explains what information may be collected through this website, how it
         may be used, and how it is protected.
       </p>
@@ -49,7 +49,7 @@ const sections = [
     title: "Information Sharing",
     content: (
       <p>
-        Syntra Digital does not sell personal information. Information may be shared only when necessary
+        Syntra Digital Solutions does not sell personal information. Information may be shared only when necessary
         to deliver requested services, work with trusted service providers, comply with legal obligations,
         or protect business operations and rights.
       </p>
@@ -107,7 +107,7 @@ export default function PrivacyPolicyPage() {
           <div className="legal-badge">Privacy & Data Handling</div>
           <h1>Privacy Policy</h1>
           <p>
-            How Syntra Digital collects, uses, and protects information shared through this website and during client work.
+            How Syntra Digital Solutions collects, uses, and protects information shared through this website and during client work.
           </p>
         </div>
       </section>
