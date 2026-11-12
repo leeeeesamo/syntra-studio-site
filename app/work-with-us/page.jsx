@@ -9,10 +9,10 @@ export const metadata = {
     title: "Work With Us | Syntra Digital Solutions",
     description:
       "Partner with Syntra Digital Solutions to improve your website, streamline operations, and build reliable systems.",
-    url: "https://syntrasolutions.digital/work-with-us",
+    url: "https://syntradigitalservices.com/work-with-us",
   },
   alternates: {
-    canonical: "https://syntrasolutions.digital/work-with-us",
+    canonical: "https://syntradigitalservices.com/work-with-us",
   },
 };
 
@@ -20,7 +20,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Syntra Digital Solutions",
-  url: "https://syntrasolutions.digital",
+  url: "https://syntradigitalservices.com",
   description:
     "Syntra Digital Solutions builds reliable websites and business tools for service companies — founded on real IT and operations experience.",
   areaServed: {

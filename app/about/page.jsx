@@ -9,7 +9,7 @@ export const metadata = {
     title: "About Syntra Digital Solutions | Web Design & Business Tools",
     description:
       "Reliable websites and business tools for service companies. Founded on real IT and operations experience.",
-    url: "https://syntrasolutions.digital/about",
+    url: "https://syntradigitalservices.com/about",
   },
 };
 

@@ -6,7 +6,7 @@ export const metadata = {
     title: "Free Website Review to Help You Get More Calls, Leads, and Customers | Syntra Digital Solutions",
     description:
       "Get a free personalized video showing what to improve on your website so it's easier for visitors to take action.",
-    url: "https://syntrasolutions.digital/website-check",
+    url: "https://syntradigitalservices.com/website-check",
   },
 };
 
