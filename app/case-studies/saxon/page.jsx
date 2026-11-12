@@ -2,11 +2,11 @@ import Link from "next/link";
 import PageContainer from "@/components/PageContainer";
 
 export const metadata = {
-  title: "Saxon Performance Automotive — Case Study | Syntra Digital Solutions",
+  title: "Saxon Performance Automotive — Case Study | Syntra Digital",
   description:
     "How Syntra Digital helped Saxon Performance Automotive build a clean, professional website that brings in new customers.",
   openGraph: {
-    title: "Saxon Performance Automotive — Case Study | Syntra Digital Solutions",
+    title: "Saxon Performance Automotive — Case Study | Syntra Digital",
     description:
       "From a basic presence to a lead-generating website. A real client project by Syntra Digital.",
     url: "https://syntradigitalservices.com/case-studies/saxon",

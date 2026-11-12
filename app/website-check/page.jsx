@@ -400,9 +400,9 @@ export default function WebsiteCheckPage() {
               <IconUser />
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-white mb-3">About Syntra Digital Solutions</h2>
+              <h2 className="text-2xl font-bold text-white mb-3">About Syntra Digital</h2>
               <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-3">
-                I&rsquo;m the founder of Syntra Digital Solutions, where I help small and local businesses get more from their websites. Most sites are closer than you think — they just need a few targeted adjustments to convert more visitors into real inquiries.
+                I&rsquo;m the founder of Syntra Digital, where I help small and local businesses get more from their websites. Most sites are closer than you think — they just need a few targeted adjustments to convert more visitors into real inquiries.
               </p>
               <p className="text-slate-400 text-sm sm:text-base leading-relaxed mb-4">
                 I&rsquo;ve worked with service businesses across multiple industries to improve clarity, speed, and lead flow. Every recommendation I make is practical, specific, and focused on results.

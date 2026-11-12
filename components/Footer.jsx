@@ -10,7 +10,7 @@ const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/company/syntra-digital-solutions/?viewAsMember=true",
+    href: "https://www.linkedin.com/company/syntra-digital-services/",
     icon: Linkedin,
   },
   {
@@ -85,14 +85,14 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[var(--syntra-text-muted)] transition-colors hover:text-white"
-                aria-label={`Syntra Digital Solutions on ${label}`}
+                aria-label={`Syntra Digital on ${label}`}
               >
                 <Icon className="h-5 w-5" />
               </a>
             ))}
           </div>
           <p className="text-[0.65rem] text-[var(--syntra-text-muted)]">
-            &copy; 2025 Syntra Digital Solutions. All rights reserved.
+            &copy; 2025 Syntra Digital. All rights reserved.
           </p>
         </div>
       </div>
