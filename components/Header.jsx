@@ -58,7 +58,7 @@ export default function Header() {
             className="h-9 sm:h-10 w-auto"
           />
           <span className="text-base sm:text-lg font-medium tracking-wide whitespace-nowrap">
-            Syntra Digital Solutions
+            Syntra Digital
           </span>
         </Link>
 

@@ -2,13 +2,13 @@ import Link from "next/link";
 import PageContainer from "@/components/PageContainer";
 
 export const metadata = {
-  title: "Work With Us | Syntra Digital Solutions",
+  title: "Work With Us | Syntra Digital",
   description:
-    "Partner with Syntra Digital Solutions to improve your website, streamline operations, and build reliable systems. See how we work and what to expect.",
+    "Partner with Syntra Digital to improve your website, streamline operations, and build reliable systems. See how we work and what to expect.",
   openGraph: {
-    title: "Work With Us | Syntra Digital Solutions",
+    title: "Work With Us | Syntra Digital",
     description:
-      "Partner with Syntra Digital Solutions to improve your website, streamline operations, and build reliable systems.",
+      "Partner with Syntra Digital to improve your website, streamline operations, and build reliable systems.",
     url: "https://syntradigitalservices.com/work-with-us",
   },
   alternates: {
@@ -19,10 +19,10 @@ export const metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Syntra Digital Solutions",
+  name: "Syntra Digital",
   url: "https://syntradigitalservices.com",
   description:
-    "Syntra Digital Solutions builds reliable websites and business tools for service companies — founded on real IT and operations experience.",
+    "Syntra Digital builds reliable websites and business tools for service companies — founded on real IT and operations experience.",
   areaServed: {
     "@type": "Country",
     name: "United States",
@@ -127,7 +127,7 @@ const faqs = [
     a: "Our Systems & Operations Foundation starts at $1,500\u2013$3,000. Website & Backend Implementation starts at $3,000+. Ongoing support starts at $500\u2013$2,500/month. Final pricing is based on your specific needs.",
   },
   {
-    q: "What makes Syntra Digital Solutions different from other agencies?",
+    q: "What makes Syntra Digital different from other agencies?",
     a: "We combine real IT and operations experience with web development. We focus on practical results — not flashy presentations. And we only build what your business actually needs.",
   },
 ];
@@ -154,7 +154,7 @@ export default function WorkWithUsPage() {
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
-              Syntra Digital Solutions partners with service businesses to build websites that bring in
+              Syntra Digital partners with service businesses to build websites that bring in
               customers, streamline tools that reduce manual work, and create systems that
               run reliably — so you can focus on what you do best.
             </p>
@@ -248,11 +248,11 @@ export default function WorkWithUsPage() {
           </div>
         </section>
 
-        {/* Why Syntra Digital Solutions */}
+        {/* Why Syntra Digital */}
         <section className="py-20 md:py-28 border-t border-slate-800/50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
-              Why Syntra Digital Solutions
+              Why Syntra Digital
             </h2>
             <p className="text-slate-400 text-base sm:text-lg text-center max-w-2xl mx-auto mb-12">
               We combine real technical and operations experience with clean, modern web development.
@@ -279,7 +279,7 @@ export default function WorkWithUsPage() {
               What you can expect
             </h2>
             <p className="text-slate-400 text-base sm:text-lg text-center max-w-2xl mx-auto mb-10">
-              When you work with Syntra Digital Solutions, you get practical improvements that
+              When you work with Syntra Digital, you get practical improvements that
               directly impact how your business runs and grows.
             </p>
             <ul className="space-y-4 max-w-2xl mx-auto">
