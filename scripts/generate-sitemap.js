@@ -6,7 +6,7 @@ const { SitemapStream } = require('sitemap');
 const { Readable } = require('stream');
 
 // Configuration
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://syntra-studio.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://syntradigitalservices.com';
 const BUILD_DIR = path.join(process.cwd(), 'out');
 const PAGES_DIR = path.join(process.cwd(), 'app');
 const SITEMAP_PATH = path.join(BUILD_DIR, 'sitemap.xml');
