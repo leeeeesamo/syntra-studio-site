@@ -401,6 +401,24 @@
   opacity: 0.85;
 }
 
+/* Compact header CTA — sized for the navigation bar */
+.nav-cta {
+  @apply inline-flex items-center justify-center font-medium rounded-full whitespace-nowrap;
+  padding: 0.45rem 1rem;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  color: #ffffff;
+  background: linear-gradient(to right, var(--syntra-gradient-start), var(--syntra-gradient-end));
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
+  transition: opacity 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.nav-cta:hover {
+  opacity: 0.9;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.35);
+  transform: translateY(-1px);
+}
+
 .btn-outline {
   @apply inline-flex items-center justify-center font-medium rounded-full;
   padding: 0.75rem 1.5rem;
