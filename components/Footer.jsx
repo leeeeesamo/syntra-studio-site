@@ -64,6 +64,14 @@ export default function Footer() {
               <Link href="/faq" className="transition-colors hover:text-white">FAQ</Link>
               <Link href="/website-check/" className="transition-colors hover:text-white">Free Website Review</Link>
               <a
+                href="https://wa.me/12054736785"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-white"
+              >
+                WhatsApp
+              </a>
+              <a
                 href="https://leeeeesamo.github.io/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -85,14 +93,14 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[var(--syntra-text-muted)] transition-colors hover:text-white"
-                aria-label={`Syntra Digital on ${label}`}
+                aria-label={`Syntra Digital Services on ${label}`}
               >
                 <Icon className="h-5 w-5" />
               </a>
             ))}
           </div>
           <p className="text-[0.65rem] text-[var(--syntra-text-muted)]">
-            &copy; 2025 Syntra Digital. All rights reserved.
+            &copy; 2025 Syntra Digital Services. All rights reserved.
           </p>
         </div>
       </div>

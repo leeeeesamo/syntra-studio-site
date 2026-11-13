@@ -7,7 +7,7 @@ import SectionHeader from '@/components/SectionHeader';
 
 const testimonials = [
   {
-    quote: "Working with Syntra Digital was a game-changer for our business. They delivered a beautiful, fast website that perfectly represents our brand.",
+    quote: "Working with Syntra Digital Services was a game-changer for our business. They delivered a beautiful, fast website that perfectly represents our brand.",
     name: "Sarah J.",
     role: "Small Business Owner"
   },

@@ -248,6 +248,14 @@ export default function PricingClient() {
               Request a Consultation
               <ArrowRight className="ml-2 w-4 h-4" />
             </a>
+            <a
+              href="https://calendar.app.google/ksQAmHgw43DNEvyx9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline"
+            >
+              Schedule a Free Consultation
+            </a>
           </motion.div>
         </div>
       </section>

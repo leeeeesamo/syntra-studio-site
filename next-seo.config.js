@@ -1,5 +1,5 @@
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://syntradigitalservices.com';
-const SITE_NAME = 'Syntra Digital';
+const SITE_NAME = 'Syntra Digital Services';
 const SITE_DESCRIPTION = 'Custom website design and development built for performance, clarity, and long-term reliability.';
 
 module.exports = {

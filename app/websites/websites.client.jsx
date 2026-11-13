@@ -164,7 +164,7 @@ export default function WebsitesClient() {
                 variants={fadeInUp}
                 className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed"
               >
-                Syntra Digital offers structured services designed to help service-based businesses clean up operations, build dependable systems, and maintain long-term reliability. Every engagement is grounded in a clear process, realistic scope, and solutions that support day-to-day work.
+                Syntra Digital Services offers structured services designed to help service-based businesses clean up operations, build dependable systems, and maintain long-term reliability. Every engagement is grounded in a clear process, realistic scope, and solutions that support day-to-day work.
               </motion.p>
             </motion.div>
           </div>

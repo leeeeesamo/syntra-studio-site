@@ -2,11 +2,11 @@ import Link from "next/link";
 import PageContainer from "@/components/PageContainer";
 
 export const metadata = {
-  title: "About Syntra Digital | Web Design & Business Tools",
+  title: "About Syntra Digital Services | Web Design & Business Tools",
   description:
-    "Syntra Digital builds reliable websites and business tools for service companies — founded on real IT and operations experience.",
+    "Syntra Digital Services builds reliable websites and business tools for service companies — founded on real IT and operations experience.",
   openGraph: {
-    title: "About Syntra Digital | Web Design & Business Tools",
+    title: "About Syntra Digital Services | Web Design & Business Tools",
     description:
       "Reliable websites and business tools for service companies. Founded on real IT and operations experience.",
     url: "https://syntradigitalservices.com/about",
@@ -91,7 +91,7 @@ export default function AboutPage() {
             </h2>
             <div className="space-y-5 text-slate-300 text-base sm:text-lg leading-relaxed">
               <p>
-                Syntra Digital is led by someone with hands-on experience in IT infrastructure,
+                Syntra Digital Services is led by someone with hands-on experience in IT infrastructure,
                 technical operations, and workflow design — not just web development. That
                 background shapes how we approach every project.
               </p>
@@ -183,7 +183,7 @@ export default function AboutPage() {
               Client feedback
             </p>
             <blockquote className="text-xl sm:text-2xl text-slate-200 leading-relaxed font-light italic mb-6">
-              &ldquo;Working with Syntra Digital was one of the best decisions we made.
+              &ldquo;Working with Syntra Digital Services was one of the best decisions we made.
               They turned our vision into a clean, professional site that&rsquo;s already
               bringing in new customers.&rdquo;
             </blockquote>

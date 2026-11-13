@@ -59,7 +59,7 @@ export default function HeroSection() {
             className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-6 animate-fade-in-up animate-delay-100"
             style={{ opacity: 0 }}
           >
-            Syntra Digital helps service-based businesses build dependable websites, streamline their workflows, and create digital infrastructure that supports real day-to-day operations.
+            Syntra Digital Services helps service-based businesses build dependable websites, streamline their workflows, and create digital infrastructure that supports real day-to-day operations.
           </p>
 
           <p
@@ -76,6 +76,14 @@ export default function HeroSection() {
             <Link href="/contact" className="btn-primary">
               Get a Free Consultation
             </Link>
+            <a
+              href="https://calendar.app.google/ksQAmHgw43DNEvyx9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline"
+            >
+              Schedule a Free Consultation
+            </a>
             <Link
               href="/services"
               className="text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"

@@ -14,8 +14,8 @@ const inter = Inter({
 
 // SEO Configuration
 const seoConfig = {
-  siteName: "Syntra Digital",
-  defaultTitle: "Syntra Digital | Reliable by Design",
+  siteName: "Syntra Digital Services",
+  defaultTitle: "Syntra Digital Services | Reliable by Design",
   description:
     "Custom website design and development built for performance, clarity, and long-term reliability.",
   canonical: "https://syntradigitalservices.com",
@@ -33,7 +33,7 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: seoConfig.siteName,
-  alternateName: "Syntra Digital Solutions",
+  alternateName: ["Syntra Digital", "Syntra Digital Solutions"],
   description: seoConfig.description,
   url: seoConfig.canonical,
   logo: `${seoConfig.canonical}/brand-assets/logo.png`,
@@ -47,9 +47,11 @@ const websiteSchema = {
   },
   priceRange: "$$$",
   openingHours: "Mo,Tu,We,Th,Fr 09:00-17:00",
-  telephone: process.env.NEXT_PUBLIC_CONTACT_PHONE || "+1234567890",
+  ...(process.env.NEXT_PUBLIC_CONTACT_PHONE
+    ? { telephone: process.env.NEXT_PUBLIC_CONTACT_PHONE }
+    : {}),
   email:
-    process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contact@syntrasolutions.digital",
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@syntradigitalservices.com",
 };
 
 export const metadata = {
@@ -60,7 +62,7 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: seoConfig.canonical,
-    site_name: seoConfig.siteName,
+    siteName: seoConfig.siteName,
     title: seoConfig.defaultTitle,
     description:
       "Custom website design and development built for performance, clarity, and long-term reliability.",
@@ -69,7 +71,7 @@ export const metadata = {
         url: `${seoConfig.canonical}/brand-assets/og-image-2026.jpg`,
         width: 1200,
         height: 630,
-        alt: "Syntra Digital — Reliable by Design",
+        alt: "Syntra Digital Services — Reliable by Design",
         type: "image/jpeg",
       },
     ],
@@ -86,7 +88,7 @@ export const metadata = {
         url: `${seoConfig.canonical}/brand-assets/og-image-2026.jpg`,
         width: 1200,
         height: 630,
-        alt: "Syntra Digital — Reliable by Design",
+        alt: "Syntra Digital Services — Reliable by Design",
       },
     ],
   },

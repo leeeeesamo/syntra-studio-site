@@ -40,7 +40,7 @@ export default function ExperienceSection() {
             className="text-lg text-slate-300 leading-relaxed"
             variants={fadeInUp}
           >
-            Syntra Digital didn&rsquo;t start in a design studio — it grew out of years working
+            Syntra Digital Services didn&rsquo;t start in a design studio — it grew out of years working
             in IT, infrastructure, and technical operations. That background shapes every project
             we take on, because we know what it takes to keep business tools running day after day.
           </motion.p>
