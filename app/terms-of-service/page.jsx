@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MiniHero from "@/components/MiniHero";
 
 function IconTerms() {
   return (
@@ -123,15 +124,14 @@ const sections = [
 export default function TermsPage() {
   return (
     <main className="legal-page">
-      <section className="legal-hero">
-        <div className="legal-hero-inner">
-          <div className="legal-badge">Service Terms</div>
-          <h1>Terms of Service</h1>
-          <p>
-            The general terms that apply to use of this website and to working with Syntra Digital Solutions.
-          </p>
-        </div>
-      </section>
+      <MiniHero
+        variant="neon-top-bottom"
+        compact
+        badge="Service Terms"
+        title="Terms of Service"
+        subtitle="The general terms that apply to use of this website and to working with Syntra Digital Solutions."
+        position="center 75%"
+      />
 
       <section className="legal-shell">
         <div className="legal-layout">

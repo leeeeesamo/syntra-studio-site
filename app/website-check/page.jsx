@@ -11,6 +11,7 @@ import {
   spinnerClass,
   FORMSPREE_ENDPOINT,
 } from '@/lib/form-styles';
+import MiniHero from '@/components/MiniHero';
 
 // ---------- SVG icon helpers (inline to avoid extra deps) ----------
 const IconCheck = () => (
@@ -145,44 +146,28 @@ export default function WebsiteCheckPage() {
   return (
     <div className="overflow-hidden">
       {/* ======================== HERO ======================== */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-950/95" />
-          <div className="absolute inset-0 opacity-15">
-            <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0.05))]" />
-          </div>
-          <div className="absolute top-1/4 left-1/3 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-400/5 rounded-full blur-3xl" />
-        </div>
-
-        <div className="container relative z-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs sm:text-sm font-medium uppercase tracking-wider mb-8">
+      <MiniHero
+        variant="blue-waves"
+        badge={
+          <>
             <IconSearch />
             100% Free — No Strings Attached
-          </span>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90">
-              Free Website Review to Help You Get More Calls, Leads, and Customers
-            </span>
-          </h1>
-
-          <p className="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10">
-            I&rsquo;ll record a short personalized video showing what I&rsquo;d improve on your site so it&rsquo;s easier for visitors to take action.
-          </p>
-
-          <button
-            onClick={scrollToForm}
-            className="btn-primary text-lg px-8 py-4 shadow-xl shadow-blue-500/20 hover:shadow-blue-500/30 transition-shadow"
-          >
-            Request Your Free Review
-          </button>
-        </div>
-      </section>
+          </>
+        }
+        title="Free Website Review to Help You Get More Calls, Leads, and Customers"
+        subtitle="I’ll record a short personalized video showing what I’d improve on your site so it’s easier for visitors to take action."
+        position="center 60%"
+      >
+        <button
+          onClick={scrollToForm}
+          className="btn-primary text-lg px-8 py-4 shadow-xl shadow-blue-500/20 hover:shadow-blue-500/30 transition-shadow"
+        >
+          Request Your Free Review
+        </button>
+      </MiniHero>
 
       {/* ======================== PROBLEM ======================== */}
-      <section className="py-20 md:py-28">
+      <section className="py-14 md:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-10 text-center">
             Most Websites Are Close — But Missing a Few Key Things
@@ -208,7 +193,7 @@ export default function WebsiteCheckPage() {
       </section>
 
       {/* ======================== OFFER ======================== */}
-      <section className="py-20 md:py-28 border-t border-slate-800/50">
+      <section className="py-14 md:py-20 border-t border-slate-800/50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-12 text-center">
             What You&rsquo;ll Get
@@ -252,7 +237,7 @@ export default function WebsiteCheckPage() {
       </section>
 
       {/* ======================== WHAT I'LL REVIEW ======================== */}
-      <section className="py-20 md:py-28 border-t border-slate-800/50">
+      <section className="py-14 md:py-20 border-t border-slate-800/50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
             What I&rsquo;ll Cover in Your Review
@@ -279,7 +264,7 @@ export default function WebsiteCheckPage() {
       </section>
 
       {/* ======================== FORM / CTA ======================== */}
-      <section id="review-form" className="py-20 md:py-28 border-t border-slate-800/50 scroll-mt-24">
+      <section id="review-form" className="py-14 md:py-20 border-t border-slate-800/50 scroll-mt-24">
         <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -393,7 +378,7 @@ export default function WebsiteCheckPage() {
       </section>
 
       {/* ======================== ABOUT ======================== */}
-      <section className="py-20 md:py-28 border-t border-slate-800/50">
+      <section className="py-14 md:py-20 border-t border-slate-800/50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 bg-black/20 border border-[var(--syntra-border-soft)] rounded-2xl p-6 sm:p-8">
             <div className="shrink-0 w-14 h-14 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
@@ -419,7 +404,7 @@ export default function WebsiteCheckPage() {
       </section>
 
       {/* ======================== FINAL CTA ======================== */}
-      <section className="py-16 md:py-24 border-t border-slate-800/50">
+      <section className="py-14 md:py-20 border-t border-slate-800/50">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Ready to See What&rsquo;s Holding Your Site Back?

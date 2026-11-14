@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PageContainer from "@/components/PageContainer";
+import MiniHero from "@/components/MiniHero";
 
 export const metadata = {
   title: "Work With Us | Syntra Digital Services",
@@ -142,38 +143,25 @@ export default function WorkWithUsPage() {
         />
 
         {/* Hero */}
-        <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-950/80 to-slate-950" />
-            <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5 [mask-image:linear-gradient(180deg,white,transparent)]" />
-          </div>
-          <div className="container relative z-10 text-center max-w-4xl mx-auto py-24">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90">
-                Improve your website and systems — with a team that gets it
-              </span>
-            </h1>
-            <p className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
-              Syntra Digital Services partners with service businesses to build websites that bring in
-              customers, streamline tools that reduce manual work, and create systems that
-              run reliably — so you can focus on what you do best.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="/website-check/" className="btn-primary">
-                Get Free Website Review
-              </Link>
-              <Link
-                href="/contact"
-                className="text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
-              >
-                Or get in touch &rarr;
-              </Link>
-            </div>
-          </div>
-        </section>
+        <MiniHero
+          variant="neon-waves"
+          title="Improve your website and systems — with a team that gets it"
+          subtitle="Syntra Digital Services partners with service businesses to build websites that bring in customers, streamline tools that reduce manual work, and create systems that run reliably — so you can focus on what you do best."
+          position="center 50%"
+        >
+          <Link href="/website-check/" className="btn-primary">
+            Get Free Website Review
+          </Link>
+          <Link
+            href="/contact"
+            className="text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
+          >
+            Or get in touch &rarr;
+          </Link>
+        </MiniHero>
 
         {/* Who is this for */}
-        <section className="py-20 md:py-28 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
               Who this is for
@@ -194,7 +182,7 @@ export default function WorkWithUsPage() {
         </section>
 
         {/* What we do */}
-        <section className="py-20 md:py-28 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 border-t border-slate-800/50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
               What we do
@@ -226,7 +214,7 @@ export default function WorkWithUsPage() {
         </section>
 
         {/* Our process */}
-        <section className="py-20 md:py-28 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
               Our process
@@ -249,7 +237,7 @@ export default function WorkWithUsPage() {
         </section>
 
         {/* Why Syntra Digital Services */}
-        <section className="py-20 md:py-28 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 border-t border-slate-800/50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
               Why Syntra Digital Services
@@ -273,7 +261,7 @@ export default function WorkWithUsPage() {
         </section>
 
         {/* Expected results */}
-        <section className="py-20 md:py-28 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
               What you can expect
@@ -294,7 +282,7 @@ export default function WorkWithUsPage() {
         </section>
 
         {/* Testimonial */}
-        <section className="py-20 md:py-28 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 border-t border-slate-800/50">
           <div className="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-xs sm:text-sm uppercase tracking-wider text-blue-300 mb-8">
               Client feedback
@@ -311,7 +299,7 @@ export default function WorkWithUsPage() {
         </section>
 
         {/* FAQ */}
-        <section className="py-20 md:py-28 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
               Frequently asked questions
@@ -331,7 +319,7 @@ export default function WorkWithUsPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 md:py-28 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 border-t border-slate-800/50">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               Ready to get started?

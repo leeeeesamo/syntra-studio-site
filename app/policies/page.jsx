@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MiniHero from "@/components/MiniHero";
 
 export const metadata = {
   title: "Company Policies | Syntra Digital Solutions",
@@ -224,16 +225,14 @@ const sections = [
 export default function PoliciesPage() {
   return (
     <main className="legal-page">
-      <section className="legal-hero">
-        <div className="legal-hero-inner">
-          <div className="legal-badge">Reliable by Design</div>
-          <h1>Company Policies</h1>
-          <p>
-            How we work with clients — clear expectations, fair terms, and
-            a straightforward process from start to finish.
-          </p>
-        </div>
-      </section>
+      <MiniHero
+        variant="neon-top-bottom"
+        compact
+        badge="Reliable by Design"
+        title="Company Policies"
+        subtitle="How we work with clients — clear expectations, fair terms, and a straightforward process from start to finish."
+        position="center 75%"
+      />
 
       <section className="legal-shell">
         <div className="legal-layout">

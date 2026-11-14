@@ -5,6 +5,7 @@ import { CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import { fadeInUp, staggerContainer } from '@/lib/animations';
 import PageContainer from '@/components/PageContainer';
+import MiniHero from '@/components/MiniHero';
 
 const serviceAreas = [
   {
@@ -80,45 +81,15 @@ export default function ServicesClient() {
     <PageContainer>
       <main className="overflow-hidden">
         {/* Hero */}
-        <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-950/90" />
-            <div className="absolute inset-0 opacity-20">
-              <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0.1))]" />
-            </div>
-          </div>
-
-          <div className="container relative z-10">
-            <motion.div
-              variants={staggerContainer}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, amount: 0.25 }}
-              className="text-center max-w-4xl mx-auto py-24"
-            >
-              <motion.h1
-                variants={fadeInUp}
-                className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-8"
-              >
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90">
-                  Practical websites and tools that support your business
-                </span>
-              </motion.h1>
-
-              <motion.p
-                variants={fadeInUp}
-                className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed"
-              >
-                We help service businesses improve how their website and internal tools
-                function day-to-day — so you spend less time on busywork and more time
-                on the work that matters.
-              </motion.p>
-            </motion.div>
-          </div>
-        </section>
+        <MiniHero
+          variant="neon-nodes"
+          title="Practical websites and tools that support your business"
+          subtitle="We help service businesses improve how their website and internal tools function day-to-day — so you spend less time on busywork and more time on the work that matters."
+          position="center 55%"
+        />
 
         {/* What we help you improve */}
-        <section className="py-20 md:py-28 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden"
@@ -157,7 +128,7 @@ export default function ServicesClient() {
         </section>
 
         {/* Core service areas */}
-        <section className="py-20 md:py-28 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 border-t border-slate-800/50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden"
@@ -221,7 +192,7 @@ export default function ServicesClient() {
         </section>
 
         {/* How it works */}
-        <section className="py-20 md:py-28 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden"
@@ -259,7 +230,7 @@ export default function ServicesClient() {
         </section>
 
         {/* What support can include */}
-        <section className="py-20 md:py-28 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 border-t border-slate-800/50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden"
@@ -297,7 +268,7 @@ export default function ServicesClient() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 md:py-28 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
               initial="hidden"

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MiniHero from "@/components/MiniHero";
 
 function IconPrivacy() {
   return (
@@ -102,15 +103,14 @@ const sections = [
 export default function PrivacyPolicyPage() {
   return (
     <main className="legal-page">
-      <section className="legal-hero">
-        <div className="legal-hero-inner">
-          <div className="legal-badge">Privacy & Data Handling</div>
-          <h1>Privacy Policy</h1>
-          <p>
-            How Syntra Digital Solutions collects, uses, and protects information shared through this website and during client work.
-          </p>
-        </div>
-      </section>
+      <MiniHero
+        variant="neon-top-bottom"
+        compact
+        badge="Privacy & Data Handling"
+        title="Privacy Policy"
+        subtitle="How Syntra Digital Solutions collects, uses, and protects information shared through this website and during client work."
+        position="center 75%"
+      />
 
       <section className="legal-shell">
         <div className="legal-layout">

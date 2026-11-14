@@ -7,6 +7,7 @@ import { fadeInUp, staggerContainer } from '@/lib/animations';
 import { cn } from '@/lib/ui-utils';
 import PageContainer from '@/components/PageContainer';
 import SectionHeader from '@/components/SectionHeader';
+import MiniHero from '@/components/MiniHero';
 
 const plans = [
   {
@@ -155,46 +156,15 @@ export default function PricingClient() {
     <PageContainer>
       <main className="overflow-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-950/90" />
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0.1))]" />
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 via-transparent to-blue-400/5" />
-          </div>
-        </div>
-
-        {/* Content */}
-        <div className="container relative z-10">
-          <motion.div
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.25 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <motion.h1 
-              variants={fadeInUp}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8"
-            >
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90">
-                Simple pricing ranges — scoped to your business
-              </span>
-            </motion.h1>
-
-            <motion.p
-              variants={fadeInUp}
-              className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10"
-            >
-              We provide clear pricing ranges to help you plan confidently. Final quotes are based on your goals, system complexity, and the amount of implementation required.
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
+      <MiniHero
+        variant="neon-top-bottom"
+        title="Simple pricing ranges — scoped to your business"
+        subtitle="We provide clear pricing ranges to help you plan confidently. Final quotes are based on your goals, system complexity, and the amount of implementation required."
+        position="center 70%"
+      />
 
       {/* Pricing Plans */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-16 md:py-20 relative overflow-hidden">
         <div className="container">
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
@@ -214,7 +184,7 @@ export default function PricingClient() {
         </div>
       </section>
 
-      <section className="py-24 relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
+      <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
         <div className="container">
           <SectionHeader
             title="Pricing transparency"
@@ -225,7 +195,7 @@ export default function PricingClient() {
 
 
       {/* CTA Section */}
-      <section className="relative py-24 overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
+      <section className="relative py-16 md:py-20 overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
         <div className="container">
           <SectionHeader
             kicker="GET STARTED"
