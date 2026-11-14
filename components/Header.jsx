@@ -53,12 +53,12 @@ export default function Header() {
           className="flex items-center gap-2.5 text-white hover:opacity-90 transition-opacity"
         >
           <img
-            src="/brand-assets/logo-icon.svg"
-            alt="Syntra Logo"
+            src="/brand-assets/syntra-icon.png"
+            alt="Syntra Digital Services logo"
             className="h-9 sm:h-10 w-auto"
           />
           <span className="text-base sm:text-lg font-medium tracking-wide whitespace-nowrap">
-            Syntra Digital
+            Syntra Digital Services
           </span>
         </Link>
 

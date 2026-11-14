@@ -36,7 +36,7 @@ const websiteSchema = {
   alternateName: ["Syntra Digital", "Syntra Digital Solutions"],
   description: seoConfig.description,
   url: seoConfig.canonical,
-  logo: `${seoConfig.canonical}/brand-assets/logo.png`,
+  logo: `${seoConfig.canonical}/brand-assets/syntra-digital-services-logo.png`,
   sameAs: [
     `https://twitter.com/${seoConfig.twitter?.handle?.replace("@", "")}`,
     "https://www.linkedin.com/company/syntra-digital-services/",
@@ -139,6 +139,13 @@ export default function RootLayout({ children }) {
           type="image/webp"
           href="/brand-assets/hero-banner.webp"
           media="(min-width: 768px)"
+        />
+
+        {/* Ahrefs Web Analytics */}
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="pYxnSyBJXRcWRAB2yClp1g"
+          async
         />
 
         {/* Google Analytics (GA4) */}
