@@ -3,7 +3,9 @@ import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Script from "next/script";
+import CookieConsent from "@/components/CookieConsent";
+import MetaPixel from "@/components/MetaPixel";
+import ConsentAnalytics from "@/components/ConsentAnalytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,7 +26,7 @@ const seoConfig = {
   },
 };
 
-// Google Analytics (GA4)
+// Google Analytics (GA4) — loaded via ConsentAnalytics after consent
 const GA_MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GA_ID || "G-KZDQP8S2YT";
 
@@ -95,6 +97,8 @@ export const metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon-64x64.png', sizes: '64x64', type: 'image/png' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
     ],
@@ -125,6 +129,12 @@ export default function RootLayout({ children }) {
         {/* Security: Referrer policy (meta fallback for static hosting) */}
         <meta name="referrer" content="strict-origin-when-cross-origin" />
 
+        {/* Meta domain verification — static, not consent-gated */}
+        <meta
+          name="facebook-domain-verification"
+          content="6ic1fbqjx8rw2e12c064gr17zx3mgg"
+        />
+
         {/* Preload hero background image — responsive WebP for faster LCP */}
         <link
           rel="preload"
@@ -141,33 +151,24 @@ export default function RootLayout({ children }) {
           media="(min-width: 768px)"
         />
 
-        {/* Ahrefs Web Analytics */}
+        {/* Google Consent Mode v2 — all optional storage denied by default.
+            This inline stub runs during HTML parse, before any Google tag
+            or analytics request, and sends no network traffic itself. */}
         <script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="pYxnSyBJXRcWRAB2yClp1g"
-          async
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                ad_storage: 'denied',
+                ad_user_data: 'denied',
+                ad_personalization: 'denied',
+                analytics_storage: 'denied',
+                wait_for_update: 500
+              });
+            `,
+          }}
         />
-
-        {/* Google Analytics (GA4) */}
-        {GA_MEASUREMENT_ID ? (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-              strategy="lazyOnload"
-            />
-            <Script id="ga4-init" strategy="lazyOnload">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_MEASUREMENT_ID}', {
-                  anonymize_ip: true,
-                  page_path: window.location.pathname
-                });
-              `}
-            </Script>
-          </>
-        ) : null}
 
         {/* Structured Data */}
         <script
@@ -190,6 +191,9 @@ export default function RootLayout({ children }) {
           <main className="flex-1">{children}</main>
 
           <Footer />
+          <CookieConsent />
+          <MetaPixel />
+          <ConsentAnalytics gaId={GA_MEASUREMENT_ID} />
         </div>
       </body>
     </html>

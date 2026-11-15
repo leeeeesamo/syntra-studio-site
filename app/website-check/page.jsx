@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import {
   formWrapperClass,
@@ -12,6 +12,7 @@ import {
   FORMSPREE_ENDPOINT,
 } from '@/lib/form-styles';
 import MiniHero from '@/components/MiniHero';
+import { PIXEL_READY_EVENT } from '@/components/MetaPixel';
 
 // ---------- SVG icon helpers (inline to avoid extra deps) ----------
 const IconCheck = () => (
@@ -62,6 +63,28 @@ export default function WebsiteCheckPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState(null);
+  const viewContentSent = useRef(false);
+
+  // Meta Pixel ViewContent — fires once, only after marketing consent
+  // initializes the pixel (PIXEL_READY_EVENT covers late consent grants).
+  useEffect(() => {
+    const send = () => {
+      if (
+        !viewContentSent.current &&
+        typeof window !== 'undefined' &&
+        typeof window.fbq === 'function'
+      ) {
+        viewContentSent.current = true;
+        window.fbq('track', 'ViewContent', {
+          content_name: 'Free Website Review',
+          content_category: 'Service',
+        });
+      }
+    };
+    send();
+    window.addEventListener(PIXEL_READY_EVENT, send);
+    return () => window.removeEventListener(PIXEL_READY_EVENT, send);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -118,6 +141,12 @@ export default function WebsiteCheckPage() {
       const result = await response.json().catch(() => null);
 
       if (response.ok) {
+        if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+          window.fbq('track', 'Lead', {
+            content_name: 'Free Website Review',
+            content_category: 'Service',
+          });
+        }
         setStatus({
           type: 'success',
           message: "Thanks! I'll review your site and send your video within 1–2 business days.",

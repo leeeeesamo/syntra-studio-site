@@ -1,6 +1,7 @@
 // components/Footer.jsx
 import Link from "next/link";
 import { Facebook, Linkedin, Instagram } from "lucide-react";
+import { OpenCookieSettings } from "@/components/CookieConsent";
 
 const socialLinks = [
   {
@@ -100,7 +101,8 @@ export default function Footer() {
             ))}
           </div>
           <p className="text-[0.65rem] text-[var(--syntra-text-muted)]">
-            &copy; 2025 Syntra Digital Services. All rights reserved.
+            &copy; 2025 Syntra Digital Services. All rights reserved.{" "}
+            <OpenCookieSettings />
           </p>
         </div>
       </div>

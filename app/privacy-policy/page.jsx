@@ -71,11 +71,34 @@ const sections = [
     id: "cookies",
     title: "Cookies & Analytics",
     content: (
-      <p>
-        This site may use cookies, analytics tools, or similar technologies to understand site traffic,
-        improve performance, and evaluate user interaction. You can typically manage cookie preferences
-        through your browser settings.
-      </p>
+      <>
+        <p>
+          This site uses cookies and similar technologies for essential
+          functionality, site analytics, and — with your permission —
+          advertising measurement.
+        </p>
+        <p>
+          Optional analytics and advertising tools load only after you grant
+          consent. Analytics tools such as Google Analytics (GA4) and Ahrefs
+          Web Analytics help us understand site traffic and improve
+          performance, and operate under Google Consent Mode with storage
+          denied by default. When you accept, we also load the Meta Pixel
+          (operated by Meta Platforms, Inc.) to measure the effectiveness of
+          our advertising and to support ad attribution. The Meta Pixel sets
+          cookies and collects information such as pages visited, actions
+          taken on the site, and technical device data, which may be used by
+          Meta to show relevant ads.
+        </p>
+        <p>
+          When you first visit, a consent banner lets you accept or reject
+          non-essential tracking. Your choice is stored in your browser and
+          can be changed at any time using the &ldquo;Cookie Preferences&rdquo;
+          link in the site footer. Withdrawing consent reloads the page so
+          that previously loaded tracking scripts are fully removed, and it
+          cannot recall data already collected. You can also manage cookies
+          through your browser settings.
+        </p>
+      </>
     ),
   },
   {
