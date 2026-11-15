@@ -10,6 +10,7 @@ import {
 
 const AHREFS_SRC = "https://analytics.ahrefs.com/analytics.js";
 const AHREFS_KEY = "pYxnSyBJXRcWRAB2yClp1g";
+const GTM_ID = "GTM-MSPDD227";
 
 export default function ConsentAnalytics({ gaId }) {
   const pathname = usePathname();
@@ -39,6 +40,23 @@ export default function ConsentAnalytics({ gaId }) {
           anonymize_ip: true,
           page_path: window.location.pathname,
         });
+      }
+
+      // Google Tag Manager — consent-gated, initialized once.
+      // Uses the existing window.dataLayer/gtag stub from the consent-default
+      // snippet; Consent Mode state is already updated to granted above.
+      if (!document.querySelector(`script[src*="gtm.js?id=${GTM_ID}"]`)) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        if (window.gtag) window.gtag("js", new Date());
+
+        const gtmScript = document.createElement("script");
+        gtmScript.async = true;
+        gtmScript.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
+        document.head.appendChild(gtmScript);
       }
 
       if (!document.querySelector(`script[src="${AHREFS_SRC}"]`)) {

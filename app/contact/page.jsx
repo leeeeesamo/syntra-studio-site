@@ -4,8 +4,8 @@ import PageContainer from "@/components/PageContainer";
 import MiniHero from "@/components/MiniHero";
 
 export const metadata = {
-  title: "Contact Syntra Digital Services | Start a Website or Systems Project",
-  description: "Get in touch with Syntra Digital Services to discuss your website or backend system project. We’ll reply quickly with next steps and a clear recommendation."
+  title: "Contact Syntra Digital Solutions | Start a Website or Systems Project",
+  description: "Get in touch with Syntra Digital Solutions to discuss your website or backend system project. We’ll reply quickly with next steps and a clear recommendation."
 };
 
 export default function ContactPage() {
@@ -31,7 +31,7 @@ export default function ContactPage() {
               Ready to launch a new website, improve your existing one, or explore digital solutions for your business?
             </h2>
             <p className="text-slate-300 leading-relaxed mb-3">
-              Schedule a free, 30-minute consultation with Syntra Digital Services. We&rsquo;ll discuss your business goals, current website, project requirements, and opportunities to strengthen your online presence.
+              Schedule a free, 30-minute consultation with Syntra Digital Solutions. We&rsquo;ll discuss your business goals, current website, project requirements, and opportunities to strengthen your online presence.
             </p>
             <p className="text-slate-300 leading-relaxed mb-3">
               Whether you need custom website design, a complete redesign, SEO, ongoing maintenance, or technical support, this no-obligation consultation is the perfect place to start.

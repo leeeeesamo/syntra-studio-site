@@ -16,8 +16,8 @@ const inter = Inter({
 
 // SEO Configuration
 const seoConfig = {
-  siteName: "Syntra Digital Services",
-  defaultTitle: "Syntra Digital Services | Reliable by Design",
+  siteName: "Syntra Digital Solutions",
+  defaultTitle: "Syntra Digital Solutions | Reliable by Design",
   description:
     "Custom website design and development built for performance, clarity, and long-term reliability.",
   canonical: "https://syntradigitalservices.com",
@@ -35,7 +35,7 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: seoConfig.siteName,
-  alternateName: ["Syntra Digital", "Syntra Digital Solutions"],
+  alternateName: ["Syntra Digital Services", "Syntra Digital"],
   description: seoConfig.description,
   url: seoConfig.canonical,
   logo: `${seoConfig.canonical}/brand-assets/syntra-digital-services-logo.png`,
@@ -73,7 +73,7 @@ export const metadata = {
         url: `${seoConfig.canonical}/brand-assets/og-image-2026.jpg`,
         width: 1200,
         height: 630,
-        alt: "Syntra Digital Services — Reliable by Design",
+        alt: "Syntra Digital Solutions — Reliable by Design",
         type: "image/jpeg",
       },
     ],
@@ -90,7 +90,7 @@ export const metadata = {
         url: `${seoConfig.canonical}/brand-assets/og-image-2026.jpg`,
         width: 1200,
         height: 630,
-        alt: "Syntra Digital Services — Reliable by Design",
+        alt: "Syntra Digital Solutions — Reliable by Design",
       },
     ],
   },

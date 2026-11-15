@@ -3,13 +3,13 @@ import PageContainer from "@/components/PageContainer";
 import MiniHero from "@/components/MiniHero";
 
 export const metadata = {
-  title: "Saxon Performance Automotive — Case Study | Syntra Digital Services",
+  title: "Saxon Performance Automotive — Case Study | Syntra Digital Solutions",
   description:
-    "How Syntra Digital Services helped Saxon Performance Automotive build a clean, professional website that brings in new customers.",
+    "How Syntra Digital Solutions helped Saxon Performance Automotive build a clean, professional website that brings in new customers.",
   openGraph: {
-    title: "Saxon Performance Automotive — Case Study | Syntra Digital Services",
+    title: "Saxon Performance Automotive — Case Study | Syntra Digital Solutions",
     description:
-      "From a basic presence to a lead-generating website. A real client project by Syntra Digital Services.",
+      "From a basic presence to a lead-generating website. A real client project by Syntra Digital Solutions.",
     url: "https://syntradigitalservices.com/case-studies/saxon",
   },
 };
