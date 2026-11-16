@@ -106,9 +106,6 @@ export const metadata = {
       { url: '/apple-touch-icon.png', sizes: '180x180' },
     ],
   },
-  alternates: {
-    canonical: seoConfig.canonical,
-  },
   robots: {
     index: true,
     follow: true,

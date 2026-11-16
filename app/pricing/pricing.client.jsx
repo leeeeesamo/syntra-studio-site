@@ -133,7 +133,7 @@ const PricingCard = ({ plan, index }) => {
           {/* CTA */}
           <motion.div className="mt-auto">
             <a
-              href="/contact"
+              href="/contact/"
               className={cn(
                 "w-full inline-flex items-center justify-center rounded-full font-medium text-sm px-6 py-3 transition-all duration-300",
                 plan.popular 
@@ -212,7 +212,7 @@ export default function PricingClient() {
             viewport={{ once: true }}
           >
             <a
-              href="/contact"
+              href="/contact/"
               className="btn-primary"
             >
               Request a Consultation

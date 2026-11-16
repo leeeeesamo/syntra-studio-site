@@ -12,6 +12,9 @@ export const metadata = {
       "Reliable websites and business tools for service companies. Founded on real IT and operations experience.",
     url: "https://syntradigitalservices.com/about",
   },
+  alternates: {
+    canonical: "https://syntradigitalservices.com/about/",
+  },
 };
 
 export default function AboutPage() {

@@ -177,7 +177,7 @@ export default function FAQClient() {
                 variants={fadeInUp}
               >
                 <a
-                  href="/contact"
+                  href="/contact/"
                   className="inline-flex items-center justify-center rounded-full font-medium text-sm px-8 py-4 text-white bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg hover:opacity-90 transition-opacity"
                 >
                   Request a Consultation
@@ -187,7 +187,7 @@ export default function FAQClient() {
                 </a>
                 
                 <a
-                  href="/pricing"
+                  href="/pricing/"
                   className="inline-flex items-center justify-center rounded-full font-medium text-sm px-8 py-4 border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800/50 transition-colors"
                 >
                   View Pricing

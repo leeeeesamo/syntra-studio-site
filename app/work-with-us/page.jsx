@@ -13,7 +13,7 @@ export const metadata = {
     url: "https://syntradigitalservices.com/work-with-us",
   },
   alternates: {
-    canonical: "https://syntradigitalservices.com/work-with-us",
+    canonical: "https://syntradigitalservices.com/work-with-us/",
   },
 };
 

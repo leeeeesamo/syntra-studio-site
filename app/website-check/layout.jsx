@@ -8,6 +8,9 @@ export const metadata = {
       "Get a free personalized video showing what to improve on your website so it's easier for visitors to take action.",
     url: "https://syntradigitalservices.com/website-check",
   },
+  alternates: {
+    canonical: "https://syntradigitalservices.com/website-check/",
+  },
 };
 
 export default function WebsiteCheckLayout({ children }) {
