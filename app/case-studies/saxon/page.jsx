@@ -12,6 +12,9 @@ export const metadata = {
       "From a basic presence to a lead-generating website. A real client project by Syntra Digital Solutions.",
     url: "https://syntradigitalservices.com/case-studies/saxon",
   },
+  alternates: {
+    canonical: "https://syntradigitalservices.com/case-studies/saxon/",
+  },
 };
 
 export default function SaxonCaseStudyPage() {

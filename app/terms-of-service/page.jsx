@@ -1,6 +1,12 @@
 import Link from "next/link";
 import MiniHero from "@/components/MiniHero";
 
+export const metadata = {
+  alternates: {
+    canonical: "https://syntradigitalservices.com/terms-of-service/",
+  },
+};
+
 function IconTerms() {
   return (
     <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
