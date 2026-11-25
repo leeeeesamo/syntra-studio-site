@@ -7,19 +7,14 @@ import SectionHeader from '@/components/SectionHeader';
 
 const testimonials = [
   {
-    quote: "Working with Syntra Digital Services was a game-changer for our business. They delivered a beautiful, fast website that perfectly represents our brand.",
-    name: "Sarah J.",
-    role: "Small Business Owner"
+    quote: "Working with Syntra Digital Solutions was one of the best decisions we made. They turned our vision into a clean, professional site that's already bringing in new customers.",
+    name: "Saxon Performance Automotive",
+    role: "Automotive Client"
   },
   {
-    quote: "Professional, responsive, and incredibly talented. They took our vision and turned it into something beyond our expectations.",
-    name: "Michael C.",
-    role: "Service Provider"
-  },
-  {
-    quote: "The attention to detail and commitment to performance is unmatched. Our new website has already increased our conversion rates significantly.",
-    name: "Emily R.",
-    role: "E-commerce Manager"
+    quote: "We had a great experience working with Syntra Digital Solutions on our company website. The turnaround time was impressive, and the quality of the finished website exceeded our expectations. The entire process was smooth, professional, and efficient. We're very happy with the results and appreciate how quickly everything came together.",
+    name: "Veloce Logistics",
+    role: "Logistics Client"
   }
 ];
 
@@ -40,13 +35,6 @@ const TestimonialCard = ({ testimonial, index }) => (
       className="group h-full bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-800 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300"
       whileHover={{ y: -5 }}
     >
-      {/* Star Rating */}
-      <div className="flex items-center gap-1 mb-6">
-        {[...Array(5)].map((_, i) => (
-          <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
-        ))}
-      </div>
-      
       {/* Quote */}
       <blockquote className="text-slate-300 leading-relaxed mb-6 text-lg">
         "{testimonial.quote}"
@@ -77,13 +65,13 @@ export default function TestimonialsSection() {
       <div className="container">
         <SectionHeader
           kicker="TESTIMONIALS"
-          title="What Clients Say"
+          title="What Our Clients Say"
           description="Real feedback from businesses we've helped succeed online."
           icon={Star}
         />
 
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto"
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
