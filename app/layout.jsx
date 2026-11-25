@@ -35,7 +35,7 @@ const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: seoConfig.siteName,
-  alternateName: ["Syntra Digital Services", "Syntra Digital"],
+  alternateName: ["Syntra Digital"],
   description: seoConfig.description,
   url: seoConfig.canonical,
   logo: `${seoConfig.canonical}/brand-assets/syntra-digital-services-logo.png`,

@@ -288,7 +288,7 @@ export default function WorkWithUsPage() {
               Client feedback
             </p>
             <blockquote className="text-xl sm:text-2xl text-slate-200 leading-relaxed font-light italic mb-6">
-              &ldquo;Working with Syntra Digital Services was one of the best decisions we made.
+              &ldquo;Working with Syntra Digital Solutions was one of the best decisions we made.
               They turned our vision into a clean, professional site that&rsquo;s already
               bringing in new customers.&rdquo;
             </blockquote>
