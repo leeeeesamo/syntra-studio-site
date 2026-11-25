@@ -14,7 +14,7 @@ const SITE_PAGES = {
 };
 
 module.exports = {
-  siteUrl: "https://syntradigitalservices.com",
+  siteUrl: "https://syntradigitalsolutions.us",
   generateRobotsTxt: false, // we maintain public/robots.txt manually
   sitemapSize: 7000,
 

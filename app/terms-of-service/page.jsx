@@ -3,7 +3,7 @@ import MiniHero from "@/components/MiniHero";
 
 export const metadata = {
   alternates: {
-    canonical: "https://syntradigitalservices.com/terms-of-service/",
+    canonical: "https://syntradigitalsolutions.us/terms-of-service/",
   },
 };
 

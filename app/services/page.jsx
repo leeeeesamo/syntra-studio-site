@@ -5,7 +5,7 @@ export const metadata = {
   description:
     "Syntra Digital Solutions helps service businesses improve their website, reduce manual work, and streamline day-to-day operations with practical, reliable tools.",
   alternates: {
-    canonical: "https://syntradigitalservices.com/services/",
+    canonical: "https://syntradigitalsolutions.us/services/",
   },
 };
 
