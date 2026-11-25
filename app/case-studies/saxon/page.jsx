@@ -10,10 +10,10 @@ export const metadata = {
     title: "Saxon Performance Automotive — Case Study | Syntra Digital Solutions",
     description:
       "From a basic presence to a lead-generating website. A real client project by Syntra Digital Solutions.",
-    url: "https://syntradigitalservices.com/case-studies/saxon",
+    url: "https://syntradigitalsolutions.us/case-studies/saxon",
   },
   alternates: {
-    canonical: "https://syntradigitalservices.com/case-studies/saxon/",
+    canonical: "https://syntradigitalsolutions.us/case-studies/saxon/",
   },
 };
 

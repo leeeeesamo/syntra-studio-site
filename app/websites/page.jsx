@@ -2,7 +2,7 @@ import { permanentRedirect } from "next/navigation";
 
 export const metadata = {
   alternates: {
-    canonical: "https://syntradigitalservices.com/services/",
+    canonical: "https://syntradigitalsolutions.us/services/",
   },
 };
 

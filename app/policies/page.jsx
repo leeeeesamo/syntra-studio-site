@@ -6,7 +6,7 @@ export const metadata = {
   description:
     "How Syntra Digital Solutions works with clients — covering service terms, payments, project scope, confidentiality, and expectations.",
   alternates: {
-    canonical: "https://syntradigitalservices.com/policies/",
+    canonical: "https://syntradigitalsolutions.us/policies/",
   },
 };
 

@@ -20,7 +20,7 @@ const seoConfig = {
   defaultTitle: "Syntra Digital Solutions | Reliable by Design",
   description:
     "Custom website design and development built for performance, clarity, and long-term reliability.",
-  canonical: "https://syntradigitalservices.com",
+  canonical: "https://syntradigitalsolutions.us",
   twitter: {
     handle: "@syntradigital",
   },

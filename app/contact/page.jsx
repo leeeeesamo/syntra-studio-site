@@ -7,7 +7,7 @@ export const metadata = {
   title: "Contact Syntra Digital Solutions | Start a Website or Systems Project",
   description: "Get in touch with Syntra Digital Solutions to discuss your website or backend system project. We’ll reply quickly with next steps and a clear recommendation.",
   alternates: {
-    canonical: "https://syntradigitalservices.com/contact/",
+    canonical: "https://syntradigitalsolutions.us/contact/",
   },
 };
 
