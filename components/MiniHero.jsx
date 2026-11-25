@@ -70,6 +70,9 @@ export default function MiniHero({
         }`}
       />
 
+      {/* Bottom edge blend into page background */}
+      <div className="hero-edge-blend" />
+
       <div className="container relative z-10 text-center max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14">
         {badge && (
           <span className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs sm:text-sm font-medium uppercase tracking-wider mb-6">

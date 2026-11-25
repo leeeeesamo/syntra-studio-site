@@ -362,6 +362,28 @@
   }
 }
 
+/* Smooth bottom fade from hero artwork into the page background */
+.hero-edge-blend {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 55%;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    var(--syntra-deep-bg) 0%,
+    color-mix(in srgb, var(--syntra-deep-bg) 55%, transparent) 45%,
+    transparent 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .hero-edge-blend {
+    height: 45%;
+  }
+}
+
 .section-divider {
   width: 80px;
   height: 2px;
