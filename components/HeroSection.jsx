@@ -43,7 +43,9 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="container relative z-10">
-        <div className="text-center max-w-4xl mx-auto">
+        {/* Localized radial scrim behind the text for contrast */}
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_55%_at_50%_45%,rgba(11,16,32,0.6)_0%,rgba(11,16,32,0.25)_55%,transparent_75%)]" />
+        <div className="text-center max-w-5xl mx-auto relative">
           <span
             className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs sm:text-sm font-medium uppercase tracking-wider mb-6"
           >
@@ -51,7 +53,7 @@ export default function HeroSection() {
           </span>
 
           <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-8"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90">
               Websites and tools that work as hard as you do.
@@ -59,7 +61,7 @@ export default function HeroSection() {
           </h1>
 
           <p
-            className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-6 animate-fade-in-up animate-delay-100"
+            className="text-lg sm:text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-6 animate-fade-in-up animate-delay-100"
             style={{ opacity: 0 }}
           >
             Syntra Digital Solutions helps service-based businesses build dependable websites, streamline their workflows, and create digital infrastructure that supports real day-to-day operations.

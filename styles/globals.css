@@ -518,7 +518,7 @@ textarea:focus {
 }
 
 .legal-layout {
-  @apply grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)];
+  @apply grid gap-6 lg:grid-cols-[300px_minmax(0,1fr)];
 }
 
 .legal-sidebar {
@@ -558,7 +558,7 @@ textarea:focus {
 }
 
 .legal-card p {
-  @apply text-slate-300 text-base md:text-lg;
+  @apply text-slate-300 text-base md:text-lg leading-relaxed;
 }
 
 .legal-card ul {
