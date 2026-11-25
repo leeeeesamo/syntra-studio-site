@@ -36,6 +36,9 @@ export default function HeroSection() {
           ))}
         </div>
 
+        {/* Bottom edge blend into page background */}
+        <div className="hero-edge-blend" />
+
       </div>
 
       {/* Content */}
