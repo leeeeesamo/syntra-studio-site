@@ -94,6 +94,9 @@
   --syntra-text-muted: #94a3b8;
   --syntra-heading: #ffffff;
   --syntra-deep-bg: #0f172a;
+  --syntra-midnight: #0b1020;
+  --syntra-elevated: #17233d;
+  --syntra-surface: rgba(23, 35, 61, 0.6);
 }
 
 /* ============================================
@@ -112,7 +115,7 @@
   }
 
   body {
-    @apply bg-slate-950 text-slate-50 font-sans;
+    @apply bg-[var(--syntra-deep-bg)] text-slate-50 font-sans;
     @apply min-h-screen w-full overflow-x-hidden;
     @apply transition-colors duration-200;
   }
@@ -203,7 +206,8 @@
 
   /* Cards */
   .card {
-    @apply bg-slate-900/50 backdrop-blur-sm border border-slate-800/50 rounded-2xl;
+    @apply backdrop-blur-sm border border-white/10 rounded-2xl;
+    background-color: var(--syntra-surface);
     @apply transition-all duration-300;
     @apply hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10;
   }
@@ -239,7 +243,8 @@
 
   /* Consistent card spacing */
   .card {
-    @apply bg-slate-900/50 backdrop-blur-sm border border-slate-800/50 rounded-2xl;
+    @apply backdrop-blur-sm border border-white/10 rounded-2xl;
+    background-color: var(--syntra-surface);
     @apply transition-all duration-300;
     @apply hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10;
     @apply p-6 sm:p-8;
@@ -517,7 +522,8 @@ textarea:focus {
 }
 
 .legal-sidebar {
-  @apply h-fit rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm p-5 lg:sticky lg:top-24;
+  @apply h-fit rounded-2xl border border-white/10 backdrop-blur-sm p-5 lg:sticky lg:top-24;
+  background-color: var(--syntra-surface);
   box-shadow: var(--shadow-xl);
 }
 
@@ -542,7 +548,8 @@ textarea:focus {
 }
 
 .legal-card {
-  @apply rounded-2xl border border-slate-800 bg-slate-900/60 backdrop-blur-sm p-6 sm:p-8;
+  @apply rounded-2xl border border-white/10 backdrop-blur-sm p-6 sm:p-8;
+  background-color: var(--syntra-surface);
   box-shadow: var(--shadow-xl);
 }
 
@@ -579,7 +586,8 @@ textarea:focus {
 }
 
 .legal-cta {
-  @apply rounded-2xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-6 sm:p-8;
+  @apply rounded-2xl border border-white/10 p-6 sm:p-8;
+  background: linear-gradient(to bottom right, var(--syntra-elevated), var(--syntra-midnight));
   box-shadow: var(--shadow-xl);
 }
 

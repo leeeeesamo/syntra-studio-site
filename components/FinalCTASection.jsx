@@ -6,7 +6,7 @@ import { fadeInUp, staggerContainer } from '@/lib/animations';
 
 export default function FinalCTASection() {
   return (
-    <section id="contact" className="section relative overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <section id="contact" className="section relative overflow-hidden bg-gradient-to-b from-[#0B1020] via-slate-900 to-[#0B1020]">
       {/* Decorative elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-blue-500/5 blur-3xl" />

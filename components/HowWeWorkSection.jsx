@@ -6,7 +6,7 @@ import { fadeInUp, staggerContainer } from '@/lib/animations';
 
 export default function HowWeWorkSection() {
   return (
-    <section className="section relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
+    <section className="section relative overflow-hidden bg-gradient-to-b from-[#0B1020] to-slate-900">
       <div className="container">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div

@@ -101,7 +101,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="text-[0.65rem] text-[var(--syntra-text-muted)]">
-            &copy; 2025 Syntra Digital Solutions. All rights reserved.{" "}
+            &copy; {new Date().getFullYear()} Syntra Digital Solutions. All rights reserved.{" "}
             <OpenCookieSettings />
           </p>
         </div>

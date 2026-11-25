@@ -89,7 +89,7 @@ export default function ServicesClient() {
         />
 
         {/* What we help you improve */}
-        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-[#0B1020] to-slate-900 border-t border-slate-800/50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden"
@@ -192,7 +192,7 @@ export default function ServicesClient() {
         </section>
 
         {/* How it works */}
-        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-[#0B1020] to-slate-900 border-t border-slate-800/50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial="hidden"
@@ -268,7 +268,7 @@ export default function ServicesClient() {
         </section>
 
         {/* CTA */}
-        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-[#0B1020] to-slate-900 border-t border-slate-800/50">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
               initial="hidden"

@@ -67,11 +67,11 @@ const TestimonialCard = ({ testimonial, index }) => (
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
+    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-[#0B1020] to-slate-900">
       {/* Decorative elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5 [mask-image:linear-gradient(180deg,white,transparent)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-900/80 to-slate-950/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-900/80 to-[#0B1020]/90" />
       </div>
       
       <div className="container">
