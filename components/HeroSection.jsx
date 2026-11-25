@@ -53,7 +53,7 @@ export default function HeroSection() {
           </span>
 
           <h1
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-8"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-8"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-100/90">
               Websites and tools that work as hard as you do.
