@@ -53,7 +53,7 @@ const websiteSchema = {
     ? { telephone: process.env.NEXT_PUBLIC_CONTACT_PHONE }
     : {}),
   email:
-    process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@syntradigitalservices.com",
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@syntradigitalsolutions.us",
 };
 
 export const metadata = {
