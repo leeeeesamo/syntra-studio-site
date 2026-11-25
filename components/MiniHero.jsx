@@ -27,8 +27,8 @@ const VARIANTS = {
 };
 
 const OVERLAYS = {
-  std: "from-slate-900/50 via-slate-950/60 to-slate-950/75",
-  strong: "from-slate-950/70 via-slate-950/65 to-slate-950/80",
+  std: "from-slate-900/50 via-[#0B1020]/60 to-[#0B1020]/75",
+  strong: "from-[#0B1020]/70 via-[#0B1020]/65 to-[#0B1020]/80",
 };
 
 export default function MiniHero({
@@ -53,7 +53,7 @@ export default function MiniHero({
     >
       {/* Wave artwork */}
       <div
-        className="absolute inset-0 -z-10 bg-slate-950 bg-cover"
+        className="absolute inset-0 -z-10 bg-[#0B1020] bg-cover"
         style={{
           backgroundImage: `url('${art.src}')`,
           backgroundPosition: position,
@@ -65,7 +65,7 @@ export default function MiniHero({
       <div
         className={`absolute inset-0 -z-10 bg-gradient-to-br ${
           compact
-            ? "from-slate-950/80 via-slate-950/65 to-slate-950/80"
+            ? "from-[#0B1020]/80 via-[#0B1020]/65 to-[#0B1020]/80"
             : OVERLAYS[art.overlay]
         }`}
       />

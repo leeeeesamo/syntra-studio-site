@@ -25,7 +25,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="section relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
+    <section className="section relative overflow-hidden bg-gradient-to-b from-slate-900 to-[#0B1020]">
       <div className="container">
         <SectionHeader title="Our process" />
 

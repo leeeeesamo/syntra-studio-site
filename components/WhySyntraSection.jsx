@@ -58,7 +58,7 @@ const DifferentiatorCard = ({ item, index }) => {
 
 export default function WhySyntraSection() {
   return (
-    <section className="section relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
+    <section className="section relative overflow-hidden bg-gradient-to-b from-[#0B1020] to-slate-900">
       <div className="container">
         <SectionHeader title="A calm, structured approach" />
 

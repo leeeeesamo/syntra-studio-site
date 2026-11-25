@@ -161,7 +161,7 @@ export default function WorkWithUsPage() {
         </MiniHero>
 
         {/* Who is this for */}
-        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-[#0B1020] to-slate-900 border-t border-slate-800/50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
               Who this is for
@@ -214,7 +214,7 @@ export default function WorkWithUsPage() {
         </section>
 
         {/* Our process */}
-        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-[#0B1020] to-slate-900 border-t border-slate-800/50">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
               Our process
@@ -261,7 +261,7 @@ export default function WorkWithUsPage() {
         </section>
 
         {/* Expected results */}
-        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-[#0B1020] to-slate-900 border-t border-slate-800/50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4 text-center">
               What you can expect
@@ -299,7 +299,7 @@ export default function WorkWithUsPage() {
         </section>
 
         {/* FAQ */}
-        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-[#0B1020] to-slate-900 border-t border-slate-800/50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
               Frequently asked questions

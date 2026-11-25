@@ -46,7 +46,7 @@ export default function SaxonCaseStudyPage() {
         </section>
 
         {/* The problem */}
-        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-[#0B1020] to-slate-900 border-t border-slate-800/50">
           <div className="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
               The problem
@@ -76,7 +76,7 @@ export default function SaxonCaseStudyPage() {
         </section>
 
         {/* The result */}
-        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-[#0B1020] to-slate-900 border-t border-slate-800/50">
           <div className="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
               The result
@@ -108,7 +108,7 @@ export default function SaxonCaseStudyPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-14 md:py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800/50">
+        <section className="py-14 md:py-20 bg-gradient-to-b from-[#0B1020] to-slate-900 border-t border-slate-800/50">
           <div className="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               Want to see similar results?

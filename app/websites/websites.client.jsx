@@ -136,7 +136,7 @@ export default function WebsitesClient() {
       <main className="overflow-hidden">
         <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 -z-10">
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-950/90" />
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-[#0B1020] to-[#0B1020]/90" />
             <div className="absolute inset-0 opacity-20">
               <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0.1))]" />
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/5 via-transparent to-blue-400/5" />
@@ -170,10 +170,10 @@ export default function WebsitesClient() {
           </div>
         </section>
 
-        <section className="section relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
+        <section className="section relative overflow-hidden bg-gradient-to-b from-[#0B1020] to-slate-900">
           <div className="absolute inset-0 -z-10">
             <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-center opacity-5 [mask-image:linear-gradient(180deg,white,transparent)]" />
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-950/70 to-slate-950/90" />
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-[#0B1020]/70 to-[#0B1020]/90" />
           </div>
 
           <div className="container">
@@ -191,7 +191,7 @@ export default function WebsitesClient() {
           </div>
         </section>
 
-        <section className="section relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
+        <section className="section relative overflow-hidden bg-gradient-to-b from-slate-900 to-[#0B1020]">
           <div className="container">
             <SectionHeader
               title="Pricing transparency"
@@ -200,7 +200,7 @@ export default function WebsitesClient() {
           </div>
         </section>
 
-        <section className="section relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
+        <section className="section relative overflow-hidden bg-gradient-to-b from-[#0B1020] to-slate-900">
           <div className="container">
             <motion.div
               className="text-center max-w-3xl mx-auto"

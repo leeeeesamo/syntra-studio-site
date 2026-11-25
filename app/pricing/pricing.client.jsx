@@ -184,7 +184,7 @@ export default function PricingClient() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
+      <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-b from-[#0B1020] to-slate-900">
         <div className="container">
           <SectionHeader
             title="Pricing transparency"
@@ -195,7 +195,7 @@ export default function PricingClient() {
 
 
       {/* CTA Section */}
-      <section className="relative py-16 md:py-20 overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
+      <section className="relative py-16 md:py-20 overflow-hidden bg-gradient-to-b from-[#0B1020] to-slate-900">
         <div className="container">
           <SectionHeader
             kicker="GET STARTED"

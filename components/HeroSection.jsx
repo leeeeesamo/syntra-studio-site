@@ -15,7 +15,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 hero-bg" />
 
         {/* Enhanced overlay gradient for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-slate-950/60 to-slate-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-[#0B1020]/60 to-[#0B1020]/70" />
 
         {/* Floating elements (kept subtle) — pure CSS */}
         <div className="absolute inset-0 overflow-hidden">
