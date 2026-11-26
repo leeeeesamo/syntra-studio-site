@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PageContainer from "@/components/PageContainer";
 import MiniHero from "@/components/MiniHero";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 export const metadata = {
   title: "Work With Us | Syntra Digital Solutions",
@@ -47,15 +48,15 @@ const whoIsThisFor = [
 
 const whatWeDo = [
   {
-    title: "Systems & Operations Foundation",
+    title: "Systems & Operations Assessment",
     desc: "We start with a strategy-first review of your tools, workflows, and pain points. You get a clear picture of what needs to change, in what order, and why — before anything gets built.",
   },
   {
-    title: "Website & Backend Implementation",
+    title: "Websites & Custom Systems",
     desc: "We design and build websites and backend systems tailored to how your business actually works. Fast, professional, and structured to generate leads and support day-to-day operations.",
   },
   {
-    title: "Ongoing Systems Support",
+    title: "Ongoing Technical & Systems Support",
     desc: "Structured, responsive support to keep everything running smoothly over time. We handle maintenance, troubleshooting, and incremental improvements — without the need for in-house IT.",
   },
 ];
@@ -113,7 +114,7 @@ const expectedResults = [
 const faqs = [
   {
     q: "How long does a typical project take?",
-    a: "Most website builds take 4\u20138 weeks depending on scope. A Systems & Operations Foundation review is usually completed in 1\u20132 weeks. We\u2019ll give you a realistic timeline before work begins.",
+    a: "Most website builds take 4\u20138 weeks depending on scope. A Systems & Operations Assessment is usually completed in 1\u20132 weeks. We\u2019ll give you a realistic timeline before work begins.",
   },
   {
     q: "Do I need to know exactly what I want before starting?",
@@ -125,7 +126,7 @@ const faqs = [
   },
   {
     q: "How much does it cost?",
-    a: "Our Systems & Operations Foundation starts at $1,500\u2013$3,000. Website & Backend Implementation starts at $3,000+. Ongoing support starts at $500\u2013$2,500/month. Final pricing is based on your specific needs.",
+    a: "Professional websites start at $2,500, and advanced websites with integrations start at $3,500. Website care plans start at $175/month. Custom backend systems start at $3,000, with assessments and ongoing support quoted individually. Final pricing is based on your specific needs.",
   },
   {
     q: "What makes Syntra Digital Solutions different from other agencies?",
@@ -281,22 +282,8 @@ export default function WorkWithUsPage() {
           </div>
         </section>
 
-        {/* Testimonial */}
-        <section className="py-14 md:py-20 border-t border-slate-800/50">
-          <div className="max-w-[44rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-xs sm:text-sm uppercase tracking-wider text-blue-300 mb-8">
-              Client feedback
-            </p>
-            <blockquote className="text-xl sm:text-2xl text-slate-200 leading-relaxed font-light italic mb-6">
-              &ldquo;Working with Syntra Digital Solutions was one of the best decisions we made.
-              They turned our vision into a clean, professional site that&rsquo;s already
-              bringing in new customers.&rdquo;
-            </blockquote>
-            <p className="text-slate-400 text-sm font-medium">
-              &mdash; Saxon Performance Automotive
-            </p>
-          </div>
-        </section>
+        {/* Testimonials */}
+        <TestimonialsSection />
 
         {/* FAQ */}
         <section className="py-14 md:py-20 bg-gradient-to-b from-[#0B1020] to-slate-900 border-t border-slate-800/50">

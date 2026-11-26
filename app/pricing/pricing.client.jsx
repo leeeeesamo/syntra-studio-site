@@ -9,50 +9,122 @@ import PageContainer from '@/components/PageContainer';
 import SectionHeader from '@/components/SectionHeader';
 import MiniHero from '@/components/MiniHero';
 
-const plans = [
+const websitePlans = [
   {
-    name: 'Systems & Operations Foundation',
+    name: 'Professional Business Website',
     description:
-      'Strategy-first review and planning to align tools, workflows, and priorities before implementation.',
-    price: 'Starting at $1,500 – $3,000',
+      'A polished, multi-page website built to present your business professionally and capture leads.',
+    price: 'Starting at $2,500',
     period: '',
     features: [
-      'Systems & workflow review',
-      'Findings + recommendations',
-      'Prioritized action plan'
-    ],
-    notIncluded: [],
-    gradient: 'from-slate-600 to-slate-700',
-    popular: false
-  },
-  {
-    name: 'Website & Backend Implementation',
-    description:
-      'Design and build dependable systems tailored to how your business operates and how work flows day-to-day.',
-    price: 'Starting at $3,000+',
-    period: '',
-    features: [
-      'Website design/rebuild (as needed)',
-      'Backend workflows + integrations',
-      'Testing, deployment, documentation'
+      'Professional multi-page website',
+      'Responsive desktop and mobile design',
+      'Custom branding and layout',
+      'Core business and service pages',
+      'Contact forms and lead capture',
+      'Foundational on-page SEO',
+      'Analytics integration',
+      'Testing and launch support'
     ],
     notIncluded: [],
     gradient: 'from-blue-500 to-blue-600',
     popular: true
   },
   {
-    name: 'Ongoing Systems Support (Optional)',
+    name: 'Advanced Website & Integrations',
     description:
-      'Structured support to keep systems stable and improving over time - without internal overhead.',
-    price: 'Starting at $500 – $2,500/month',
+      'A website with advanced functionality for businesses that need more than an informational presence.',
+    price: 'Starting at $3,500',
     period: '',
     features: [
-      'Maintenance + troubleshooting',
-      'Enhancements/optimization',
-      'Periodic check-ins'
+      'Custom website functionality',
+      'Advanced lead capture',
+      'CRM integrations',
+      'Automated form workflows',
+      'Client-facing features',
+      'Third-party API integrations',
+      'Business workflow integrations',
+      'Custom dashboards or admin tools'
     ],
     notIncluded: [],
     gradient: 'from-purple-500 to-purple-600',
+    popular: false
+  }
+];
+
+const carePlan = {
+  name: 'Website Care Plan',
+  description:
+    'Recurring website maintenance focused on reliability, routine technical checks, and ongoing website health.',
+  price: 'Starting at $175/month',
+  period: '',
+  features: [
+    'Website availability and uptime checks',
+    'Routine website health review',
+    'HTTPS and security configuration review',
+    'Dependency and update checks',
+    'SEO metadata and broken-link checks',
+    'Contact form, navigation, and functionality testing',
+    'Desktop and mobile performance review',
+    'Backup status verification where supported',
+    'Monthly maintenance summary'
+  ],
+  notIncluded: [],
+  gradient: 'from-cyan-500 to-blue-600',
+  popular: false
+};
+
+const systemsPlans = [
+  {
+    name: 'Custom Backend Systems & Integrations',
+    description:
+      'Custom backend functionality, workflow automation, and business system integrations built around how you operate.',
+    price: 'Starting at $3,000',
+    period: '',
+    features: [
+      'Custom backend functionality',
+      'Workflow automation',
+      'CRM and operational tools',
+      'Internal administrative systems',
+      'Data workflows',
+      'Customer portals',
+      'Specialized digital tools'
+    ],
+    notIncluded: [],
+    gradient: 'from-slate-600 to-slate-700',
+    popular: false
+  },
+  {
+    name: 'Systems & Operations Assessment',
+    description:
+      'An evaluation of your existing tools, digital systems, workflow inefficiencies, and opportunities for improvement.',
+    price: 'Custom Quote',
+    period: '',
+    features: [
+      'Current-system assessment',
+      'Workflow and operational review',
+      'Technical recommendations',
+      'Prioritized improvement roadmap',
+      'Implementation scope recommendations'
+    ],
+    notIncluded: [],
+    gradient: 'from-slate-600 to-slate-700',
+    popular: false
+  },
+  {
+    name: 'Ongoing Technical & Systems Support',
+    description:
+      'Broader technical and operational support for businesses that need ongoing systems assistance.',
+    price: 'Custom Monthly Agreement',
+    period: '',
+    features: [
+      'Integrations maintenance',
+      'Technical troubleshooting',
+      'Periodic improvements',
+      'Support scoped to your needs'
+    ],
+    notIncluded: [],
+    gradient: 'from-slate-600 to-slate-700',
     popular: false
   }
 ];
@@ -106,7 +178,7 @@ const PricingCard = ({ plan, index }) => {
             <p className="text-slate-400 text-sm mb-4">{plan.description}</p>
             
             <div className="flex items-baseline justify-center gap-1">
-              <span className="text-4xl font-bold text-white">{plan.price}</span>
+              <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight">{plan.price}</span>
               <span className="text-slate-400 text-sm">{plan.period}</span>
             </div>
           </div>
@@ -158,26 +230,89 @@ export default function PricingClient() {
       {/* Hero Section */}
       <MiniHero
         variant="neon-top-bottom"
-        title="Simple pricing ranges — scoped to your business"
-        subtitle="We provide clear pricing ranges to help you plan confidently. Final quotes are based on your goals, system complexity, and the amount of implementation required."
+        title="Simple, transparent pricing — built around your business."
+        subtitle="From professional websites and dependable maintenance to custom systems and integrations, Syntra Digital Solutions offers practical solutions tailored to your goals and project requirements."
         position="center 70%"
       />
 
-      {/* Pricing Plans */}
+      {/* Website Design & Development */}
       <section className="py-16 md:py-20 relative overflow-hidden">
         <div className="container">
-          <motion.div 
+          <SectionHeader
+            kicker="WEBSITES"
+            title="Website Design & Development"
+            description="Professional websites and advanced web experiences for small businesses. Final deliverables, page count, revisions, and responsibilities are defined in your individual project proposal."
+          />
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
+            {websitePlans.map((plan, index) => (
+              <PricingCard
+                key={plan.name}
+                plan={plan}
+                index={index}
+              />
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Website Maintenance & Support */}
+      <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-b from-[#0B1020] to-slate-900">
+        <div className="container">
+          <SectionHeader
+            kicker="MAINTENANCE"
+            title="Website Maintenance & Support"
+            description="Recurring care to keep your website healthy, secure, and performing well."
+          />
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto"
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
+            <PricingCard plan={carePlan} index={0} />
+            <div className="hidden md:flex flex-col justify-center rounded-2xl border border-white/10 bg-[var(--syntra-surface)] p-6 sm:p-8 backdrop-blur-sm">
+              <h3 className="text-xl font-bold text-white mb-3">What's not included</h3>
+              <ul className="space-y-2 text-sm text-slate-400">
+                <li>• New pages or major content updates</li>
+                <li>• Redesigns and custom integrations</li>
+                <li>• Paid third-party subscriptions</li>
+                <li>• Extensive troubleshooting</li>
+              </ul>
+              <p className="mt-4 text-sm text-slate-400">
+                These are quoted separately unless included in a written agreement.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Business Systems & Technical Solutions */}
+      <section className="py-16 md:py-20 relative overflow-hidden">
+        <div className="container">
+          <SectionHeader
+            kicker="SYSTEMS"
+            title="Business Systems & Technical Solutions"
+            description="Custom backend systems, integrations, and ongoing technical support — separate from standard website design."
+          />
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
             variants={staggerContainer}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
           >
-            {plans.map((plan, index) => (
-              <PricingCard 
-                key={plan.name} 
-                plan={plan} 
-                index={index} 
+            {systemsPlans.map((plan, index) => (
+              <PricingCard
+                key={plan.name}
+                plan={plan}
+                index={index}
               />
             ))}
           </motion.div>
@@ -188,8 +323,15 @@ export default function PricingClient() {
         <div className="container">
           <SectionHeader
             title="Pricing transparency"
-            description="We don't upsell unnecessary work - our goal is to build what you actually need. You'll get a clear scope before any project begins."
+            description="Prices shown are starting rates, not guaranteed final quotes. Each project receives a defined scope and written proposal. Final pricing depends on project requirements and complexity."
           />
+          <div className="max-w-3xl mx-auto mt-8 grid gap-3 sm:grid-cols-2 text-sm text-slate-400">
+            <p>• Hosting, domain registration, paid software, and third-party subscriptions may be additional.</p>
+            <p>• Additional features, revisions, and development outside the agreed scope are quoted separately.</p>
+            <p>• Included revisions are defined in each project's scope.</p>
+            <p>• Smaller limited-scope requests may receive individual quotes.</p>
+            <p>• Payment schedules and deposit requirements are established in individual project agreements.</p>
+          </div>
         </div>
       </section>
 

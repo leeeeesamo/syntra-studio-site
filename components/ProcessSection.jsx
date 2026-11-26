@@ -12,7 +12,7 @@ const steps = [
     icon: Layers
   },
   {
-    title: 'Website & Backend Implementation',
+    title: 'Websites & Custom Systems',
     description: 'We design and build dependable websites and tools tailored to your operations.',
     icon: LayoutTemplate
   },
