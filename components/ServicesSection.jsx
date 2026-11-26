@@ -19,7 +19,7 @@ const services = [
     borderColor: 'border-blue-500/20'
   },
   {
-    title: 'Website & Backend Implementation',
+    title: 'Websites & Custom Systems',
     href: '/services',
     body: 'Design and build dependable websites and tools tailored to your operations and daily workflows.',
     icon: LayoutTemplate,

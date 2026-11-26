@@ -12,7 +12,7 @@ import MiniHero from '@/components/MiniHero';
 const faqs = [
   {
     question: 'Do you start with a Systems Review?',
-    answer: 'Most engagements start with our Systems & Operations Foundation. It is a strategy-first review that helps us understand how your business operates today, identify gaps, and define the right order of improvements before we build anything.'
+    answer: 'Many engagements start with a Professional Business Website or a Systems & Operations Assessment. The assessment is a strategy-first review that helps us understand how your business operates today, identify gaps, and define the right order of improvements before we build anything.'
   },
   {
     question: 'What affects pricing the most?',
@@ -20,15 +20,15 @@ const faqs = [
   },
   {
     question: 'Do you offer ongoing support?',
-    answer: 'Yes. Ongoing Systems Support is available for businesses that want stability and improvements over time without internal overhead. Support typically includes maintenance, troubleshooting, incremental enhancements, and periodic check-ins.'
+    answer: 'Yes. Ongoing Technical & Systems Support is available for businesses that want stability and improvements over time without internal overhead. Support typically includes maintenance, troubleshooting, incremental enhancements, and periodic check-ins.'
   },
   {
     question: 'How long does a typical project take?',
-    answer: 'It depends on scope and complexity. The Systems & Operations Foundation is typically the fastest way to get clarity, and implementation timelines are set after that review. Most builds fall in the 6-12 week range once scope is confirmed.'
+    answer: 'It depends on scope and complexity. The Systems & Operations Assessment is typically the fastest way to get clarity, and implementation timelines are set after that review. Most builds fall in the 6-12 week range once scope is confirmed.'
   },
   {
     question: 'Do you work with existing tools (CRM/scheduling/etc.)?',
-    answer: 'Yes. We often integrate with the tools you already use (or help you select better-fit ones). During the Systems & Operations Foundation, we review your current stack and identify what to keep, what to adjust, and what to replace.'
+    answer: 'Yes. We often integrate with the tools you already use (or help you select better-fit ones). During the Systems & Operations Assessment, we review your current stack and identify what to keep, what to adjust, and what to replace.'
   },
   {
     question: 'Do you only build websites?',
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     question: 'Will I be locked into a retainer?',
-    answer: 'No. Ongoing Systems Support is optional. Some clients prefer a structured monthly plan; others only engage for the Systems & Operations Foundation and an implementation project.'
+    answer: 'No. Ongoing Technical & Systems Support is optional. Some clients prefer a structured monthly plan; others only engage for the Systems & Operations Assessment and an implementation project.'
   }
 ];
 

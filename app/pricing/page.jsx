@@ -2,7 +2,7 @@ import PricingClient from "./pricing.client";
 
 export const metadata = {
   title: "Pricing | Website & System Services | Syntra Digital Solutions",
-  description: "View transparent pricing ranges for Syntra Digital Solutions’s services—from systems reviews to implementation and ongoing support for growing service businesses.",
+  description: "Transparent starting prices from Syntra Digital Solutions—professional websites from $2,500, website care plans from $175/month, and custom systems and integrations tailored to your business.",
   alternates: {
     canonical: "https://syntradigitalsolutions.us/pricing/",
   },

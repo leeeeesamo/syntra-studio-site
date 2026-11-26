@@ -9,7 +9,7 @@ import MiniHero from '@/components/MiniHero';
 
 const serviceAreas = [
   {
-    title: 'Systems & Operations Foundation',
+    title: 'Systems & Operations Assessment',
     description:
       'A strategy-first review designed to bring clarity to how your business operates today and define a practical path forward. We assess your current tools, workflows, and pain points — then map out what needs to change and in what order.',
     includes: [
@@ -19,7 +19,7 @@ const serviceAreas = [
     ],
   },
   {
-    title: 'Website & Backend Implementation',
+    title: 'Websites & Custom Systems',
     description:
       'We design and build websites and backend systems tailored to how your business actually works. This goes beyond a surface-level site — we create dependable infrastructure that supports day-to-day operations and helps bring in new business.',
     includes: [
@@ -29,7 +29,7 @@ const serviceAreas = [
     ],
   },
   {
-    title: 'Ongoing Systems Support',
+    title: 'Ongoing Technical & Systems Support',
     description:
       'Structured, responsive support to keep your systems stable and improving over time — without the need for in-house IT resources. We handle maintenance, troubleshooting, and incremental improvements so you can focus on your business.',
     includes: [
